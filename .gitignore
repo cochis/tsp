@@ -1,0 +1,9 @@
+node_modules/
+uploads/fiestas/
+uploads/galerias/
+uploads/invitaciones/
+uploads/salones/
+uploads/usuarios/
+uploads/zips/
+*.env        
+ 

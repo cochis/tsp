@@ -1,0 +1,54 @@
+<div class="contact-container">
+  <div class="header">
+    <div class="container padding-50">
+      <div class="row">
+        <div class="col-8">
+          <h1>
+            {{ "notice.title" | translate | uppercase }}
+          </h1>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="info padding-50">
+    <div class="container">
+      <div class="row">
+        <div class="  col-12">
+          {{lang}}
+          <ng-container *ngIf="lang =='es'">
+
+            <iframe src="/assets/docs/notice-es.pdf" width="100%" height="600">
+            </iframe>
+          </ng-container>
+          <ng-container *ngIf="lang =='en'">
+
+            <iframe src="/assets/docs/notice-en.pdf" width="100%" height="600">
+            </iframe>
+          </ng-container>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <p-dialog class="confirmation-dialog" [(visible)]="displayConfirmation" [modal]="true"
+    [breakpoints]="{ '960px': '90vw' }" [style]="{ width: '30vw' }" [draggable]="false" [resizable]="false"
+    [closeOnEscape]="false">
+    <img *ngIf="!isError" src="/assets/img/success.png" class="mb-3" />
+    <img *ngIf="isError" src="/assets/img/error.png" class="mb-3" />
+    <h3>{{ titleMesasge | uppercase }}</h3>
+    <p [innerHTML]="message"></p>
+    <hr />
+    <button type="button" class="btn btn-primary w-100" (click)="closeContact()">
+      {{ "contact.message_button" | translate | uppercase }}
+    </button>
+    <hr class="mb-0" />
+  </p-dialog>
+
+  <app-footer></app-footer>
+</div>

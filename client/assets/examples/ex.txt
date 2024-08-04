@@ -1,0 +1,56 @@
+db.roles.updateMany({ activated: true }, { $set: { role: "6551752fae51b4c12e8d9f6e" } })
+db.fiestas.updateMany({ nombre: "REUNION SEP 2023" }, { $set: { realizada: false } })
+
+db.salons.updateMany({telefono:5529046793}, {$set:{nombre:"Salon D'Angelos"}})
+db.fiestas.updateMany({nombre:"XV AÑOS JULIETA SHECCID"}, {$set:{usuarioCreated: ObjectId("65d1c2a30699645d8cade4be"),}})
+db.usuarios.deleteOne({ email: "Adrianabautista4258@yahoo.com" })
+db.usuarios.deleteOne({ nombre: "NUEVA" })
+db.grupos.deleteOne({ clave: "AMGGPO" })
+db.boletos.deleteMany({ fiesta: null })
+db.usuarios.updateMany({ email: "adrianabautista4258@yahoo.com"}, {$set:{activated:true}})
+db.usuarios.deleteOne({ email: "oramirez@jasu.usß" })
+db.usuarios.deleteOne({ email: "martin@mail.com" })
+db.usuarios.deleteOne({ email: "neza@neza.com" })
+db.fiestas.deleteOne({ nombre: 'BODA DE MARTIN' })
+db.fiestas.deleteOne({  nombre: 'DSA' })
+db.usuarios.insertMany([{ nombre: "OSCAR ALEJANDRO", apellidoPaterno: "RAMIREZ", apellidoMaterno: "ROSAS", email: "info@cochisweb.com", password: "$2a$10$ZBTj0HY9HeIh8dxDwVXekenRYl2g0MgR2ivDIgySDc6qmkcNmr9dG", role: "64ff4ea7da409a7d91056a53", google: false, activated: true, dateCreated: 1694453227825, lastEdited: 1694802018423 }])
+db.boletos.drop()
+db.eventos.drop()
+db.fiestas.drop()
+db.grupos.drop()
+db.roles.drop()
+db.salons.drop()
+db.tickets.drop()
+db.tipoeventos.drop()
+db.tipogrupos.drop()
+db.usuarios.deleteMany( { role: ObjectId("650373d9db5868019b55ebd3") } )
+db.usuarios.deleteMany( { role: ObjectId("650373d9db5868019b55ebd4") } )
+db.usuarios.deleteMany( { role: ObjectId("650373d9db5868019b55ebd2") } )
+
+db.roles.insertMany([{ "nombre": "ADMIN", "clave": "ADMROL", "usuarioCreated": "655174f0ae51b4c12e8d9f6d", "activated": true, "dateCreated": 1694453393809, "lastEdited": 1694457953313 }, { "nombre": "USUARIO", "clave": "USRROL", "usuarioCreated": "655174f0ae51b4c12e8d9f6d", "activated": true, "dateCreated": 1694453393809, "lastEdited": 1694457953313 }, { "nombre": "SALON", "clave": "SLNROL", "usuarioCreated": "655174f0ae51b4c12e8d9f6d", "activated": true, "dateCreated": 1694453393809, "lastEdited": 1694457953313 }, { "nombre": "ANFITRION", "clave": "ANFROL", "usuarioCreated": "655174f0ae51b4c12e8d9f6d", "activated": true, "dateCreated": 1694453393809, "lastEdited": 1694457953313 }, { "nombre": "CHECADOR", "clave": "CHCROL", "usuarioCreated": "655174f0ae51b4c12e8d9f6d", "activated": true, "dateCreated": 1694453393809, "lastEdited": 1694457953313 }])
+
+
+
+db.usuarios.deleteOne({ email: "balam.efrain@gmail.com" })
+db.usuarios.deleteOne({ email: "efras1@gmail.com" })
+db.usuarios.deleteOne({ email: "hugo@hugo.com" })
+db.usuarios.deleteOne({ email: "dsa@dffsd.com" })
+db.fiestas.deleteOne({ nombre: "HGO" })
+db.boletos.deleteOne({ dateCreated: 1696143943862 })
+
+db.fiestas.updateOne({nombre:"XV AÑOS SARAH IXCHEL"}, {$set:{_id:ObjectId("65d4f0b24eb88de0bf1b809c")}})
+db.fiestas.find({salon:"65598dfa2c028fe992b4e9e4"})
+
+db.boletos.deleteMany({  fiesta: ObjectId("669a901eeadfce23d2a02163")})
+
+
+////////Borrar usuario 
+ db.boletos.deleteMany({ usuarioCreated: ObjectId(" ") })
+    db.fiestas.deleteMany({ usuarioCreated: ObjectId(" ") })
+    db.galerias.deleteMany({ usuarioCreated: ObjectId(" ") })
+    db.invitacions.deleteMany({ usuarioCreated: ObjectId(" ") })
+    db.pushes.deleteMany({ usuarioCreated: ObjectId(" ") })
+    db.salons.deleteMany({ usuarioCreated: ObjectId(" ") })
+    db.templates.deleteMany({ usuarioCreated: ObjectId(" ") })
+    db.tickets.deleteMany({ usuarioCreated: ObjectId(" ") })
+    db.usuarios.deleteMany({ usuarioCreated: ObjectId(" ") })

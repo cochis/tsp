@@ -1,0 +1,29 @@
+server {
+root /var/www/toma-la-com;
+    index index.php index.html index.htm;
+server_name toma-la.com;
+location / {
+       try_files $uri $uri/ =404;
+    }
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
+   }
+}
+ 
+
+
+
+sudo certbot --nginx -d toma-la.com -d www.toma-la.com
+ 
+
+
+
+ define('AUTH_KEY',         'YrPL5eufl3*xZf2:9RY4sVO9AO.})p&>$s6!/|&hmQ$o2)`HrbZ~]mgmRy+|5LkB');
+define('SECURE_AUTH_KEY',  'N{u.soyIgTTxhB!(l~i>7F s}6=@;o98ojrXN6dEQ,/nJNB:=HT=&t0+~Bceh8?u');
+define('LOGGED_IN_KEY',    '7Jb@;*~!St7?zq&{8VePz6;;BVQM{=w1=|s1y&Luu0J+fb%q_ -9~-1TFHA[Lu4+');
+define('NONCE_KEY',        '{Cw%4h;vT*m[e_bVj|Xgho!,q8XB]V>$x4Bg<GSg 6.+Mg ZHTBo+fb~o#zM.+jW');
+define('AUTH_SALT',        '=5Ya={n_H7c1-IfEc`hsx]I=mUg~/081_qP0MsW?SxiHd!(P)=Ilr0Y]sj--_RWv');
+define('SECURE_AUTH_SALT', '~M  ]5P|:N>cFpDh0j,@@6L(D;WJ+}WHlH}A4e*nQ=Vy1Gkd+ M|:i|2_|rgbVun');
+define('LOGGED_IN_SALT',   'mp_:ui$CG}:?DImr5xdl3L7JIL}*%N)uF^bKQKIRK>,b*IX^nL?;N1P|c+(BxgFg');
+define('NONCE_SALT',       ';-3:!NN@r;-U|w=EycHcP<k=$euNJJko+l.9G<s_T5V+Scy@+ z#r-v>hyHLP+vw');

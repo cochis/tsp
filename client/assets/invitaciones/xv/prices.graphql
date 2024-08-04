@@ -1,0 +1,131 @@
+query prices($pag: Int, $num: Int, $ord: String, $asc:Boolean, $filter: PriceFilter)
+{
+    prices(
+        pag: $pag
+        num: $num
+        ord: $ord
+        asc: $asc
+        filter: $filter
+    ) {
+        totalCount
+        totalEdges
+        hasMore
+        pag
+        edges {
+            node {
+                id
+                date
+                price
+                drums
+                volume
+                product{
+                    id
+                    presentation{
+                        id
+                        name
+                    }
+                    fruitVariety{
+                        id
+                        name
+                        fruit{
+                            id
+                            name
+                        }
+                    }
+                }
+                country{
+                    id
+                    name
+                }
+            }
+        }
+    }
+}
+
+query price($input: PriceInput!)
+{
+    price(
+        input: $input
+    ) {
+        id
+        date
+        price
+        drums
+        volume
+        product{
+            id
+            presentation{
+                id
+                name
+            }
+            fruitVariety{
+                id
+                name
+                fruit{
+                    id
+                    name
+                }
+            }
+        }
+        country{
+            id
+            name
+        }
+    }
+}
+
+query harvests($pag: Int, $num: Int, $ord: String, $asc:Boolean, $filter: HarvestFilter)
+{
+    harvests(
+        pag: $pag
+        num: $num
+        ord: $ord
+        asc: $asc
+        filter: $filter
+    ) {
+        totalCount
+        totalEdges
+        hasMore
+        pag
+        edges {
+            node {
+                id
+                month
+                country{
+                    id
+                    name
+                }
+                fruitVariety{
+                    id
+                    name
+                    fruit{
+                        id
+                        name
+                    }
+                }
+            }
+        }
+    }
+}
+
+query harvest($input: HarvestInput!)
+{
+    harvest(
+        input: $input
+    ) {
+        id
+        month
+        country{
+            id
+            name
+        }
+        fruitVariety{
+            id
+            name
+            fruit{
+                id
+                name
+            }
+        }
+    }
+}
