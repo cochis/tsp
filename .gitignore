@@ -5,5 +5,5 @@ uploads/invitaciones/
 uploads/salones/
 uploads/usuarios/
 uploads/zips/
-*.env        
+.env        
  
