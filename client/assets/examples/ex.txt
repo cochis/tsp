@@ -54,3 +54,366 @@ db.boletos.deleteMany({  fiesta: ObjectId("669a901eeadfce23d2a02163")})
     db.templates.deleteMany({ usuarioCreated: ObjectId(" ") })
     db.tickets.deleteMany({ usuarioCreated: ObjectId(" ") })
     db.usuarios.deleteMany({ usuarioCreated: ObjectId(" ") })
+
+ 
+    db.usuarios.insertMany([{
+    _id: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    nombre: 'OSCAR ALEJANDRO',
+    apellidoPaterno: 'RAMIREZ',
+    apellidoMaterno: 'ROSAS',
+    email: 'info@cochisweb.com',
+    password: '$2a$10$uw5bPuSzrwwkX6BtSpsto.g4xPWZVZlJL12dkkFJatOVcRS1HfFuS',
+    role: ObjectId("6551752fae51b4c12e8d9f6e"),
+    google: false,
+    activated: true,
+    dateCreated: 1694453227825,
+    lastEdited: 1721686648284,
+    __v: 1,
+    img: '',
+    salon: [],
+    usuarioCreated: [],
+    cantidadFiestas: -1,
+    paqueteActual: null,
+    pushNotification: null
+  }])
+
+
+    db.roles.insertMany([
+  {
+    _id: ObjectId("6551752fae51b4c12e8d9f6e"),
+    nombre: 'ADMIN',
+    clave: 'ADMROL',
+    usuarioCreated: '655174f0ae51b4c12e8d9f6d',
+    activated: true,
+    dateCreated: 1694453393809,
+    lastEdited: 1694457953313
+  },
+  {
+    _id: ObjectId("6551752fae51b4c12e8d9f6f"),
+    nombre: 'USUARIO',
+    clave: 'USRROL',
+    usuarioCreated: '655174f0ae51b4c12e8d9f6d',
+    activated: true,
+    dateCreated: 1694453393809,
+    lastEdited: 1694457953313
+  },
+  {
+    _id: ObjectId("6551752fae51b4c12e8d9f70"),
+    nombre: 'CENTRO DE EVENTOS',
+    clave: 'SLNROL',
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1694453393809,
+    lastEdited: 1722719595634
+  },
+  {
+    _id: ObjectId("6551752fae51b4c12e8d9f71"),
+    nombre: 'ANFITRION',
+    clave: 'ANFROL',
+    usuarioCreated: '655174f0ae51b4c12e8d9f6d',
+    activated: true,
+    dateCreated: 1694453393809,
+    lastEdited: 1694457953313
+  },
+  {
+    _id: ObjectId("6551752fae51b4c12e8d9f72"),
+    nombre: 'CHECADOR',
+    clave: 'CHCROL',
+    usuarioCreated: '655174f0ae51b4c12e8d9f6d',
+    activated: true,
+    dateCreated: 1694453393809,
+    lastEdited: 1694457953313
+  }
+]
+)
+
+
+
+    db.eventos.insertMany([
+  {
+    _id: ObjectId("65598eef2c028fe992b4ea38"),
+    nombre: 'XV AÑOS',
+    clave: 'XVAEVT',
+    usuarioCreated: ObjectId("65598da12c028fe992b4e9c7"),
+    activated: true,
+    dateCreated: 1700368090883,
+    lastEdited: 1700368114011,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65f887f78dedd5e3acb3a05f"),
+    nombre: 'PRIMERA COMUNION',
+    clave: 'PRCEVT',
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1710786556191,
+    lastEdited: 1710786570848,
+    __v: 0
+  },
+  {
+    _id: ObjectId("669445d24647a84cfc02e513"),
+    nombre: 'BODA',
+    clave: 'BDAEVT',
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1720993243151,
+    lastEdited: 1720993303977,
+    __v: 0
+  },
+  {
+    _id: ObjectId("669445e24647a84cfc02e518"),
+    nombre: 'EVENTO LABORAL',
+    clave: 'LABAVT',
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1720993264193,
+    lastEdited: 1720993307177,
+    __v: 0
+  },
+  {
+    _id: ObjectId("669445f04647a84cfc02e51d"),
+    nombre: 'EVENTO SOCIAL',
+    clave: 'SOCEVT',
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1720993279089,
+    lastEdited: 1720993312250,
+    __v: 0
+  },
+  {
+    _id: ObjectId("669445fe4647a84cfc02e522"),
+    nombre: 'OTRO',
+    clave: 'OTREVT',
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1720993292025,
+    lastEdited: 1720993315609,
+    __v: 0
+  }
+])
+
+   db.grupos.insertMany([
+  {
+    _id: ObjectId("657768b1047a58294970e93a"),
+    nombre: 'AMIGOS',
+    clave: 'AMG',
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1702324393932,
+    lastEdited: 1702324404837,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65d4f6ba15a4c888ee56403b"),
+    nombre: 'FAMILIA',
+    clave: 'FMAGPO',
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1708455602429,
+    lastEdited: 1708455627345,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65d4f6da15a4c888ee564051"),
+    nombre: 'MAESTROS',
+    clave: 'MTSGPO',
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1708455631296,
+    lastEdited: 1708455679087,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65d4f71115a4c888ee564085"),
+    nombre: 'COMPAÑEROS',
+    clave: 'CPNGPO',
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1708455686749,
+    lastEdited: 1708455701494,
+    __v: 0
+  },
+  {
+    _id: ObjectId("669442c9e36d0ade974594a8"),
+    nombre: 'OTROS',
+    clave: 'OTRGPO',
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1720992466957,
+    lastEdited: 1720992482530,
+    __v: 0
+  },
+  {
+    _id: ObjectId("66af249b97051a9be05ab128"),
+    nombre: 'ALUMNO',
+    clave: 'ALMGPO',
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1722754207953,
+    lastEdited: 1722754242506,
+    __v: 0
+  }
+])
+
+
+
+
+
+db.paquetes.insertMany([
+  {
+    _id: ObjectId("66ac30bd02c48b53e8f28da2"),
+    nombre: 'POR 1 EVENTO',
+    tipo: 'eventos',
+    tipoCosto: 'único',
+    tipoPaquete: 'number',
+    clave: 'P1EVPQ',
+    value: 1,
+    costo: 1,
+    img: 'cf42aa7f-c423-4873-8f50-83b462dc153f.png',
+    descripciones: [
+      {
+        info: 'Invitados ilimitados',
+        _id: ObjectId("66af254297051a9be05ab182")
+      },
+      {
+        info: 'Invitación dinámica',
+        _id: ObjectId("66af254297051a9be05ab183")
+      },
+      {
+        info: 'Envío de invitaciones',
+        _id: ObjectId("66af254297051a9be05ab184")
+      },
+      {
+        info: 'Logística en tiempo real',
+        _id: ObjectId("66af254297051a9be05ab185")
+      }
+    ],
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1722560665788,
+    lastEdited: 1722754391943,
+    __v: 0,
+    tipoVigencia: 'Uso',
+    typeOfVigencia: 'number',
+    vigencia: '0'
+  },
+  {
+    _id: ObjectId("66ac310a02c48b53e8f28dd3"),
+    nombre: 'POR 4 EVENTOS',
+    tipo: 'eventos',
+    tipoCosto: 'único',
+    tipoPaquete: 'number',
+    clave: 'P4EVPQ',
+    value: 5,
+    costo: 1,
+    img: 'da41c2da-12bc-43c1-a8f5-c9271d7b0b6f.png',
+    descripciones: [
+      {
+        info: 'Invitados ilimitados',
+        _id: ObjectId("66af252d97051a9be05ab15f")
+      },
+      {
+        info: 'Invitación dinámica',
+        _id: ObjectId("66af252d97051a9be05ab160")
+      },
+      {
+        info: 'Envío de invitaciones',
+        _id: ObjectId("66af252d97051a9be05ab161")
+      },
+      {
+        info: 'Logística en tiempo real',
+        _id: ObjectId("66af252d97051a9be05ab162")
+      }
+    ],
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1722560748073,
+    lastEdited: 1722754371086,
+    __v: 0,
+    tipoVigencia: 'Uso',
+    typeOfVigencia: 'number',
+    vigencia: '0'
+  },
+  {
+    _id: ObjectId("66ae9df860474a275b3f7f70"),
+    nombre: 'GALERÍA',
+    tipo: 'galerias',
+    tipoCosto: 'único',
+    tipoPaquete: 'ilimitado',
+    clave: 'GLAVPQ',
+    value: -1,
+    costo: 1,
+    tipoVigencia: 'use',
+    typeOfVigencia: 'number',
+    vigencia: '0',
+    img: 'b5bb6d58-5530-4e0d-88bb-179f2fd4b088.png',
+    descripciones: [
+      {
+        info: 'Ingreso a la galería hasta el evento',
+        _id: ObjectId("66aeb2c5ed7eedb39a86f3c2")
+      },
+      {
+        info: '30 días de resguardo de fotos después del evento',
+        _id: ObjectId("66aeb2c5ed7eedb39a86f3c3")
+      },
+      {
+        info: 'Descarga de imágenes en un archivo ZIP',
+        _id: ObjectId("66aeb2c5ed7eedb39a86f3c4")
+      }
+    ],
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1722719699840,
+    lastEdited: 1722725082815,
+    __v: 0
+  }]
+)
+
+
+db.tipocentros.insertMany([
+  {
+    _id: ObjectId("66ac303d02c48b53e8f28d7e"),
+    nombre: 'ESCUELA DE BAILE',
+    clave: 'ESCTCE',
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1722560584582,
+    lastEdited: 1722754076181,
+    __v: 0,
+    descripcion: 'SE RECOMIENDA ANFITRION'
+  },
+  {
+    _id: ObjectId("66ac304902c48b53e8f28d85"),
+    nombre: 'COLEGIO',
+    clave: 'PRMTCE',
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1722560600595,
+    lastEdited: 1722754103318,
+    __v: 0,
+    descripcion: 'SE RECOMIENDA ANFITRION'
+  },
+  {
+    _id: ObjectId("66ac305702c48b53e8f28d8c"),
+    nombre: 'SALON DE EVENTOS',
+    clave: 'SLETCE',
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1722560614309,
+    lastEdited: 1722754133014,
+    __v: 0,
+    descripcion: 'SE RECOMIENDA SALON DE EVENTOS'
+  },
+  {
+    _id: ObjectId("66ac306502c48b53e8f28d93"),
+    nombre: 'PARTICULAR',
+    clave: 'PARTCE',
+    usuarioCreated: ObjectId("655174f0ae51b4c12e8d9f6d"),
+    activated: true,
+    dateCreated: 1722560626810,
+    lastEdited: 1722754158810,
+    __v: 0,
+    descripcion: 'SE RECOMIENDA ANFITRION'
+  }
+]
+)
