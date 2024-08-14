@@ -66,6 +66,14 @@ const UsuarioSchema = Schema({
     type: Object,
     default: null
   },
+  aceptoPolitica: {
+    type: Boolean,
+    default: false,
+  },
+  aceptoTerminos: {
+    type: Boolean,
+    default: false,
+  },
 
   activated: {
     type: Boolean,

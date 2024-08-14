@@ -1,6 +1,6 @@
 {
   "name": "MyTicketPartyServer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tickets Server",
   "main": "index.js",
   "scripts": {
