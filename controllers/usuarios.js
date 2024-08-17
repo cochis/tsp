@@ -2,6 +2,7 @@ const { response } = require('express')
 const bcrypt = require('bcryptjs')
 const Usuario = require('../models/usuario')
 const { generarJWT } = require('../helpers/jwt')
+const { transporter } = require('../helpers/mailer')
 //getUsuarios Usuario
 const getUsuarios = async (req, res) => {
   const desde = Number(req.query.desde) || 0
@@ -73,6 +74,19 @@ const crearUsuario = async (req, res = response) => {
     await usuario.save()
     // Generar el TOKEN - JWT
     const token = await generarJWT(usuario)
+
+
+
+
+    await transporter.sendMail({
+      from: '"Verificación de correo" <info@cochisweb.com>', // sender address
+      to: usuario.email + ', info@cochisweb.com', // list of receivers
+      subject: "Verificación de correo ✔", // Subject line
+      html: `
+          <b>Por favor entra al siguiente link para verificar tu correo  </b>
+         <a href="https://tickets.cochisweb.com/auth/verification/${email}">Verifica Correo</a>
+          `,
+    });
 
     res.json({
       ok: true,
