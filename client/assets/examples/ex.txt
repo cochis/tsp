@@ -31,7 +31,7 @@ db.roles.insertMany([{ "nombre": "ADMIN", "clave": "ADMROL", "usuarioCreated": "
 
 
 
-db.usuarios.deleteOne({ email: "balam.efrain@gmail.com" })
+db.usuarios.deleteOne({ email: "dsa@dsa.com" })
 db.usuarios.deleteOne({ email: "efras1@gmail.com" })
 db.usuarios.deleteOne({ email: "hugo@hugo.com" })
 db.usuarios.deleteOne({ email: "dsa@dffsd.com" })
@@ -45,7 +45,7 @@ db.boletos.deleteMany({  fiesta: ObjectId("669a901eeadfce23d2a02163")})
 
 
 ////////Borrar usuario 
- db.boletos.deleteMany({ usuarioCreated: ObjectId(" ") })
+ db.boletos.deleteMany({ usuarioCreated:  ObjectId(" ") })
     db.fiestas.deleteMany({ usuarioCreated: ObjectId(" ") })
     db.galerias.deleteMany({ usuarioCreated: ObjectId(" ") })
     db.invitacions.deleteMany({ usuarioCreated: ObjectId(" ") })
