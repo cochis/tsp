@@ -364,7 +364,7 @@ const crearUsuario = async (req, res = response) => {
                                           style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
                                           <a href="https://www.instagram.com/my_ticketparty/" title="Instagram"
                                             target="_blank">
-                                            <img src="https://www.myticketparty.com/assets/icons/facebook-icon.png"
+                                            <img src="https://www.myticketparty.com/assets/icons/instagram-icon.png"
                                               alt="Instagram Tycket Party" title="Instagram Tycket Party" width="32"
                                               style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">
                                           </a>
