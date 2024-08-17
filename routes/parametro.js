@@ -12,7 +12,8 @@ const {
   isActive,
   getParametroById,
   getAllParametros,
-  getParametrosByEmail
+  getParametrosByEmail,
+  getParametrosByClave
 } = require("../controllers/parametro");
 const { validarJWT } = require("../middlewares/validar-jwt");
 const router = Router();
@@ -21,6 +22,8 @@ router.get("/", validarJWT, getParametros);
 router.get("/all", validarJWT, getAllParametros);
 router.get("/:uid", validarJWT, getParametroById);
 router.get("/email/:email", validarJWT, getParametrosByEmail);
+router.get("/clave/:clave", getParametrosByClave);
+
 router.post(
   "/",
   [

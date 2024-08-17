@@ -190,7 +190,33 @@ const getParametrosByEmail = async (req, res = response) => {
     })
   }
 }
+const getParametrosByClave = async (req, res = response) => {
+  const clave = req.params.clave
 
+
+
+  try {
+    const parametroDB = await Parametro.find({ clave: clave })
+      .populate('usuarioCreated', 'nombre apellidoPaterno apellidoMaterno email _id')
+
+
+    if (!parametroDB) {
+      return res.status(404).json({
+        ok: false,
+        msg: 'No exite un salon',
+      })
+    }
+    res.json({
+      ok: true,
+      parametro: parametroDB[0],
+    })
+  } catch (error) {
+    res.status(500).json({
+      ok: false,
+      msg: 'Error inesperado',
+    })
+  }
+}
 module.exports = {
   getParametros,
   crearParametro,
@@ -198,6 +224,7 @@ module.exports = {
   isActive,
   getParametroById,
   getAllParametros,
-  getParametrosByEmail
+  getParametrosByEmail,
+  getParametrosByClave
 
 }
