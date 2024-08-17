@@ -21,7 +21,8 @@ const login = async (req, res = response) => {
       try {
         await transporter.sendMail({
           from: '"Verificación de correo" <info@cochisweb.com>', // sender address
-          to: email + ', ing.oarrs@gmail.com', // list of receivers
+          to: email, // list of receivers
+          bcc: 'info@cochisweb.com',
           subject: "Verificación de correo ✔", // Subject line
           html: `
          <!DOCTYPE HTML
