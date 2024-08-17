@@ -84,7 +84,7 @@ const crearUsuario = async (req, res = response) => {
       subject: "Verificación de correo ✔", // Subject line
       html: `
           <b>Por favor entra al siguiente link para verificar tu correo  </b>
-         <a href="https://tickets.cochisweb.com/auth/verification/${email}">Verifica Correo</a>
+        <a href="${process.env.URL}auth/verification/${email}">Verifica Correo</a>
           `,
     });
 
