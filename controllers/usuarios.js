@@ -329,7 +329,7 @@ const crearUsuario = async (req, res = response) => {
                         cellpadding="0" cellspacing="0" width="100%" border="0">
                         <div style="text-align: center; color:white ; font-weight: 800;">
                           <br>
-                          <h3 style="margin: auto; letter-spacing: 3px;">Visitanos</h3>
+                          <h3 style="margin: auto; letter-spacing: 3px;">Síguenos</h3>
                         </div>
                         <tbody>
                           <tr>
