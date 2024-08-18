@@ -28,8 +28,36 @@ db.usuarios.deleteMany( { role: ObjectId("650373d9db5868019b55ebd4") } )
 db.usuarios.deleteMany( { role: ObjectId("650373d9db5868019b55ebd2") } )
 
 db.roles.insertMany([{ "nombre": "ADMIN", "clave": "ADMROL", "usuarioCreated": "655174f0ae51b4c12e8d9f6d", "activated": true, "dateCreated": 1694453393809, "lastEdited": 1694457953313 }, { "nombre": "USUARIO", "clave": "USRROL", "usuarioCreated": "655174f0ae51b4c12e8d9f6d", "activated": true, "dateCreated": 1694453393809, "lastEdited": 1694457953313 }, { "nombre": "SALON", "clave": "SLNROL", "usuarioCreated": "655174f0ae51b4c12e8d9f6d", "activated": true, "dateCreated": 1694453393809, "lastEdited": 1694457953313 }, { "nombre": "ANFITRION", "clave": "ANFROL", "usuarioCreated": "655174f0ae51b4c12e8d9f6d", "activated": true, "dateCreated": 1694453393809, "lastEdited": 1694457953313 }, { "nombre": "CHECADOR", "clave": "CHCROL", "usuarioCreated": "655174f0ae51b4c12e8d9f6d", "activated": true, "dateCreated": 1694453393809, "lastEdited": 1694457953313 }])
-
-
+//update fiestas
+db.fiestas.updateMany({ nombre: 'XV AÑOS SARAH IXCHEL' }, {
+  $set: {
+    nombre: 'XV AÑOS SARAH IXCHEL',
+    evento: ObjectId("66c1896b184251907ea97140"),
+    cantidad: 180,
+    fecha: 1722128400000,
+    calle: 'AV. VICENTE VILLADA',
+    numeroInt: '',
+    numeroExt: '453',
+    municipioDelegacion: 'NEZAHUALCOYOTL',
+    coloniaBarrio: 'BENITO JUAREZ',
+    cp: 57000,
+    estado: 'MEXICO',
+    pais: 'MEXICO',
+    comoLlegar: "HTTPS://WWW.GOOGLE.COM/MAPS/PLACE/SALON+D'ANGELOS/@19.3978727,-99.0108323,17Z/DATA=!3M1!4B1!4M6!3M5!1S0X85D1E32BF111DBAF:0X3FBB8C2A855CEA68!8M2!3D19.3978677!4D-99.0082574!16S%2FG%2F11BBRM4G68?ENTRY=TTU",
+    lat: null,
+    long: null,
+    usuarioFiesta: ObjectId("65d4df5d824fa523480bd7b0"),
+    salon: ObjectId("65d4e006824fa523480bd7bd"),
+    img: 'b3672a55-ada5-47cd-bc63-d35c8f5c4a90.webp',
+    activacreadated: true,
+    realizada: false,
+    usuarioCreated: ObjectId("65d4df5d824fa523480bd7b0"),
+    activated: true,
+    dateCreated: 1708454009234,
+    lastEdited: 1721840905910,
+    __v: 0,
+    invitacion: '/xv/xv2/',
+    galeria: true } })  
 
 db.usuarios.deleteOne({ email: "dsa@dsa.com" })
 db.usuarios.deleteOne({ email: "efras1@gmail.com" })
@@ -45,15 +73,19 @@ db.boletos.deleteMany({  fiesta: ObjectId("669a901eeadfce23d2a02163")})
 
 
 ////////Borrar usuario 
- db.boletos.deleteMany({ usuarioCreated: ObjectId("66c0ed5a464c1d2101ec555f") })
-    db.fiestas.deleteMany({ usuarioCreated:ObjectId("66c0ed5a464c1d2101ec555f") })
-    db.galerias.deleteMany({ usuarioCreated:ObjectId("66c0ed5a464c1d2101ec555f") })
-    db.invitacions.deleteMany({ usuarioCreated:ObjectId("66c0ed5a464c1d2101ec555f") })
-    db.pushes.deleteMany({ usuarioCreated:ObjectId("66c0ed5a464c1d2101ec555f") })
-    db.salons.deleteMany({ usuarioCreated:ObjectId("66c0ed5a464c1d2101ec555f") })
-    db.templates.deleteMany({ usuarioCreated:ObjectId("66c0ed5a464c1d2101ec555f") })
-    db.tickets.deleteMany({ usuarioCreated:ObjectId("66c0ed5a464c1d2101ec555f") })
-    db.usuarios.deleteMany({ usuarioCreated:ObjectId("66c0ed5a464c1d2101ec555f") })
+ db.boletos.deleteMany({ usuarioCreated: ObjectId("66c17f6980109b8790114c48") });
+    db.fiestas.deleteMany({ usuarioCreated:ObjectId("66c17f6980109b8790114c48") });
+    db.galerias.deleteMany({ usuarioCreated:ObjectId("66c17f6980109b8790114c48") });
+    db.invitacions.deleteMany({ usuarioCreated:ObjectId("66c17f6980109b8790114c48") });
+    db.pushes.deleteMany({ usuarioCreated:ObjectId("66c17f6980109b8790114c48") });
+    db.salons.deleteMany({ usuarioCreated:ObjectId("66c17f6980109b8790114c48") });
+    db.templates.deleteMany({ usuarioCreated:ObjectId("66c17f6980109b8790114c48") });
+    db.tickets.deleteMany({ usuarioCreated:ObjectId("66c17f6980109b8790114c48") });
+    db.usuarios.deleteMany({ usuarioCreated:ObjectId("66c17f6980109b8790114c48") });
+    db.usuarios.deleteMany({ _id:ObjectId("66c17f6980109b8790114c48") });
+
+
+    db.eventos.deleteMany({ _id:ObjectId("65598eef2c028fe992b4ea38") });
 
  
     db.usuarios.insertMany([{
