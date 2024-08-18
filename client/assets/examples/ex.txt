@@ -73,16 +73,16 @@ db.boletos.deleteMany({  fiesta: ObjectId("669a901eeadfce23d2a02163")})
 
 
 ////////Borrar usuario 
- db.boletos.deleteMany({ usuarioCreated: ObjectId("66c17f6980109b8790114c48") });
-    db.fiestas.deleteMany({ usuarioCreated:ObjectId("66c17f6980109b8790114c48") });
-    db.galerias.deleteMany({ usuarioCreated:ObjectId("66c17f6980109b8790114c48") });
-    db.invitacions.deleteMany({ usuarioCreated:ObjectId("66c17f6980109b8790114c48") });
-    db.pushes.deleteMany({ usuarioCreated:ObjectId("66c17f6980109b8790114c48") });
-    db.salons.deleteMany({ usuarioCreated:ObjectId("66c17f6980109b8790114c48") });
-    db.templates.deleteMany({ usuarioCreated:ObjectId("66c17f6980109b8790114c48") });
-    db.tickets.deleteMany({ usuarioCreated:ObjectId("66c17f6980109b8790114c48") });
-    db.usuarios.deleteMany({ usuarioCreated:ObjectId("66c17f6980109b8790114c48") });
-    db.usuarios.deleteMany({ _id:ObjectId("66c17f6980109b8790114c48") });
+ db.boletos.deleteMany({ usuarioCreated: ObjectId("66c180d880109b8790114e06") });
+    db.fiestas.deleteMany({ usuarioCreated:ObjectId("66c180d880109b8790114e06") });
+    db.galerias.deleteMany({ usuarioCreated:ObjectId("66c180d880109b8790114e06") });
+    db.invitacions.deleteMany({ usuarioCreated:ObjectId("66c180d880109b8790114e06") });
+    db.pushes.deleteMany({ usuarioCreated:ObjectId("66c180d880109b8790114e06") });
+    db.salons.deleteMany({ usuarioCreated:ObjectId("66c180d880109b8790114e06") });
+    db.templates.deleteMany({ usuarioCreated:ObjectId("66c180d880109b8790114e06") });
+    db.tickets.deleteMany({ usuarioCreated:ObjectId("66c180d880109b8790114e06") });
+    db.usuarios.deleteMany({ usuarioCreated:ObjectId("66c180d880109b8790114e06") });
+    db.usuarios.deleteMany({ _id:ObjectId("66c180d880109b8790114e06") });
 
 
     db.eventos.deleteMany({ _id:ObjectId("65598eef2c028fe992b4ea38") });
