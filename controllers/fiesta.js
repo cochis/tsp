@@ -10,6 +10,9 @@ const getFiestas = async (req, res) => {
     Fiesta.find({})
       .sort({ nombre: 1 })
       .populate('usuarioCreated', 'nombre apellidoPaterno apellidoMaterno email _id')
+      .populate('evento')
+      .populate('salon')
+      .populate('usuarioFiesta', 'nombre apellidoPaterno apellidoMaterno email _id')
       .skip(desde)
       .limit(cant),
     Fiesta.countDocuments(),
@@ -26,6 +29,8 @@ const getAllFiestas = async (req, res) => {
   const [fiestas, total] = await Promise.all([
     Fiesta.find({})
       .populate('usuarioCreated', 'nombre apellidoPaterno apellidoMaterno email _id')
+      .populate('evento')
+      .populate('salon')
       .populate('usuarioFiesta', 'nombre apellidoPaterno apellidoMaterno email _id')
       .sort({ fecha: -1 }),
     Fiesta.countDocuments(),
@@ -179,6 +184,8 @@ const getFiestaById = async (req, res = response) => {
   try {
     const fiestaDB = await Fiesta.findById(uid)
       .populate('usuarioCreated', 'nombre apellidoPaterno apellidoMaterno email _id')
+      .populate('evento')
+      .populate('salon')
       .populate('usuarioFiesta', 'nombre apellidoPaterno apellidoMaterno email _id')
       .populate('salon')
     if (!fiestaDB) {
@@ -205,6 +212,8 @@ const getFiestaByEmail = async (req, res = response) => {
   try {
     const fiestaDB = await Fiesta.find({ usuarioCreated: email })
       .populate('usuarioCreated', 'nombre apellidoPaterno apellidoMaterno email _id')
+      .populate('evento')
+      .populate('salon')
       .populate('usuarioFiesta', 'nombre apellidoPaterno apellidoMaterno email _id')
       .populate('salon')
       ;
@@ -235,8 +244,9 @@ const getFiestasByAnfitrion = async (req, res = response) => {
   try {
     const fiestaDB = await Fiesta.find({ usuarioFiesta: uid })
       .populate('usuarioCreated', 'nombre apellidoPaterno apellidoMaterno email _id')
-      .populate('usuarioFiesta', 'nombre apellidoPaterno apellidoMaterno email _id')
+      .populate('evento')
       .populate('salon')
+      .populate('usuarioFiesta', 'nombre apellidoPaterno apellidoMaterno email _id')
     if (!fiestaDB) {
       return res.status(404).json({
         ok: false,
@@ -288,8 +298,9 @@ const getFiestasBySalon = async (req, res = response) => {
   try {
     const fiestaDB = await Fiesta.find({ salon: uid })
       .populate('usuarioCreated', 'nombre apellidoPaterno apellidoMaterno email _id')
-      .populate('usuarioFiesta', 'nombre apellidoPaterno apellidoMaterno email _id')
+      .populate('evento')
       .populate('salon')
+      .populate('usuarioFiesta', 'nombre apellidoPaterno apellidoMaterno email _id')
     if (!fiestaDB) {
       return res.status(404).json({
         ok: false,
