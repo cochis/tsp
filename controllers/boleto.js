@@ -78,6 +78,28 @@ const crearBoleto = async (req, res = response) => {
     })
   }
 }
+//crearBoleto Boleto
+const dropBoletos = async (req, res = response) => {
+
+
+
+  try {
+
+    Boleto.deleteMany({})
+
+
+    res.json({
+      delete: true,
+
+    })
+  } catch (error) {
+    console.error('error', error)
+    res.status(500).json({
+      ok: false,
+      msg: 'Error inesperado...  revisar logs',
+    })
+  }
+}
 
 //actualizarBoleto Boleto
 const actualizarBoleto = async (req, res = response) => {
@@ -417,6 +439,9 @@ const setPushNotificationBoleto = async (req, res = response) => {
   }
 }
 
+
+
+
 module.exports = {
   getBoletos,
   crearBoleto,
@@ -431,6 +456,7 @@ module.exports = {
   setPushNotificationBoleto,
   isVista,
   setPushBoleto,
-  cambiarBoletos
+  cambiarBoletos,
+  dropBoletos
 
 }

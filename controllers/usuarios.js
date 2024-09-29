@@ -433,35 +433,25 @@ const crearUsuario = async (req, res = response) => {
 }
 const crearUsuarioSalon = async (req, res = response) => {
   const { email, password } = req.body
-  console.log('req.body::: ', req.body);
-
   if (req.body.paqueteActual == '') {
     req.body.paqueteActual = undefined
   }
   const uid = req.uid
-
-
   try {
     const existeEmail = await Usuario.findOne({ email })
     if (existeEmail) {
-
       if (!existeEmail.usuarioCreated.includes(uid)) {
         existeEmail.usuarioCreated.push(uid)
       }
       if (!existeEmail.salon.includes(req.body.salon)) {
         existeEmail.salon.push(req.body.salon)
       }
-
       await existeEmail.save()
       return res.json({
         ok: true,
         existeEmail
       })
-
     }
-
-
-
     const usuario = new Usuario({
       ...req.body
     })

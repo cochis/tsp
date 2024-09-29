@@ -18,7 +18,8 @@ const {
   getBoletosByEmail,
   setPushNotificationBoleto,
   isVista,
-  cambiarBoletos
+  cambiarBoletos,
+  dropBoletos
 } = require("../controllers/boleto");
 const { validarJWT } = require("../middlewares/validar-jwt");
 const router = Router();
@@ -29,6 +30,7 @@ router.get("/:uid", getBoletoById);
 router.get("/email/:email", validarJWT, getBoletosByEmail);
 router.get("/fiesta/:uid", getBoletoByFiesta);
 router.get("/confirma-fiesta/:uid", confirmaBoleto);
+router.delete("/delete-boletos", dropBoletos);
 router.post(
   "/",
 

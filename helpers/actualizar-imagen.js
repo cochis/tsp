@@ -101,6 +101,7 @@ const actualizarImagenTemplate = async (tipo, id, nombreArchivo, imgTemplate) =>
       if (!invitacion) {
         return false
       }
+
       switch (imgTemplate) {
         case 'mensajeImg':
           if (invitacion.data.mensajeImg !== '') {
@@ -160,6 +161,17 @@ const actualizarImagenTemplate = async (tipo, id, nombreArchivo, imgTemplate) =>
             borrarImagen(pathViejo)
           }
           invitacion.data.hospedajeImg = nombreArchivo
+
+          await invitacion.save()
+
+          return true
+          break;
+        case 'byFileInvitacion':
+          if (invitacion.data.byFileInvitacion !== '') {
+            pathViejo = `./uploads/invitaciones/${invitacion.data.byFileInvitacion}`
+            borrarImagen(pathViejo)
+          }
+          invitacion.data.byFileInvitacion = nombreArchivo
 
           await invitacion.save()
 

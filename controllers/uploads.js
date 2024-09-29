@@ -1,3 +1,5 @@
+
+
 const path = require('path')
 const fs = require('fs')
 const { response } = require('express')
@@ -79,6 +81,7 @@ const fileUploadTemplate = async (req, res = response) => {
     })
   }
   const file = await req.files.imagen
+  console.log('req.files::: ', req.files);
   const nombreCortado = file.name.split('.')
   const extensionArchivo = nombreCortado[nombreCortado.length - 1]
   const nombreArchivo = `${uuidv4()}.${extensionArchivo}`
