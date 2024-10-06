@@ -21,6 +21,7 @@ const routes = [
   '/core/about',
   '/core/contact',
   '/core/pricing',
+  '/core/examples',
   '/core/mis-fiestas',
   '/core/info-fiesta',
   '/core/galeria',
