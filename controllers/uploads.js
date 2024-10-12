@@ -61,9 +61,9 @@ const fileUpload = async (req, res = response) => {
 }
 const fileUploadTemplate = async (req, res = response) => {
   const tipo = req.params.tipo
+
   const id = req.params.id
   const imgTemplate = req.params.imgTemplate
-
   const tiposValidos = [
     'invitaciones'
   ]
@@ -81,7 +81,6 @@ const fileUploadTemplate = async (req, res = response) => {
     })
   }
   const file = await req.files.imagen
-  console.log('req.files::: ', req.files);
   const nombreCortado = file.name.split('.')
   const extensionArchivo = nombreCortado[nombreCortado.length - 1]
   const nombreArchivo = `${uuidv4()}.${extensionArchivo}`
@@ -110,17 +109,7 @@ const fileUploadTemplate = async (req, res = response) => {
 }
 const fileUploadGaleria = async (req, res = response) => {
   const fiesta = req.params.fiesta
-  // console.log('fiesta::: ', fiesta);
   const boleto = req.params.boleto
-  // console.log('boleto::: ', boleto);
-  // console.log('req.body::: ', req.body);
-
-  /* 
-    return await res.status(200).json({
-      ok: true,
-      msg: 'Archivo subido',
-  
-    }) */
   //validar si existe un archivo
   if (!req.files || Object.keys(req.files).length === 0) {
     return res.status(400).json({
@@ -205,17 +194,8 @@ const deleteGaleria = async (req, res = response) => {
 }
 const deleteAllGaleria = async (req, res = response) => {
   const fiesta = req.params.fiesta
-  // console.log('fiesta::: ', fiesta);
-  const boleto = req.params.boleto
-  // console.log('boleto::: ', boleto);
-  // console.log('req.body::: ', req.body);
 
-  /* 
-    return await res.status(200).json({
-      ok: true,
-      msg: 'Archivo subido',
-  
-    }) */
+  const boleto = req.params.boleto
   //validar si existe un archivo
   if (!req.files || Object.keys(req.files).length === 0) {
     return res.status(400).json({

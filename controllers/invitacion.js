@@ -261,10 +261,20 @@ const getInvitacionByFiesta = async (req, res = response) => {
         msg: 'No exite un invitacion',
       })
     }
-    res.json({
-      ok: true,
-      invitacion: invitacionDB[0],
-    })
+
+    if (invitacionDB[0]) {
+
+      res.json({
+        ok: true,
+        invitacion: invitacionDB[0],
+      })
+    } else {
+      res.json({
+        ok: true,
+        invitacion: null,
+      })
+
+    }
   } catch (error) {
     res.status(500).json({
       ok: false,

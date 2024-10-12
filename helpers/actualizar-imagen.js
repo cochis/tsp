@@ -7,13 +7,19 @@ const Invitacion = require('../models/invitacion')
 const Paquete = require('../models/paquete')
 
 const borrarImagen = (path) => {
-  // console.log('path::: ', path);
 
-  if (fs.existsSync(path)) {
-    // console.log('borro');
-    fs.unlinkSync(path)
-  } else {
-    // console.log('no borro');
+  try {
+
+    if (fs.existsSync(path)) {
+      console.info('borro');
+      fs.unlinkSync(path)
+
+    } else {
+      console.info('no borro');
+
+    }
+  } catch (error) {
+    console.error('error::: ', error);
 
   }
 }
@@ -94,10 +100,12 @@ const actualizarImagen = async (tipo, id, nombreArchivo) => {
   }
 }
 const actualizarImagenTemplate = async (tipo, id, nombreArchivo, imgTemplate) => {
+
   let pathViejo = ''
   switch (tipo) {
     case 'invitaciones':
       var invitacion = await Invitacion.findOne({ fiesta: id })
+
       if (!invitacion) {
         return false
       }
@@ -161,6 +169,17 @@ const actualizarImagenTemplate = async (tipo, id, nombreArchivo, imgTemplate) =>
             borrarImagen(pathViejo)
           }
           invitacion.data.hospedajeImg = nombreArchivo
+
+          await invitacion.save()
+
+          return true
+          break;
+        case 'mesaRegalosImg':
+          if (invitacion.data.mesaRegalosImg !== '') {
+            pathViejo = `./uploads/invitaciones/${invitacion.data.mesaRegalosImg}`
+            borrarImagen(pathViejo)
+          }
+          invitacion.data.mesaRegalosImg = nombreArchivo
 
           await invitacion.save()
 
