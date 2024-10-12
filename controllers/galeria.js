@@ -91,7 +91,7 @@ const downloadGaleriasFiesta = async (req, res = response) => {
     url = 'https://tickets.cochisweb.com/api/upload/zips/'
 
   }
-  // console.log('url::: ', url);
+
   const galerias = await Galeria.find({ fiesta: fiesta, activated: true })
   const JSZip = require('jszip');
   const fs = require('fs');
