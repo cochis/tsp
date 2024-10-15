@@ -25,7 +25,7 @@ db.tipoeventos.drop()
 db.tipogrupos.drop()
 db.usuarios.deleteMany( { role: ObjectId("650373d9db5868019b55ebd3") } )
 db.usuarios.deleteMany( { role: ObjectId("650373d9db5868019b55ebd4") } )
-db.usuarios.deleteMany( { role: ObjectId("650373d9db5868019b55ebd2") } )
+db.boletos.deleteMany( { fiesta: ObjectId("670ace12e52f97e35908191c") } )
 
 db.roles.insertMany([{ "nombre": "ADMIN", "clave": "ADMROL", "usuarioCreated": "655174f0ae51b4c12e8d9f6d", "activated": true, "dateCreated": 1694453393809, "lastEdited": 1694457953313 }, { "nombre": "USUARIO", "clave": "USRROL", "usuarioCreated": "655174f0ae51b4c12e8d9f6d", "activated": true, "dateCreated": 1694453393809, "lastEdited": 1694457953313 }, { "nombre": "SALON", "clave": "SLNROL", "usuarioCreated": "655174f0ae51b4c12e8d9f6d", "activated": true, "dateCreated": 1694453393809, "lastEdited": 1694457953313 }, { "nombre": "ANFITRION", "clave": "ANFROL", "usuarioCreated": "655174f0ae51b4c12e8d9f6d", "activated": true, "dateCreated": 1694453393809, "lastEdited": 1694457953313 }, { "nombre": "CHECADOR", "clave": "CHCROL", "usuarioCreated": "655174f0ae51b4c12e8d9f6d", "activated": true, "dateCreated": 1694453393809, "lastEdited": 1694457953313 }])
 //update fiestas
