@@ -24,6 +24,7 @@ db.tickets.drop()
 db.tipoeventos.drop()
 db.tipogrupos.drop()
 db.usuarios.deleteMany( { role: ObjectId("650373d9db5868019b55ebd3") } )
+db.boletos.deleteMany( { id: ObjectId("650373d9db5868019b55ebd3") } )
 db.usuarios.deleteMany( { role: ObjectId("650373d9db5868019b55ebd4") } )
 db.boletos.deleteMany( { fiesta: ObjectId("670ace12e52f97e35908191c") } )
 
@@ -71,7 +72,7 @@ db.fiestas.find({salon:"65598dfa2c028fe992b4e9e4"})
 
 db.boletos.deleteMany({  fiesta: ObjectId("669a901eeadfce23d2a02163")})
 
-
+db.boletos.deleteMany({ uid: ObjectId("66c180d880109b8790114e06") });
 ////////Borrar usuario 
  db.boletos.deleteMany({ usuarioCreated: ObjectId("66c180d880109b8790114e06") });
     db.fiestas.deleteMany({ usuarioCreated:ObjectId("66c180d880109b8790114e06") });
