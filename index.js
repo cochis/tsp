@@ -65,6 +65,7 @@ const routes = [
   '/core/check-in',
   '/core/invitaciones/xv/xv2',
   '/core/templates/default',
+  '/core/examples',
   '/auth/login',
   '/auth/register',
 
