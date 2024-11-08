@@ -47,6 +47,10 @@ const BoletoSchema = Schema({
     type: Number,
     default: 0
   },
+  requeridos: {
+    type: Number
+    
+  },
   dateCreated: {
     type: Number,
     required: true,
