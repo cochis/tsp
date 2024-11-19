@@ -103,6 +103,20 @@ const FiestaSchema = Schema({
     type: Boolean,
     default: false,
   },
+  example: {
+    type: Boolean,
+    default: false,
+  },
+  img: {
+    type: String,
+    default: '',
+
+  },
+  croquis: {
+    type: String,
+    default: 'fiesta-default.jpg',
+
+  },
   usuarioCreated: {
     type: Schema.Types.ObjectId,
     ref: "Usuario",

@@ -205,8 +205,69 @@ const actualizarImagenTemplate = async (tipo, id, nombreArchivo, imgTemplate) =>
       break
   }
 }
+const actualizarImagenFiesta = async (tipo, id, nombreArchivo, type) => {
+  console.log('type', type)
+  console.log('nombreArchivo', nombreArchivo)
+  console.log('id', id)
+  console.log('tipo', tipo)
+
+  let pathViejo = ''
+  switch (tipo) {
+    case 'fiestas':
+      var fiesta = await Fiesta.findById(id)
+      console.log('fiesta', fiesta)
+
+      if (!fiesta) {
+        return false
+      }
+
+      console.log('type', type)
+      switch (type) {
+        case 'img':
+          if (fiesta.img !== '') {
+            pathViejo = `./uploads/fiestas/${fiesta.img}`
+            borrarImagen(pathViejo)
+          }
+          fiesta.img = nombreArchivo
+
+          await fiesta.save()
+
+          return true
+          break;
+        case 'croquis':
+          if (fiesta.croquis !== '') {
+            pathViejo = `./uploads/fiestas/${fiesta.croquis}`
+            borrarImagen(pathViejo)
+          }
+          fiesta.croquis = nombreArchivo
+
+          await fiesta.save()
+
+          return true
+          break;
+
+          if (invitacion.data.byFileInvitacion !== '') {
+            pathViejo = `./uploads/invitaciones/${invitacion.data.byFileInvitacion}`
+            borrarImagen(pathViejo)
+          }
+          invitacion.data.byFileInvitacion = nombreArchivo
+
+          await invitacion.save()
+
+          return true
+          break;
+
+        default:
+          break;
+      }
+
+    default:
+      break
+  }
+}
 
 module.exports = {
   actualizarImagen,
-  actualizarImagenTemplate
+  actualizarImagenTemplate,
+  actualizarImagenFiesta
 }

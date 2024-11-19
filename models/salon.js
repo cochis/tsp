@@ -68,6 +68,11 @@ const SalonSchema = Schema({
     type: String,
 
   },
+  img: {
+    type: String,
+    default: 'fiesta-default.jpg',
+
+  },
   usuarioCreated: {
     type: Schema.Types.ObjectId,
     ref: "Usuario",
