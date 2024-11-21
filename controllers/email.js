@@ -8,7 +8,6 @@ const { transporter } = require('../helpers/mailer')
 const sendMail = async (req, res) => {
 
   const { fiesta, to, sender, boleto, text_url } = req.body
-  // console.log('req.body sendMail::: ', req.body);
   const fiestaDB = await Fiesta.findById(fiesta)
   const boletoDB = await Boleto.findById(boleto)
 
@@ -31,7 +30,7 @@ const sendMail = async (req, res) => {
   }
 
   var link = ''
-  // console.log('fiestaDB::: ', fiestaDB);
+ 
   if (fiestaDB.invitacion == 'default') {
 
     link = `${text_url}core/templates/${fiestaDB.invitacion}/${fiestaDB._id}/${boletoDB._id}`
@@ -485,7 +484,7 @@ const sendMail = async (req, res) => {
 const reSendMail = async (req, res) => {
 
   const { fiesta, to, sender, boleto, text_url } = req.body
-  // console.log(' req.body reSendMail::: ', req.body);
+ 
   const fiestaDB = await Fiesta.findById(fiesta)
 
   const boletoDB = await Boleto.findById(boleto)
@@ -948,7 +947,7 @@ const reSendMail = async (req, res) => {
 const sendMailByBoleto = async (req, res) => {
 
   const boleto = req.body
-  // console.log('req.body sendMailByBoleto::: ', req.body);
+ 
 
   const text_url = boleto.text_url
 

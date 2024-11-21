@@ -136,7 +136,7 @@ const downloadGaleriasFiesta = async (req, res = response) => {
   /* 
     var zp = []
     galerias.forEach(gal => {
-       // console.log('gal::: ', gal);
+ );
       let file;
       file = img.file('http://localhost:3008/api/upload/galerias/' + gal.img, imgData, { base64: true });
   

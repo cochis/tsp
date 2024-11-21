@@ -11,11 +11,11 @@ const borrarImagen = (path) => {
   try {
 
     if (fs.existsSync(path)) {
-      console.info('borro');
+     
       fs.unlinkSync(path)
 
     } else {
-      console.info('no borro');
+      
 
     }
   } catch (error) {
@@ -206,22 +206,13 @@ const actualizarImagenTemplate = async (tipo, id, nombreArchivo, imgTemplate) =>
   }
 }
 const actualizarImagenFiesta = async (tipo, id, nombreArchivo, type) => {
-  console.log('type', type)
-  console.log('nombreArchivo', nombreArchivo)
-  console.log('id', id)
-  console.log('tipo', tipo)
-
   let pathViejo = ''
   switch (tipo) {
     case 'fiestas':
       var fiesta = await Fiesta.findById(id)
-      console.log('fiesta', fiesta)
-
       if (!fiesta) {
         return false
       }
-
-      console.log('type', type)
       switch (type) {
         case 'img':
           if (fiesta.img !== '') {

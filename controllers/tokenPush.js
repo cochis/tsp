@@ -281,9 +281,6 @@ const enviarNotificacionToUser = async (req, res = response) => {
       vapidKey.privateKey
     );
 
-
-    // console.log('usuarioDB.pushNotification::: ', usuarioDB.pushNotification);
-
     var ressPush = []
     var ressError = []
     if (usuarioDB.pushNotification.length > 0) {
@@ -377,10 +374,6 @@ const enviarNotificacionToBoleto = async (req, res = response) => {
           expirationTime: null,
           keys: pushDB.keys
         }
-
-        // console.log('webpush', webpush.setVapidDetails)
-        // console.log('ps', ps)
-        // console.log('payload', payload)
         webpush.sendNotification(ps, JSON.stringify(payload)).then(resPush => {
 
 

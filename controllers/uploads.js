@@ -109,14 +109,8 @@ const fileUploadTemplate = async (req, res = response) => {
 }
 const fileUploadFiestas = async (req, res = response) => {
   const type = req.params.type
-  console.log('type', type)
-
   const id = req.params.id
-  console.log('id', id)
-
-
   //validar si existe un archivo
-  console.log('req.files', req.files)
   if (!req.files || Object.keys(req.files).length === 0) {
     return res.status(400).json({
       ok: false,
