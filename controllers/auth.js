@@ -8,7 +8,7 @@ const { transporter } = require('../helpers/mailer')
 const login = async (req, res = response) => {
   const { email, password } = req.body
   try {
-    // Verificar email
+    // Verificar     email
     const usuarioDB = await Usuario.findOne({ email })
 
     if (!usuarioDB) {
