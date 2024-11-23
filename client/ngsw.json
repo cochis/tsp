@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1732401431379,
+  "timestamp": 1732402264043,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.20206c03f0b894cc.js",
+        "/main.f5cb0197780c219d.js",
         "/manifest.webmanifest",
         "/polyfills.0a14238993673413.js",
         "/runtime.8f33b8458085c89f.js",
@@ -89,6 +89,7 @@
         "/assets/images/example/example_dinamica.png",
         "/assets/images/example/galeria.png",
         "/assets/images/faq_graphic.jpg",
+        "/assets/images/faqs/actualizacion.png",
         "/assets/images/faqs/archivo.png",
         "/assets/images/faqs/archivo_invitados.png",
         "/assets/images/faqs/boleto_individual.png",
@@ -237,6 +238,7 @@
     "/assets/images/example/example_dinamica.png": "3f652c927c285b02467be3a91bfff6e9c1d8bb93",
     "/assets/images/example/galeria.png": "fa3fceb2cafca1c669ffe8d4e70073dabfc67d5e",
     "/assets/images/faq_graphic.jpg": "07e50f3aa9b810d96f734d7629def2a279a0a3b2",
+    "/assets/images/faqs/actualizacion.png": "3641893a71772f1597236af31bc44474bb0f5ace",
     "/assets/images/faqs/archivo.png": "fda6132e5b4ae7be0aa6e057d94c92c84f3c07eb",
     "/assets/images/faqs/archivo_invitados.png": "0382a7cae242e2f3d4ffa500e934ba8f72fd8c54",
     "/assets/images/faqs/boleto_individual.png": "d52ebf2f3f3636af872b1016583dbc2dd77e468a",
@@ -321,8 +323,8 @@
     "/assets/js/jquery.sticky.js": "7fd0ecfd2534f00a8a97f8db64fc9ece30303863",
     "/favicon.ico": "406cd1a4f1dfae8dc91cbc20c60996913a826cdc",
     "/fiesta.8de27df8aa39d37a.jpeg": "5fc75c8f4a993818546a99d6ffb7e8d8ad95d3f3",
-    "/index.html": "444dd333959e6c332f42c1d73824c4a7bf6c6386",
-    "/main.20206c03f0b894cc.js": "c08106b8c4fb4c3a0cb46461f5f47115c77ac335",
+    "/index.html": "42c783de5409a5f5bc338f5fdc9bc53c8939f093",
+    "/main.f5cb0197780c219d.js": "3fc984bad32896e525648aca0f03ab76ccaa2bcd",
     "/manifest.webmanifest": "f3ee09a9f3b96c8dbc496fb3ae8595a14ab22bd1",
     "/polyfills.0a14238993673413.js": "e8e41c297a3fb24560fa851e08d4e483cac81e10",
     "/runtime.8f33b8458085c89f.js": "7561a8f72dd5c989426d3c2f453504c5ee27f44a",
