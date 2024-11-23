@@ -133,7 +133,7 @@ const fileUploadFiestas = async (req, res = response) => {
     await actualizarImagenFiesta('fiestas', id, nombreArchivo, type)
     return await res.status(200).json({
       ok: true,
-      msg: 'Archivo subido',
+      msg: 'Archivo  subido',
       nombreArchivo,
     })
   })
