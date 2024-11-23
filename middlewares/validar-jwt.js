@@ -40,7 +40,7 @@ const validarAdminJWT = (req, res, next) => {
     ) {
       return res.status(203).json({
         ok: false,
-        msg: 'Usuario no autorizado ADM',
+        msg: 'Usuario no   autorizado ADM',
       })
     }
     req.uid = usuario.uid
