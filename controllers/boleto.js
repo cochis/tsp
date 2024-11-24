@@ -150,7 +150,7 @@ const setPushBoleto = async (req, res = response) => {
   try {
     const boletoDB = await Boleto.findById(uid)
     const fiestaDB = await Fiesta.findById(boletoDB.fiesta)
-    const usuario = await Fiesta.findById(fiestaDB.usuarioCreated)
+    const usuarioDB = await Usuario.findById(fiestaDB.usuarioCreated)
     if (!boletoDB) {
       return res.status(404).json({
         ok: false,
@@ -181,7 +181,9 @@ const setPushBoleto = async (req, res = response) => {
 const registrarAsistencia = async (req, res = response) => {
   //Validar token y comporbar si es el sboleto
   const uid = req.params.id
-
+  const boletoDB = await Boleto.findById(uid)
+  const fiestaDB = await Fiesta.findById(boletoDB.fiesta)
+  const usuarioDB = await Usuario.findById(fiestaDB.usuarioCreated)
   try {
     const boletoDB = await Boleto.findById(uid)
     if (!boletoDB) {
@@ -197,7 +199,7 @@ const registrarAsistencia = async (req, res = response) => {
     })
     await transporter.sendMail({
       from: '"Confirmación" <info@cochisweb.com> ', // sender address
-      to: usuario.email, // list of receivers
+      to: usuarioDB.email, // list of receivers
       subject: `✉ Confirmación de boleto `, // Subject line
       html: `<!DOCTYPE HTML
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
