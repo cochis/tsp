@@ -184,6 +184,7 @@ const registrarAsistencia = async (req, res = response) => {
   const boletoDB = await Boleto.findById(uid)
   const fiestaDB = await Fiesta.findById(boletoDB.fiesta)
   const usuarioDB = await Usuario.findById(fiestaDB.usuarioCreated)
+  console.log('usuarioDB::: ', usuarioDB);
   try {
     const boletoDB = await Boleto.findById(uid)
     if (!boletoDB) {
