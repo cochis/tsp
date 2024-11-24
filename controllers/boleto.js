@@ -149,8 +149,7 @@ const setPushBoleto = async (req, res = response) => {
 
   try {
     const boletoDB = await Boleto.findById(uid)
-    const fiestaDB = await Fiesta.findById(boletoDB.fiesta)
-    const usuarioDB = await Usuario.findById(fiestaDB.usuarioCreated)
+
     if (!boletoDB) {
       return res.status(404).json({
         ok: false,
@@ -183,7 +182,7 @@ const registrarAsistencia = async (req, res = response) => {
   const uid = req.params.id
   const boletoDB = await Boleto.findById(uid)
   const fiestaDB = await Fiesta.findById(boletoDB.fiesta)
-  const usuarioDB = await Usuario.findById(fiestaDB.usuarioCreated)
+  const usuarioDB = await Usuario.findById(fiestaDB.usuarioFiesta)
 
   try {
     const boletoDB = await Boleto.findById(uid)
