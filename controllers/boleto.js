@@ -451,7 +451,7 @@ const registrarAsistencia = async (req, res = response) => {
       
       
       `
-    console.log('msn::: ', msn);
+
     await transporter.sendMail({
       from: '"Confirmación" <info@cochisweb.com> ', // sender address
       to: usuarioDB.email, // list of receivers
