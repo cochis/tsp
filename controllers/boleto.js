@@ -198,6 +198,7 @@ const registrarAsistencia = async (req, res = response) => {
     const boletoActualizado = await Boleto.findByIdAndUpdate(uid, campos, {
       new: true,
     })
+    console.log('boletoActualizado::: ', boletoActualizado);
     await transporter.sendMail({
       from: '"Confirmación" <info@cochisweb.com> ', // sender address
       to: usuarioDB.email, // list of receivers
@@ -361,7 +362,7 @@ const registrarAsistencia = async (req, res = response) => {
                                                                                             <strong
                                                                                                 style="color:#13547a"> ${boletoActualizado.nombreGrupo.toUpperCase()}
                                                                                             </strong>
-                                                                                            <b style="color:#363675">`+ (boletoActualizado.confirmado) ? 'confirmo su invitación.' : 'a quitado su confirmación' + `
+                                                                                            <b style="color:#363675">` + (boletoActualizado.confirmado) ? 'confirmo su invitación.' : 'a quitado su confirmación' + `
                                                                                             </b >
                                                                                         </span ></strong ></span >
                                                                             </p >
