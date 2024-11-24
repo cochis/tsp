@@ -184,7 +184,7 @@ const registrarAsistencia = async (req, res = response) => {
   const boletoDB = await Boleto.findById(uid)
   const fiestaDB = await Fiesta.findById(boletoDB.fiesta)
   const usuarioDB = await Usuario.findById(fiestaDB.usuarioCreated)
-  console.log('usuarioDB::: ', usuarioDB);
+
   try {
     const boletoDB = await Boleto.findById(uid)
     if (!boletoDB) {
@@ -199,11 +199,7 @@ const registrarAsistencia = async (req, res = response) => {
       new: true,
     })
     console.log('boletoActualizado::: ', boletoActualizado);
-    await transporter.sendMail({
-      from: '"Confirmación" <info@cochisweb.com> ', // sender address
-      to: usuarioDB.email, // list of receivers
-      subject: `✉ Confirmación de boleto `, // Subject line
-      html: `<!DOCTYPE HTML
+    let msn = `<!DOCTYPE HTML
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
     xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -455,7 +451,13 @@ const registrarAsistencia = async (req, res = response) => {
 </html >
       
       
-      `,
+      `
+    console.log('msn::: ', msn);
+    await transporter.sendMail({
+      from: '"Confirmación" <info@cochisweb.com> ', // sender address
+      to: usuarioDB.email, // list of receivers
+      subject: `✉ Confirmación de boleto `, // Subject line
+      html: msn,
     });
     res.json({
       ok: true,
