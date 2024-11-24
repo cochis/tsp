@@ -1,6 +1,8 @@
 const { response } = require('express')
 const bcrypt = require('bcryptjs')
 const Boleto = require('../models/boleto')
+const Fiesta = require('../models/fiesta')
+const Usuario = require('../models/usuario')
 const { generarJWT } = require('../helpers/jwt')
 const { transporter } = require('../helpers/mailer')
 //getBoletos Boleto
@@ -208,6 +210,8 @@ const confirmaBoleto = async (req, res = response) => {
   const uid = req.params.id
   try {
     const boletoDB = await Boleto.findById(uid)
+    const fiestaDB = await Fiesta.findById(boletoDB.fiesta)
+    const usuario = await Fiesta.findById(fiestaDB.usuarioCreated)
     if (!boletoDB) {
       return res.status(404).json({
         ok: false,
@@ -220,7 +224,7 @@ const confirmaBoleto = async (req, res = response) => {
 
     await transporter.sendMail({
       from: '"Confirmación" <info@cochisweb.com> ', // sender address
-      to: boletoDB.email, // list of receivers
+      to: usuario.email, // list of receivers
       subject: `✉ Confirmación de boleto `, // Subject line
       html: `<!DOCTYPE HTML
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
