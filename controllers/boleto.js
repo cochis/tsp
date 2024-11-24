@@ -388,13 +388,11 @@ const registrarAsistencia = async (req, res = response) => {
                                                     </tr>
                                                 </tbody>
                                             </table>
-
-                                            <!--[if (!mso)& (!IE)]>< !-->
-                                        </div >< !--< ![endif]-- >
+ 
+                                        </div >
                                     </div >
                                 </div >
-                                < !--[if (mso)| (IE)]></td >< ![endif]-- >
-                                < !--[if (mso)| (IE)]></tr ></table ></td ></tr ></table >< ![endif]-- >
+                               
                             </div >
                         </div >
                     </div >
