@@ -25,6 +25,16 @@ const getUsuarios = async (req, res) => {
     total,
   })
 }
+const getCantUsuarios = async (req, res) => {
+  const [total] = await Promise.all([
+    Usuario.countDocuments(),
+  ])
+  res.json({
+    ok: true,
+    uid: req.uid,
+    total,
+  })
+}
 const getAllUsuarios = async (req, res) => {
   const [usuarios, total] = await Promise.all([
     Usuario.find({})
@@ -664,6 +674,33 @@ const getUsuarioByCreador = async (req, res = response) => {
     })
   }
 }
+const getUsuarioByClaveColaborador = async (req, res = response) => {
+  const clave = req.params.clave
+
+  try {
+    const usuarioDB = await Usuario.find({ claveColaborador: clave })
+      .populate('usuarioCreated', 'nombre apellidoPaterno apellidoMaterno email _id')
+      .populate('role', 'nombre clave _id')
+      .populate('tipoCentro', 'nombre clave _id')
+
+
+    if (!usuarioDB) {
+      return res.status(404).json({
+        ok: false,
+        msg: 'No exite un usuario',
+      })
+    }
+    res.json({
+      ok: true,
+      usuarios: usuarioDB,
+    })
+  } catch (error) {
+    res.status(500).json({
+      ok: false,
+      msg: 'Error inesperado',
+    })
+  }
+}
 const getUsuarioByCreatedUid = async (req, res = response) => {
   const user = req.params.user
 
@@ -789,8 +826,10 @@ module.exports = {
   getAllUsuarios,
   actualizarPassUsuario,
   getUsuarioByCreatedUid,
+  getUsuarioByClaveColaborador,
   getUsuarioByEmail,
   getUsuarioByCreador,
-  deleteUsersOfUser
+  deleteUsersOfUser,
+  getCantUsuarios
 
 }

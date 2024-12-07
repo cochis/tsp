@@ -12,18 +12,22 @@ const {
   isActive,
   getUsuarioById,
   getAllUsuarios,
+  getCantUsuarios,
   actualizarPassUsuario,
   getUsuarioByCreatedUid,
   crearUsuarioSalon,
   getUsuarioByEmail,
   getUsuarioByCreador,
-  deleteUsersOfUser
+  deleteUsersOfUser,
+  getUsuarioByClaveColaborador
 } = require("../controllers/usuarios");
 const { validarJWT, validarAdminJWT } = require("../middlewares/validar-jwt");
 const router = Router();
 
 router.get("/", validarJWT, getUsuarios);
 router.get("/all", validarJWT, getAllUsuarios);
+router.get("/cantidad", validarJWT, getCantUsuarios);
+router.get("/claveColaborador/:clave", validarJWT, getUsuarioByClaveColaborador);
 router.get("/:uid", validarJWT, getUsuarioById);
 router.post(
   "/",
