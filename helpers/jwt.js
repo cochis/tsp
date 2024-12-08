@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken')
 
 const generarJWT = (usuario) => {
+  usuario.compras = undefined
   return new Promise((resolve, reject) => {
     const payload = {
       usuario,

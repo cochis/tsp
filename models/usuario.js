@@ -58,9 +58,6 @@ const UsuarioSchema = Schema({
     default: 0,
 
   },
-  claveColaborador: {
-    type: String,
-  },
   compras: [{
     type: Object
 
