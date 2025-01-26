@@ -54,6 +54,10 @@ const routes = [
   '/core/eventos/vista-eventos',
   '/core/eventos/editar-evento',
   '/core/eventos/crear-evento',
+  '/core/ejemplos',
+  '/core/ejemplos/vista-ejemplos',
+  '/core/ejemplos/editar-ejemplo',
+  '/core/ejemplos/crear-ejemplo',
   '/core/tipo-cantidad',
   '/core/tipo-cantidad/vista-paquetes',
   '/core/tipo-cantidad/editar-tipo-cantidad',
@@ -95,6 +99,7 @@ app.use('/api/pushes', require('./routes/push'))
 app.use('/api/contactos', require('./routes/contacto'))
 app.use('/api/login', require('./routes/auth'))
 app.use('/api/eventos', require('./routes/evento'))
+app.use('/api/ejemplos', require('./routes/ejemplo'))
 app.use('/api/parametros', require('./routes/parametro'))
 app.use('/api/compras', require('./routes/compra'))
 app.use('/api/status-compras', require('./routes/statusCompra'))
