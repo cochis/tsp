@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1737879729939,
+  "timestamp": 1737948114627,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -189,7 +189,7 @@
     "/assets/css/bootstrap-icons.css": "1ce683e78b48dfd6a85e2b4314d85c9a52388f25",
     "/assets/css/bootstrap.min.css": "7abed070e37ce060c0a561575f1d41a7f248fc74",
     "/assets/css/fontello.css": "36d16d0317c30729a96d0fca029d1c55db96bf5d",
-    "/assets/css/templatemo-topic-listing.css": "5cab401ab8cb8c69b08895c502ad11d59d32b707",
+    "/assets/css/templatemo-topic-listing.css": "86c41e65a29c19fdd4ed2dc2e3a655ef3bee12ff",
     "/assets/download/invitados.xlsx": "a402dc874f2c648977d6d3739f935755d88ec86c",
     "/assets/examples/envio_mail.png": "27654aeb84c8988baa0935f8e5a92afecf16c9ca",
     "/assets/examples/envio_push.jpeg": "bf229671a03e86bb6f39ca09acff1e87055d7095",
