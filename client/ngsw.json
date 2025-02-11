@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1737948114627,
+  "timestamp": 1739249349466,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,12 +13,12 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.9f77054b3487913a.js",
+        "/main.3b40d8c751bd91ed.js",
         "/manifest.webmanifest",
         "/polyfills.0a14238993673413.js",
         "/runtime.8f33b8458085c89f.js",
         "/scripts.3a384ad5c5dd731b.js",
-        "/styles.96ee62bac9ffe31c.css"
+        "/styles.4a0c815edcb64a50.css"
       ],
       "patterns": []
     },
@@ -53,6 +53,7 @@
         "/assets/font/fontello.woff2",
         "/assets/fonts/bootstrap-icons.woff",
         "/assets/fonts/bootstrap-icons.woff2",
+        "/assets/icons/banner.jpg",
         "/assets/icons/birthday.png",
         "/assets/icons/checkin.png",
         "/assets/icons/crear-evento.png",
@@ -60,6 +61,12 @@
         "/assets/icons/evento-checking.png",
         "/assets/icons/evento.png",
         "/assets/icons/facebook-icon.png",
+        "/assets/icons/flores1.jpeg",
+        "/assets/icons/flores1.png",
+        "/assets/icons/flores2.jpeg",
+        "/assets/icons/flores3.jpeg",
+        "/assets/icons/flores4.jpeg",
+        "/assets/icons/flores5.jpeg",
         "/assets/icons/galeria.png",
         "/assets/icons/galeriai.png",
         "/assets/icons/grupos.png",
@@ -118,6 +125,8 @@
         "/assets/images/link-ubicacion.png",
         "/assets/images/loading.gif",
         "/assets/images/logo.png",
+        "/assets/images/media.png",
+        "/assets/images/media.webp",
         "/assets/images/musica.avif",
         "/assets/images/musica.png",
         "/assets/images/qr.jpeg",
@@ -189,7 +198,7 @@
     "/assets/css/bootstrap-icons.css": "1ce683e78b48dfd6a85e2b4314d85c9a52388f25",
     "/assets/css/bootstrap.min.css": "7abed070e37ce060c0a561575f1d41a7f248fc74",
     "/assets/css/fontello.css": "36d16d0317c30729a96d0fca029d1c55db96bf5d",
-    "/assets/css/templatemo-topic-listing.css": "86c41e65a29c19fdd4ed2dc2e3a655ef3bee12ff",
+    "/assets/css/templatemo-topic-listing.css": "d4e2416b01a745351be5dcb061fbe3c38691907d",
     "/assets/download/invitados.xlsx": "a402dc874f2c648977d6d3739f935755d88ec86c",
     "/assets/examples/envio_mail.png": "27654aeb84c8988baa0935f8e5a92afecf16c9ca",
     "/assets/examples/envio_push.jpeg": "bf229671a03e86bb6f39ca09acff1e87055d7095",
@@ -207,6 +216,7 @@
     "/assets/font/fontello.woff2": "6fa0536e98caf6ac3e85d32141580c20f395ae71",
     "/assets/fonts/bootstrap-icons.woff": "a77e6a2f335f3fcb4f2930794907c88ed7de7ca1",
     "/assets/fonts/bootstrap-icons.woff2": "3a284b0618771f29da8eb6be900e99439253dce0",
+    "/assets/icons/banner.jpg": "91f3f34bd299fc16da2e9249597c6785239be8d2",
     "/assets/icons/birthday.png": "444cae41d77e8e5dbc516ca4b6506c0dfd1b3ce1",
     "/assets/icons/checkin.png": "5c4ba735805be3fe0ea5a4f103b8a87716f94d22",
     "/assets/icons/crear-evento.png": "47f05e62932e8ff13f2844dcb851d34693f27784",
@@ -214,6 +224,12 @@
     "/assets/icons/evento-checking.png": "97b65b046e9fc9188375f4de2a90cde99c2c7b6e",
     "/assets/icons/evento.png": "ab57ab13dff0e96141de8f71dc4935ad4e575412",
     "/assets/icons/facebook-icon.png": "c67e0ffd99287cd7ffd4961f94b5d3e25789f9e2",
+    "/assets/icons/flores1.jpeg": "6599e800dbc1fdc6e43fb400b478f22ea87783ee",
+    "/assets/icons/flores1.png": "543f8328bae2878ad45e24adb9d64bc937d8985e",
+    "/assets/icons/flores2.jpeg": "77e2cc92abb816b0258dff5169b45ea6f035d107",
+    "/assets/icons/flores3.jpeg": "c266b213b668cc8646532bb7742792f2bf063f28",
+    "/assets/icons/flores4.jpeg": "fe0375c7d86068fd9c6e075acdb9d45462319872",
+    "/assets/icons/flores5.jpeg": "6406701ff8936ee13eb4a284cef8f621e199ac95",
     "/assets/icons/galeria.png": "75a3f14dcb91f5f462d0914921753a739473102f",
     "/assets/icons/galeriai.png": "d8076cfd0443eb64e13a5055b4f6ea8ba4c6324e",
     "/assets/icons/grupos.png": "db2564648d6bab89b9585298a2765d999e5afb3e",
@@ -272,6 +288,8 @@
     "/assets/images/link-ubicacion.png": "e8f501e2ca14257af7945f9763516e0a789569b8",
     "/assets/images/loading.gif": "c6bbb0c42808f8200c8c472750b4d68b32dd4079",
     "/assets/images/logo.png": "4d9d522e490cddbd739f00b744503a9d00fbb71b",
+    "/assets/images/media.png": "f4d559c443787a4302f7d723c8ba853dafac60e5",
+    "/assets/images/media.webp": "b53b798cc8bb72f1333011438311e99469aed557",
     "/assets/images/musica.avif": "1139f42090285a80bfc6a2a57fe3e6994a33d778",
     "/assets/images/musica.png": "35b75cc03d0582360e1d3caaf9216f8b0893a153",
     "/assets/images/qr.jpeg": "44f7232bdae4bc2a2f773eb5adf2f37338aab325",
@@ -333,13 +351,13 @@
     "/assets/js/jquery.sticky.js": "7fd0ecfd2534f00a8a97f8db64fc9ece30303863",
     "/favicon.ico": "406cd1a4f1dfae8dc91cbc20c60996913a826cdc",
     "/fiesta.8de27df8aa39d37a.jpeg": "5fc75c8f4a993818546a99d6ffb7e8d8ad95d3f3",
-    "/index.html": "8023cf2eff87a6a3cd1616bd6dfce84f5971875e",
-    "/main.9f77054b3487913a.js": "f38a07f1f0ae3f1cdae465cd49573af548efa9f3",
+    "/index.html": "dfbd86b3e8136529719e3269607a23273080e7be",
+    "/main.3b40d8c751bd91ed.js": "160b09048ea745419fc2051adc54ee033de290e4",
     "/manifest.webmanifest": "f3ee09a9f3b96c8dbc496fb3ae8595a14ab22bd1",
     "/polyfills.0a14238993673413.js": "e8e41c297a3fb24560fa851e08d4e483cac81e10",
     "/runtime.8f33b8458085c89f.js": "7561a8f72dd5c989426d3c2f453504c5ee27f44a",
     "/scripts.3a384ad5c5dd731b.js": "8aa86e89b2ed1d914d2ebfa9c482816219e9e7ac",
-    "/styles.96ee62bac9ffe31c.css": "ec4f9f35f33ea31568171d0b134da83190b96c29"
+    "/styles.4a0c815edcb64a50.css": "cbccb95981f76d1551e357ffd3fec96b1ba809f1"
   },
   "navigationUrls": [
     {
