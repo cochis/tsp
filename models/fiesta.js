@@ -117,6 +117,11 @@ const FiestaSchema = Schema({
     default: 'fiesta-default.jpg',
 
   },
+  croquisOk: {
+    type: Boolean,
+    default: false,
+
+  },
   usuarioCreated: {
     type: Schema.Types.ObjectId,
     ref: "Usuario",
