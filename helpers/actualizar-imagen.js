@@ -12,7 +12,7 @@ const ImgItem = require('../models/imgItem')
 const borrarArchivo = (path) => {
   try {
     if (fs.existsSync(path)) {
-      console.log('borro');
+
       fs.unlinkSync(path)
     } else {
       console.log('no borro');

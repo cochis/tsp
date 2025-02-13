@@ -15,7 +15,8 @@ const {
   getInvitacionForSln,
   getInvitacionByClave,
   getInvitacionByFiesta,
-  deleteInvitacionByUser
+  deleteInvitacionByUser,
+  getInvitacionBySalon
 } = require("../controllers/invitacion");
 const { validarJWT, validarAdminJWT } = require("../middlewares/validar-jwt");
 const router = Router();
@@ -26,6 +27,7 @@ router.get("/all", getAllInvitacions);
 router.get("/all/salon", getInvitacionForSln);
 router.get("/:uid", getInvitacionById);
 router.get("/fiesta/:id", getInvitacionByFiesta);
+router.get("/salon/:id", getInvitacionBySalon);
 router.delete("/deleteInvitacionbyUser/:user", deleteInvitacionByUser);
 router.get("/clave/:clave", getInvitacionByClave);
 router.post(

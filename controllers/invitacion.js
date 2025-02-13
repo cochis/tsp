@@ -306,6 +306,42 @@ const deleteInvitacionByUser = async (req, res = response) => {
 }
 
 
+const getInvitacionBySalon = async (req, res = response) => {
+  const id = req.params.id
+  try {
+    const invitacionDB = await Invitacion.find({ salon: id })
+      .populate('fiesta')
+      .populate('salon')
+      .populate('usuarioCreated')
+    if (!invitacionDB) {
+      return res.status(404).json({
+        ok: false,
+        msg: 'No exite un invitacion',
+      })
+    }
+
+    if (invitacionDB[0]) {
+
+      res.json({
+        ok: true,
+        invitacion: invitacionDB[0],
+      })
+    } else {
+      res.json({
+        ok: true,
+        invitacion: null,
+      })
+
+    }
+  } catch (error) {
+    res.status(500).json({
+      ok: false,
+      msg: 'Error inesperado',
+    })
+  }
+}
+
+
 module.exports = {
   getInvitacions,
   crearInvitacion,
@@ -316,5 +352,6 @@ module.exports = {
   getInvitacionForSln,
   getInvitacionByClave,
   getInvitacionByFiesta,
-  deleteInvitacionByUser
+  deleteInvitacionByUser,
+  getInvitacionBySalon
 }
