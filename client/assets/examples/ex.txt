@@ -1,5 +1,10 @@
 db.roles.updateMany({ activated: true }, { $set: { role: "6551752fae51b4c12e8d9f6e" } })
 db.fiestas.updateMany({ nombre: "REUNION SEP 2023" }, { $set: { realizada: false } })
+db.invitacions.updateMany({ usuarioCreated: ObjectId("670acdb9e52f97e3590818c1") }, { $set: { data: {
+   donde2AddressUbicacion:"",
+   donde3AddressUbicacion:"",
+                      
+} } })
 
 db.salons.updateMany({telefono:5529046793}, {$set:{nombre:"Salon D'Angelos"}})
 db.fiestas.updateMany({nombre:"XV AÑOS JULIETA SHECCID"}, {$set:{usuarioCreated: ObjectId("65d1c2a30699645d8cade4be"),}})
