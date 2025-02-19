@@ -129,6 +129,8 @@ app.use('/api/search', require('./routes/busquedas'))
 app.use('/api/galeria', require('./routes/galeria'))
 app.use('/api/logs', require('./routes/log'))
 app.use('/api/stripes', require('./routes/stripe'))
+app.use('/api/cps', require('./routes/cp'))
+app.use('/api/paises', require('./routes/pais'))
 app.get('*', function (req, res, next) {
   res.sendFile(path.resolve('client/index.html'))
 })
