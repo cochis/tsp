@@ -1,7 +1,9 @@
 const { response } = require('express')
 const bcrypt = require('bcryptjs')
 const Cp = require('../models/cp')
+const Usuario = require('../models/usuario')
 const { generarJWT } = require('../helpers/jwt')
+const fs = require('fs');
 //getCps Cp
 const getCps = async (req, res) => {
   const desde = Number(req.query.desde) || 0
@@ -37,7 +39,6 @@ const getAllCps = async (req, res) => {
     total,
   })
 }
-
 //crearCp Cp
 const crearCp = async (req, res = response) => {
   const { email, password } = req.body
@@ -73,7 +74,6 @@ const crearCp = async (req, res = response) => {
     })
   }
 }
-
 //actualizarCp Cp
 const actualizarCp = async (req, res = response) => {
   //Validar token y comporbar si es el scp
@@ -112,8 +112,6 @@ const actualizarCp = async (req, res = response) => {
     })
   }
 }
-
-
 const isActive = async (req, res = response) => {
   const uid = req.params.id
   try {
@@ -141,7 +139,6 @@ const isActive = async (req, res = response) => {
     })
   }
 }
-
 const getCpById = async (req, res = response) => {
   const uid = req.params.uid
   try {
@@ -243,9 +240,6 @@ const getCpsByCP = async (req, res = response) => {
     })
   }
 }
-
-
-
 const deleteCPS = async (req, res = response) => {
 
   try {
@@ -281,8 +275,66 @@ const deleteCPS = async (req, res = response) => {
 
 
 }
+const readFile = async (req, res = response) => {
+  const pais = req.params.pais
+  try {
+    fs.readFile('./uploads/files/cpsMx.json', 'utf8', async (error, datos) => {
+      if (error) {
+        console.error("Ocurrió un error al leer el archivo:", error);
+        return res.json({
+          ok: false,
+          error: error
+        })
+      }
+      const usuarioDB = await Usuario.find({ email: 'info@cochisweb.com' })
+        .populate('usuarioCreated', 'nombre apellidoPaterno apellidoMaterno email _id')
+        .populate('role')
+        .populate('tipoCentro', 'nombre clave _id')
+        .populate('salon')
+      console.log('usuarioDB::: ', usuarioDB[0]._id);
 
 
+      var codigos = []
+      datos = JSON.parse(datos)
+
+      datos.forEach(async cp => {
+        let codigo = {
+          ...cp,
+          usuarioCreated: usuarioDB[0]._id,
+          dateCreated: Date.now(),
+          lastEdited: Date.now(),
+          pais_clv: pais
+        }
+        codigos.push(codigo)
+        let cpN = new Cp({
+          ...codigo
+        })
+        await cpN.save()
+
+
+
+
+
+
+      });
+
+
+      return res.json({
+        ok: true,
+        datos: codigos
+      })
+    });
+
+  } catch (error) {
+    return res.json({
+      ok: false,
+      error: error
+    })
+  }
+
+
+
+}
 
 
 
@@ -301,6 +353,7 @@ module.exports = {
   getCpsByEmail,
   deleteCPS,
   getCpsByCP,
-  getCpsByPaisCP
+  getCpsByPaisCP,
+  readFile
 
 }
