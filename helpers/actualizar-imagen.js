@@ -284,6 +284,7 @@ const actualizarImagenTemplate = async (tipo, id, nombreArchivo, imgTemplate) =>
   }
 }
 const actualizarImagenType = async (tipo, id, nombreArchivo, type) => {
+
   let pathViejo = ''
   switch (tipo) {
     case 'fiestas':

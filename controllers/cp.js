@@ -291,7 +291,7 @@ const readFile = async (req, res = response) => {
         .populate('role')
         .populate('tipoCentro', 'nombre clave _id')
         .populate('salon')
-      console.log('usuarioDB::: ', usuarioDB[0]._id);
+
 
 
       var codigos = []

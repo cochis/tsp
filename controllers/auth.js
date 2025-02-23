@@ -1,6 +1,7 @@
 const { response } = require('express')
 const bcrypt = require('bcryptjs')
 const Usuario = require('../models/usuario')
+const Proveedor = require('../models/proveedor')
 const { generarJWT } = require('../helpers/jwt')
 const { googleVerify } = require('../helpers/google-verify')
 const { transporter } = require('../helpers/mailer')
@@ -358,6 +359,8 @@ const login = async (req, res = response) => {
 </html>
           `,
         });
+
+
         return res.status(404).json({
           ok: false,
           msg: 'Usuario desactivado',
@@ -379,10 +382,13 @@ const login = async (req, res = response) => {
 
     // Generar el TOKEN - JWT
     const token = await generarJWT(usuarioDB)
+    const proveedorDB = await Proveedor.find({ usuarioCreated: usuarioDB._id })
+
 
     return res.json({
       ok: true,
       token,
+      proveedor: [proveedorDB],
       email: usuarioDB.email,
       role: usuarioDB.role,
       uid: usuarioDB._id,

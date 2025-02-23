@@ -47,7 +47,18 @@ const ProveedorSchema = Schema({
       type: String
     },
   }],
+  ubicacion: {
+    type: String,
 
+  },
+  lng: {
+    type: Number,
+
+  },
+  lat: {
+    type: Number,
+
+  },
   usuarioCreated: {
     type: Schema.Types.ObjectId,
     ref: "Usuario",

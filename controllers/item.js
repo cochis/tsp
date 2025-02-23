@@ -85,6 +85,9 @@ const actualizarItem = async (req, res = response) => {
   const uid = req.params.id
   try {
     const itemDB = await Item.findById(uid)
+      .populate('usuarioCreated', 'nombre apellidoPaterno apellidoMaterno email _id')
+      .populate('categoriaItem')
+      .populate('proveedor')
     if (!itemDB) {
       return res.status(404).json({
         ok: false,
@@ -151,6 +154,7 @@ const getItemById = async (req, res = response) => {
   const uid = req.params.uid
   try {
     const itemDB = await Item.findById(uid)
+      .populate('usuarioCreated', 'nombre apellidoPaterno apellidoMaterno email _id')
       .populate('categoriaItem')
       .populate('proveedor')
     if (!itemDB) {
@@ -227,6 +231,50 @@ const getItemsByProveedor = async (req, res = response) => {
   }
 }
 
+const getCalificarItemById = async (req, res = response) => {
+
+  const uid = req.params.uid
+  const calificacion = req.params.calificacion
+
+  try {
+    const itemDB = await Item.findById(uid)
+      .populate('usuarioCreated', 'nombre apellidoPaterno apellidoMaterno email _id')
+      .populate('categoriaItem')
+      .populate('proveedor')
+    if (!itemDB) {
+      return res.status(404).json({
+        ok: false,
+        msg: 'No exite un item',
+      })
+    }
+
+    datosAct = {
+
+      calificacion: (Number(itemDB.calificacion) + Number(calificacion)),
+      timesCalificado: Number(itemDB.timesCalificado) + 1,
+      promedioCalificacion: (Number(itemDB.calificacion) + Number(calificacion)) / (Number(itemDB.timesCalificado) + 1)
+    }
+
+
+
+    const itemActualizado = await Item.findByIdAndUpdate(uid, datosAct, {
+      new: true,
+    })
+    res.json({
+      ok: true,
+      itemActualizado,
+    })
+
+
+
+  } catch (error) {
+    res.status(500).json({
+      ok: false,
+      msg: 'Error inesperado',
+    })
+  }
+}
+
 module.exports = {
   getItems,
   crearItem,
@@ -235,6 +283,7 @@ module.exports = {
   getItemById,
   getAllItems,
   getItemsByEmail,
-  getItemsByProveedor
+  getItemsByProveedor,
+  getCalificarItemById
 
 }

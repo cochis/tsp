@@ -12,7 +12,8 @@ const {
   isActive,
   getProveedorById,
   getAllProveedors,
-  getProveedorsByEmail
+  getProveedorsByEmail,
+  getProveedorsByCreador
 } = require("../controllers/proveedor");
 const { validarJWT } = require("../middlewares/validar-jwt");
 const router = Router();
@@ -21,6 +22,7 @@ router.get("/", validarJWT, getProveedors);
 router.get("/all", validarJWT, getAllProveedors);
 router.get("/:uid", validarJWT, getProveedorById);
 router.get("/email/:email", validarJWT, getProveedorsByEmail);
+router.get("/creador/:id", validarJWT, getProveedorsByCreador);
 router.post(
   "/",
   [

@@ -22,6 +22,10 @@ const UsuarioSchema = Schema({
     required: true,
     unique: true,
   },
+  telefono: {
+    type: String,
+
+  },
   password: {
     type: String,
   },

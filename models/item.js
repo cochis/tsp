@@ -52,7 +52,8 @@ const ItemSchema = Schema({
     type: Object
   }],
   cantidades: [{
-    type: Object
+    type: Object,
+    default: 0
   }],
   photos: [{
     type: Object
@@ -65,6 +66,14 @@ const ItemSchema = Schema({
     type: Object
   }],
   calificacion: {
+    type: Number,
+    default: 0
+  },
+  promedioCalificacion: {
+    type: Number,
+    default: 0
+  },
+  timesCalificado: {
     type: Number,
     default: 0
   },

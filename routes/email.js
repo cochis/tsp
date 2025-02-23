@@ -8,7 +8,8 @@ const { validarCampos } = require("../middlewares/validar-campos");
 const {
   sendMail,
   sendMailByBoleto,
-  reSendMail
+  reSendMail,
+  sendMailCotizacion
 
 } = require("../controllers/email");
 const { validarJWT } = require("../middlewares/validar-jwt");
@@ -28,6 +29,8 @@ router.post("/byBoleto/:boleto",
   check("fiesta", "Es necesaria una fiesta").not().isEmpty(),
 
   sendMailByBoleto);
+
+
 router.post("/resend",
   validarJWT,
   check("to", "Es necesario destinatario").not().isEmpty(),
@@ -35,6 +38,8 @@ router.post("/resend",
   check("fiesta", "Es necesaria una fiesta").not().isEmpty(),
 
   reSendMail);
+
+router.post("/cotizacion/:id", sendMailCotizacion);
 
 
 module.exports = router;

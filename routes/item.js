@@ -13,7 +13,8 @@ const {
   getItemById,
   getAllItems,
   getItemsByEmail,
-  getItemsByProveedor
+  getItemsByProveedor,
+  getCalificarItemById
 } = require("../controllers/item");
 const { validarJWT } = require("../middlewares/validar-jwt");
 const router = Router();
@@ -21,6 +22,7 @@ const router = Router();
 router.get("/", validarJWT, getItems);
 router.get("/all", getAllItems);
 router.get("/:uid", getItemById);
+router.put("/calificar/:uid/:calificacion", getCalificarItemById);
 router.get("/email/:email", validarJWT, getItemsByEmail);
 router.get("/proveedor/:proveedor", validarJWT, getItemsByProveedor);
 router.post(

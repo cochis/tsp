@@ -192,6 +192,33 @@ const getProveedorsByEmail = async (req, res = response) => {
     })
   }
 }
+const getProveedorsByCreador = async (req, res = response) => {
+  const id = req.params.id
+
+
+
+  try {
+    const proveedorDB = await Proveedor.find({ usuarioCreated: id })
+      .populate('usuarioCreated', 'nombre apellidoPaterno apellidoMaterno email _id')
+
+
+    if (!proveedorDB) {
+      return res.status(404).json({
+        ok: false,
+        msg: 'No exite un salon',
+      })
+    }
+    res.json({
+      ok: true,
+      proveedors: proveedorDB,
+    })
+  } catch (error) {
+    res.status(500).json({
+      ok: false,
+      msg: 'Error inesperado',
+    })
+  }
+}
 
 module.exports = {
   getProveedors,
@@ -200,6 +227,7 @@ module.exports = {
   isActive,
   getProveedorById,
   getAllProveedors,
-  getProveedorsByEmail
+  getProveedorsByEmail,
+  getProveedorsByCreador
 
 }

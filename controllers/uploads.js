@@ -349,6 +349,46 @@ const fileUploadMusicaIinvitacion = async (req, res = response) => {
     })
   })
 }
+
+
+const deleteFile = async (req, res = response) => {
+  const tipo = req.params.tipo
+  const file = req.params.file
+  const type = req.params.type
+  try {
+    const path = `./uploads/${tipo}/${file}`
+    if (fs.existsSync(path)) {
+      fs.unlinkSync(path)
+
+      return await res.status(200).json({
+        ok: true,
+        type: type,
+        tipo: tipo,
+        file: file,
+        msg: 'Archivo borrado',
+      })
+    } else {
+      return await res.status(200).json({
+        ok: false,
+        type: type,
+        tipo: tipo,
+        file: file,
+        msg: 'No se encontro file',
+        file,
+      })
+    }
+
+  } catch (error) {
+    return await res.status(400).json({
+      ok: false,
+      msg: 'Error al borrar file',
+      error,
+    })
+  }
+}
+
+
+
 module.exports = {
   fileUpload,
   retornaImagen,
@@ -360,4 +400,5 @@ module.exports = {
   fileUploadMusicaIinvitacion,
   retornaMusica,
   fileUploadProveedor,
+  deleteFile
 }
