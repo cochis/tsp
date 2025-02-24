@@ -370,7 +370,7 @@ const actualizarCotizacion = async (req, res = response) => {
 
 
 
-                                                                <a href="http://localhost:4200/core/calificacion/productos/${cotizacionDB._id}" target="_blank" class="v-button"
+                                                                <a href="https://www.myticketparty.com/core/calificacion/productos/${cotizacionDB._id}" target="_blank" class="v-button"
                                                                     style="box-sizing: border-box;display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #1c3861; border-radius: 40px;-webkit-border-radius: 40px; -moz-border-radius: 40px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;font-size: 14px;">
                                                                     <span
                                                                         style="display:block;padding:15px 44px;line-height:120%;"><span

@@ -1843,13 +1843,13 @@ Fecha del evento
                                                        <tr  style="text-transform: uppercase;">
                                                       
                                                         <th>
-                                                        <a href="http://localhost:4200/core/vista-producto/${data[i].item.uid}" class="upper" tyle="text-decoration:none;color:#13547a">
+                                                        <a href="https://www.myticketparty.com/core/vista-producto/${data[i].item.uid}" class="upper" tyle="text-decoration:none;color:#13547a">
                                                         ${data[i].item.nombre}
                                                         </a>
                                                         </th>
                                                         <th>
 
-                                                        <a href="http://localhost:4200/core/vista-proveedor/${data[i].item.proveedor._id}" class="upper" style="text-decoration:none;color:#13547a">
+                                                        <a href="https://www.myticketparty.com/core/vista-proveedor/${data[i].item.proveedor._id}" class="upper" style="text-decoration:none;color:#13547a">
                                                         ${data[i].item.proveedor.nombre}
                                                         </a>
                                                         </th>  
