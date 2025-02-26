@@ -23,8 +23,8 @@
                 body: JSON.stringify({ token: response.credential })
             })
                 .then(resp => resp.json())
-                .then(data => console.log('Nuestro server', data))
-                .catch(console.log)
+                .then(data => console.info('Nuestro server', data))
+                .catch(console.info)
         }
         window.onload = function () {
             google.accounts.id.initialize({

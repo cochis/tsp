@@ -134,6 +134,8 @@ app.use('/api/calificaciones', require('./routes/calificacion'))
 app.use('/api/cotizaciones', require('./routes/cotizacion'))
 app.use('/api/estatus-cotizaciones', require('./routes/estatusCotizacion'))
 app.use('/api/paises', require('./routes/pais'))
+app.use('/api/files', require('./routes/file'))
+app.use('/api/datas', require('./routes/data'))
 app.get('*', function (req, res, next) {
   res.sendFile(path.resolve('client/index.html'))
 })

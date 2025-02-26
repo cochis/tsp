@@ -88,7 +88,7 @@ const downloadGaleriasFiesta = async (req, res = response) => {
   if (url == 'false') {
     url = 'http://localhost:3008/api/upload/zips/'
   } else {
-    url = 'https://tickets.cochisweb.com/api/upload/zips/'
+    url = 'https://myticketparty.com/api/upload/zips/'
 
   }
 

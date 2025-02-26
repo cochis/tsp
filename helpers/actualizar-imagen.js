@@ -15,7 +15,7 @@ const borrarArchivo = (path) => {
 
       fs.unlinkSync(path)
     } else {
-      console.log('no borro');
+      console.info('no borro');
     }
   } catch (error) {
     console.error('error::: ', error);
