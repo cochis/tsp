@@ -113,7 +113,6 @@ const actualizarCotizacion = async (req, res = response) => {
       });
 
 
-
       const cotizacionActualizado = await Cotizacion.findByIdAndUpdate(uid, campos, {
         new: true,
       })

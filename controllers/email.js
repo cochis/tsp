@@ -2020,9 +2020,6 @@ Fecha del evento
 
 
 
-
-
-
     await transporter.sendMail({
       from: '"Cotizacion" <info@cochisweb.com>', // sender address
       // to: 'info@cochisweb.com', // list of receivers

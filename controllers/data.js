@@ -85,18 +85,6 @@ const delDataByUsr = async (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
   } catch (error) {
     console.error('error::: ', error);
 
