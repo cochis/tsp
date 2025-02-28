@@ -24,7 +24,7 @@ router.get("/all", getAllItems);
 router.get("/:uid", getItemById);
 router.put("/calificar/:uid/:calificacion", getCalificarItemById);
 router.get("/email/:email", validarJWT, getItemsByEmail);
-router.get("/proveedor/:proveedor", validarJWT, getItemsByProveedor);
+router.get("/proveedor/:proveedor", getItemsByProveedor);
 router.post(
   "/",
   [
