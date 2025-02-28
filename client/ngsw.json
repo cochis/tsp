@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1740698329388,
+  "timestamp": 1740764975005,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,12 +13,12 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.6efb9c43f464976f.js",
+        "/main.628a753cd090b5f2.js",
         "/manifest.webmanifest",
         "/polyfills.0a14238993673413.js",
         "/runtime.8f33b8458085c89f.js",
         "/scripts.3a384ad5c5dd731b.js",
-        "/styles.904d2fcb8740a4b2.css"
+        "/styles.e36cc362d90060f2.css"
       ],
       "patterns": []
     },
@@ -58,6 +58,7 @@
         "/assets/fonts/Roboto/Roboto-Regular.ttf",
         "/assets/fonts/bootstrap-icons.woff",
         "/assets/fonts/bootstrap-icons.woff2",
+        "/assets/icons/1evento-checking.png",
         "/assets/icons/banner.jpg",
         "/assets/icons/birthday.png",
         "/assets/icons/checkin.png",
@@ -100,6 +101,7 @@
         "/assets/images/businesswoman-using-tablet-analysis.jpg",
         "/assets/images/colleagues-working-cozy-office-medium-shot.jpg",
         "/assets/images/example/example_dinamica.png",
+        "/assets/images/example/example_pagina_proveedor.png",
         "/assets/images/example/galeria.png",
         "/assets/images/faq_graphic.jpg",
         "/assets/images/faqs/actualizacion.png",
@@ -227,12 +229,13 @@
     "/assets/fonts/Roboto/Roboto-Regular.ttf": "c28d0c21dfdd99f9efed2f27c88387b2108ceb2e",
     "/assets/fonts/bootstrap-icons.woff": "a77e6a2f335f3fcb4f2930794907c88ed7de7ca1",
     "/assets/fonts/bootstrap-icons.woff2": "3a284b0618771f29da8eb6be900e99439253dce0",
+    "/assets/icons/1evento-checking.png": "97b65b046e9fc9188375f4de2a90cde99c2c7b6e",
     "/assets/icons/banner.jpg": "91f3f34bd299fc16da2e9249597c6785239be8d2",
     "/assets/icons/birthday.png": "444cae41d77e8e5dbc516ca4b6506c0dfd1b3ce1",
     "/assets/icons/checkin.png": "5c4ba735805be3fe0ea5a4f103b8a87716f94d22",
     "/assets/icons/crear-evento.png": "47f05e62932e8ff13f2844dcb851d34693f27784",
     "/assets/icons/escolar.png": "a7e9b4d3db341135111d6b898ac81ae999b7d841",
-    "/assets/icons/evento-checking.png": "97b65b046e9fc9188375f4de2a90cde99c2c7b6e",
+    "/assets/icons/evento-checking.png": "2967098fd789a5c95ef92de61dc3c2f6fd09bf45",
     "/assets/icons/evento.png": "ab57ab13dff0e96141de8f71dc4935ad4e575412",
     "/assets/icons/facebook-icon.png": "c67e0ffd99287cd7ffd4961f94b5d3e25789f9e2",
     "/assets/icons/flores1.jpeg": "6599e800dbc1fdc6e43fb400b478f22ea87783ee",
@@ -258,7 +261,7 @@
     "/assets/icons/invitacion.png": "f313fe07580d673dc3f6bacc872f7e0a3143e947",
     "/assets/icons/people.png": "f396178ad4ecd30e7e388a105181612c3765d591",
     "/assets/icons/person.png": "8269ec64920f88d2f2c65464a2f3a8a5c98ffddb",
-    "/assets/icons/qr.png": "e7b594ad1b464697d05b6a9141a086b6f12f763e",
+    "/assets/icons/qr.png": "b2420d1ea2ebfd8ee6c75ab75cb57057005f2e98",
     "/assets/icons/registro.png": "aaf125a051d8345b4971df7aec1751acbf9e7c8f",
     "/assets/icons/salon.png": "09012def18e28e11b2cc208585b6c2335ab10b23",
     "/assets/icons/school.png": "75d3175cf5452e09d0da1e145cabb28b635a6aa1",
@@ -269,6 +272,7 @@
     "/assets/images/businesswoman-using-tablet-analysis.jpg": "610aec239228882ce4f7be6fe277de8ef426a758",
     "/assets/images/colleagues-working-cozy-office-medium-shot.jpg": "990cb87f1f6f066b63b352e9923e318f809a3c16",
     "/assets/images/example/example_dinamica.png": "3f652c927c285b02467be3a91bfff6e9c1d8bb93",
+    "/assets/images/example/example_pagina_proveedor.png": "40410d38593e4ab9741c7be347980a8047cbb5da",
     "/assets/images/example/galeria.png": "fa3fceb2cafca1c669ffe8d4e70073dabfc67d5e",
     "/assets/images/faq_graphic.jpg": "07e50f3aa9b810d96f734d7629def2a279a0a3b2",
     "/assets/images/faqs/actualizacion.png": "3641893a71772f1597236af31bc44474bb0f5ace",
@@ -363,13 +367,13 @@
     "/assets/js/jquery.sticky.js": "7fd0ecfd2534f00a8a97f8db64fc9ece30303863",
     "/favicon.ico": "406cd1a4f1dfae8dc91cbc20c60996913a826cdc",
     "/fiesta.8de27df8aa39d37a.jpeg": "5fc75c8f4a993818546a99d6ffb7e8d8ad95d3f3",
-    "/index.html": "c72ffc181b82a5599eafe9e64845d819dc95634c",
-    "/main.6efb9c43f464976f.js": "fafb8e66882416a4f3c12c67cd15ba1f31c20c88",
+    "/index.html": "a72d85b228dd791f822c3c1a639ebc9d394febc9",
+    "/main.628a753cd090b5f2.js": "fb627bd78e739cf6335224606f305c26ed842be2",
     "/manifest.webmanifest": "f3ee09a9f3b96c8dbc496fb3ae8595a14ab22bd1",
     "/polyfills.0a14238993673413.js": "e8e41c297a3fb24560fa851e08d4e483cac81e10",
     "/runtime.8f33b8458085c89f.js": "7561a8f72dd5c989426d3c2f453504c5ee27f44a",
     "/scripts.3a384ad5c5dd731b.js": "8aa86e89b2ed1d914d2ebfa9c482816219e9e7ac",
-    "/styles.904d2fcb8740a4b2.css": "f8bc9c7f891686920e5563c97993d180bca61c1b"
+    "/styles.e36cc362d90060f2.css": "eb40aeca6ee5582e96dac9f49604c9fe15263c58"
   },
   "navigationUrls": [
     {

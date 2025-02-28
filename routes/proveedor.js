@@ -20,7 +20,7 @@ const router = Router();
 
 router.get("/", validarJWT, getProveedors);
 router.get("/all", validarJWT, getAllProveedors);
-router.get("/:uid", validarJWT, getProveedorById);
+router.get("/:uid", getProveedorById);
 router.get("/email/:email", validarJWT, getProveedorsByEmail);
 router.get("/creador/:id", validarJWT, getProveedorsByCreador);
 router.post(
