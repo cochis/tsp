@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1740790789092,
+  "timestamp": 1740796831916,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.289c39945549c1ec.js",
+        "/main.576dced666449530.js",
         "/manifest.webmanifest",
         "/polyfills.0a14238993673413.js",
         "/runtime.8f33b8458085c89f.js",
@@ -96,6 +96,7 @@
         "/assets/icons/school.png",
         "/assets/icons/social.jpeg",
         "/assets/icons/social.png",
+        "/assets/icons/sport.png",
         "/assets/icons/whatsapp.webp",
         "/assets/images/404.png",
         "/assets/images/businesswoman-using-tablet-analysis.jpg",
@@ -267,6 +268,7 @@
     "/assets/icons/school.png": "75d3175cf5452e09d0da1e145cabb28b635a6aa1",
     "/assets/icons/social.jpeg": "5b157d06c62100d1accbcf8440f593120ec411b8",
     "/assets/icons/social.png": "e282d74447f14c5c9ba98e1fd8a1a46f90f9baf8",
+    "/assets/icons/sport.png": "ed62a79b211fd4659b1fabd0bf628e7355243f4d",
     "/assets/icons/whatsapp.webp": "f4e38e9c2a3f1be4e08b6e19e308d678c0adfbfb",
     "/assets/images/404.png": "8002cfe39e72d39472de5e8d53f29db758872652",
     "/assets/images/businesswoman-using-tablet-analysis.jpg": "610aec239228882ce4f7be6fe277de8ef426a758",
@@ -367,8 +369,8 @@
     "/assets/js/jquery.sticky.js": "7fd0ecfd2534f00a8a97f8db64fc9ece30303863",
     "/favicon.ico": "406cd1a4f1dfae8dc91cbc20c60996913a826cdc",
     "/fiesta.8de27df8aa39d37a.jpeg": "5fc75c8f4a993818546a99d6ffb7e8d8ad95d3f3",
-    "/index.html": "21aa319b58218d1e3be2b8ba65887faa95234456",
-    "/main.289c39945549c1ec.js": "01977e1b1cda0b86f2c6fa206f8eab9360236240",
+    "/index.html": "e38c37ec49894a97b7819f6c2634f2cca3338d50",
+    "/main.576dced666449530.js": "edf120c6721ebde1f5e2ea2c3cb987c352ed3725",
     "/manifest.webmanifest": "f3ee09a9f3b96c8dbc496fb3ae8595a14ab22bd1",
     "/polyfills.0a14238993673413.js": "e8e41c297a3fb24560fa851e08d4e483cac81e10",
     "/runtime.8f33b8458085c89f.js": "7561a8f72dd5c989426d3c2f453504c5ee27f44a",

@@ -20,6 +20,8 @@ const routes = [
   '/core',
   '/core/about',
   '/core/contact',
+  '/core/market',
+  '/core/faqs',
   '/core/pricing',
   '/core/examples',
   '/core/mis-fiestas',
