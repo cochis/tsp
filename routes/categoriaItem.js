@@ -18,7 +18,7 @@ const { validarJWT } = require("../middlewares/validar-jwt");
 const router = Router();
 
 router.get("/", validarJWT, getCategoriaItems);
-router.get("/all", validarJWT, getAllCategoriaItems);
+router.get("/all", getAllCategoriaItems);
 router.get("/:uid", validarJWT, getCategoriaItemById);
 router.get("/email/:email", validarJWT, getCategoriaItemsByEmail);
 router.post(
