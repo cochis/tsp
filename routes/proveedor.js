@@ -19,7 +19,7 @@ const { validarJWT } = require("../middlewares/validar-jwt");
 const router = Router();
 
 router.get("/", validarJWT, getProveedors);
-router.get("/all", validarJWT, getAllProveedors);
+router.get("/all", getAllProveedors);
 router.get("/:uid", getProveedorById);
 router.get("/email/:email", validarJWT, getProveedorsByEmail);
 router.get("/creador/:id", validarJWT, getProveedorsByCreador);
