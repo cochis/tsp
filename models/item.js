@@ -77,6 +77,14 @@ const ItemSchema = Schema({
     type: Number,
     default: 0
   },
+  envios: {
+    type: Boolean,
+    default: false,
+  },
+  descripcionEnvios: {
+    type: String,
+
+  },
 
   usuarioCreated: {
     type: Schema.Types.ObjectId,

@@ -59,6 +59,11 @@ const ProveedorSchema = Schema({
     type: Number,
 
   },
+  ubicaciones: [{
+    type: Schema.Types.ObjectId,
+    ref: "Salon",
+    required: true
+  }],
   usuarioCreated: {
     type: Schema.Types.ObjectId,
     ref: "Usuario",

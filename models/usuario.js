@@ -42,6 +42,11 @@ const UsuarioSchema = Schema({
     ref: "Salon",
 
   }],
+  proveedor: [{
+    type: Schema.Types.ObjectId,
+    ref: "Proveedor",
+
+  }],
   usuarioCreated: [{
     type: Schema.Types.ObjectId,
     ref: "Usuario",
