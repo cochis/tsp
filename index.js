@@ -6,6 +6,8 @@ const { dbConnection } = require('./database/config')
 const path = require('path')
 const https = require('https')
 const fs = require('fs')
+var cron = require('node-cron');
+var request = require('request')
 // Crear el servidor de express
 const app = express()
 // Configurar CORS
@@ -151,3 +153,16 @@ app.listen(process.env.PORT, () => {
   )
   console.info('Servidor corriendo en puerto ' + process.env.PORT)
 })
+
+cron.schedule(' 0 0 * * *', () => {
+  let invitacionesURL = process.env.URLAPI + 'fiestas/changeStatus'
+  request(invitacionesURL, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+    }
+  })
+
+});
+
+
+
+

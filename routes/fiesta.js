@@ -15,12 +15,14 @@ const {
   getFiestaByEmail,
   getFiestasByAnfitrion,
   getFiestasBySalon,
-  actualizarFiestaByUsr
+  actualizarFiestaByUsr,
+  changeStatus
 } = require("../controllers/fiesta");
 const { validarJWT } = require("../middlewares/validar-jwt");
 const router = Router();
 
 router.get("/", validarJWT, getFiestas);
+router.get("/changeStatus", changeStatus);
 router.get("/all", validarJWT, getAllFiestas);
 router.get("/email/:email", validarJWT, getFiestaByEmail);
 router.get("/anfitrion/:uid", validarJWT, getFiestasByAnfitrion);

@@ -2,6 +2,7 @@ const { response } = require('express')
 const bcrypt = require('bcryptjs')
 const Fiesta = require('../models/fiesta')
 const { generarJWT } = require('../helpers/jwt')
+const Cron = require('../models/cron')
 //getFiestas Fiesta
 const getFiestas = async (req, res) => {
   const desde = Number(req.query.desde) || 0
@@ -319,7 +320,86 @@ const getFiestasBySalon = async (req, res = response) => {
     })
   }
 }
+const changeStatus = async (req, res = response) => {
 
+  let today = new Date().getTime() + 86400000
+  var desactivadas = []
+  try {
+    const fiestaDB = await Fiesta.find()
+    var fiestaDB1 = await fiestaDB.filter((res, j) => {
+
+      return res.fecha <= today
+    })
+
+    if (fiestaDB1 && fiestaDB1.length > 0) {
+      await fiestaDB1.forEach(async (fs, i) => {
+        fiestaDB1[i].activated = false
+        let id = fiestaDB1[i]._id.toString()
+        campos = {
+          nombre: fiestaDB1[i].nombre,
+          evento: fiestaDB1[i].evento.toString(),
+          cantidad: fiestaDB1[i].cantidad,
+          fecha: fiestaDB1[i].fecha,
+          calle: fiestaDB1[i].calle,
+          numeroInt: fiestaDB1[i].numeroInt,
+          numeroExt: fiestaDB1[i].numeroExt,
+          municipioDelegacion: fiestaDB1[i].municipioDelegacion,
+          coloniaBarrio: fiestaDB1[i].coloniaBarrio,
+          cp: fiestaDB1[i].cp,
+          estado: fiestaDB1[i].estado,
+          pais: fiestaDB1[i].pais,
+          comoLlegar: fiestaDB1[i].comoLlegar,
+          lat: fiestaDB1[i].lat,
+          long: fiestaDB1[i].long,
+          usuarioFiesta: fiestaDB1[i].usuarioFiesta.toString(),
+          salon: fiestaDB1[i].salon.toString(),
+          img: fiestaDB1[i].img,
+          invitacion: fiestaDB1[i].invitacion,
+          activacreadated: fiestaDB1[i].activacreadated,
+          realizada: fiestaDB1[i].realizada,
+          galeria: fiestaDB1[i].galeria,
+          checking: fiestaDB1[i].checking,
+          mesaOk: fiestaDB1[i].mesaOk,
+          example: fiestaDB1[i].example,
+          croquis: fiestaDB1[i].croquis,
+          croquisOk: fiestaDB1[i].croquisOk,
+          usuarioCreated: fiestaDB1[i].usuarioCreated.toString(),
+          activated: false,
+          dateCreated: fiestaDB1[i].dateCreated,
+          lastEdited: today,
+        }
+        var fiestaActualizado = await Fiesta.findByIdAndUpdate(id, campos, {
+          new: true,
+        })
+        await desactivadas.push(fiestaActualizado)
+      });
+    }
+    const cron = await new Cron({
+      type: 'Desactivacion fiestas',
+      response: fiestaDB1,
+      dataCreated: today,
+    })
+    await cron.save()
+    if (desactivadas.length == 0) {
+      return res.status(200).json({
+        ok: false,
+        msg: 'Sin fiestas por actualizar',
+        cron: cron
+      })
+    }
+    res.json({
+      ok: true,
+      fiestasDesactivadas: desactivadas,
+      cron: cron
+    })
+  } catch (error) {
+    res.status(500).json({
+      ok: false,
+      error: error,
+      msg: 'Error inesperado',
+    })
+  }
+}
 
 
 
@@ -333,6 +413,7 @@ module.exports = {
   getFiestaByEmail,
   getFiestasByAnfitrion,
   getFiestasBySalon,
-  actualizarFiestaByUsr
+  actualizarFiestaByUsr,
+  changeStatus
 
 }
