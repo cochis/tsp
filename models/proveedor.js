@@ -28,7 +28,15 @@ const ProveedorSchema = Schema({
   descripcion: {
     type: String
   },
-
+  redes: [{
+    red: {
+      type: Schema.Types.ObjectId,
+      ref: "Red",
+    },
+    value: {
+      type: String
+    },
+  }],
   contactos: [{
     tipoContacto: {
       type: Schema.Types.ObjectId,
