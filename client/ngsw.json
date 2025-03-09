@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1741538391255,
+  "timestamp": 1741557610655,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.1c11833390c2136b.js",
+        "/main.2ac5b71da3baf138.js",
         "/manifest.webmanifest",
         "/polyfills.0a14238993673413.js",
         "/runtime.8f33b8458085c89f.js",
@@ -96,6 +96,7 @@
         "/assets/icons/people.png",
         "/assets/icons/person.png",
         "/assets/icons/proveedor.png",
+        "/assets/icons/qrcode (1).png",
         "/assets/icons/qrcode.png",
         "/assets/icons/registro.png",
         "/assets/icons/salon.png",
@@ -277,6 +278,7 @@
     "/assets/icons/people.png": "f396178ad4ecd30e7e388a105181612c3765d591",
     "/assets/icons/person.png": "8269ec64920f88d2f2c65464a2f3a8a5c98ffddb",
     "/assets/icons/proveedor.png": "e304b44a4b52c6f44ab0a7e308c017eb154530c6",
+    "/assets/icons/qrcode (1).png": "c27d61d3c9494096afe8bb9cf4de7d74f50457eb",
     "/assets/icons/qrcode.png": "4172596eebd876744b236d3d97b9199b2d92863b",
     "/assets/icons/registro.png": "aaf125a051d8345b4971df7aec1751acbf9e7c8f",
     "/assets/icons/salon.png": "09012def18e28e11b2cc208585b6c2335ab10b23",
@@ -387,8 +389,8 @@
     "/assets/js/jquery.sticky.js": "7fd0ecfd2534f00a8a97f8db64fc9ece30303863",
     "/favicon.ico": "406cd1a4f1dfae8dc91cbc20c60996913a826cdc",
     "/fiesta.8de27df8aa39d37a.jpeg": "5fc75c8f4a993818546a99d6ffb7e8d8ad95d3f3",
-    "/index.html": "c4f3bddb4ea66873f7321127f9f6e4baddf383de",
-    "/main.1c11833390c2136b.js": "a4b0a5b7a1ab38848c63427d7fbf72b42f9561b1",
+    "/index.html": "531804c91c2911da64de150e564b6619628fa538",
+    "/main.2ac5b71da3baf138.js": "8eabd1746437a6ed8a5fe857e39d974db3aeda60",
     "/manifest.webmanifest": "f3ee09a9f3b96c8dbc496fb3ae8595a14ab22bd1",
     "/polyfills.0a14238993673413.js": "e8e41c297a3fb24560fa851e08d4e483cac81e10",
     "/runtime.8f33b8458085c89f.js": "7561a8f72dd5c989426d3c2f453504c5ee27f44a",
