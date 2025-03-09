@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1741465387164,
+  "timestamp": 1741538391255,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,12 +13,12 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.93ad06f3b413fd2e.js",
+        "/main.1c11833390c2136b.js",
         "/manifest.webmanifest",
         "/polyfills.0a14238993673413.js",
         "/runtime.8f33b8458085c89f.js",
         "/scripts.3a384ad5c5dd731b.js",
-        "/styles.e26c6a2fa1e16aaf.css"
+        "/styles.2c156736360c9e61.css"
       ],
       "patterns": []
     },
@@ -88,6 +88,7 @@
         "/assets/icons/icon-96x96.png",
         "/assets/icons/iglesia.png",
         "/assets/icons/instagram-icon.png",
+        "/assets/icons/instagram.webp",
         "/assets/icons/invi.png",
         "/assets/icons/invitacion.png",
         "/assets/icons/market.png",
@@ -103,6 +104,7 @@
         "/assets/icons/social.jpeg",
         "/assets/icons/social.png",
         "/assets/icons/sport.png",
+        "/assets/icons/tiktok.png",
         "/assets/icons/whatsapp.webp",
         "/assets/images/404.png",
         "/assets/images/businesswoman-using-tablet-analysis.jpg",
@@ -267,6 +269,7 @@
     "/assets/icons/icon-96x96.png": "5d7cbedff04c7d7ba104cac8c828ba4d026128de",
     "/assets/icons/iglesia.png": "2c48453e9577a077a292ef43fa254d6d77bdecb0",
     "/assets/icons/instagram-icon.png": "8a1b58dd89f41e81b0130d39670260375c240252",
+    "/assets/icons/instagram.webp": "1006960fad782c98b69203bdd9b3610ec2a3b8a6",
     "/assets/icons/invi.png": "fc8622a077c44c1fc7e41061d1358e018a06e3b7",
     "/assets/icons/invitacion.png": "f313fe07580d673dc3f6bacc872f7e0a3143e947",
     "/assets/icons/market.png": "268123cb00ab343bc0de3eb67a4bb8291bd888f4",
@@ -282,6 +285,7 @@
     "/assets/icons/social.jpeg": "5b157d06c62100d1accbcf8440f593120ec411b8",
     "/assets/icons/social.png": "e282d74447f14c5c9ba98e1fd8a1a46f90f9baf8",
     "/assets/icons/sport.png": "ed62a79b211fd4659b1fabd0bf628e7355243f4d",
+    "/assets/icons/tiktok.png": "e6a289a5c93024a9cc541ee68b01ee683461c689",
     "/assets/icons/whatsapp.webp": "f4e38e9c2a3f1be4e08b6e19e308d678c0adfbfb",
     "/assets/images/404.png": "8002cfe39e72d39472de5e8d53f29db758872652",
     "/assets/images/businesswoman-using-tablet-analysis.jpg": "610aec239228882ce4f7be6fe277de8ef426a758",
@@ -383,13 +387,13 @@
     "/assets/js/jquery.sticky.js": "7fd0ecfd2534f00a8a97f8db64fc9ece30303863",
     "/favicon.ico": "406cd1a4f1dfae8dc91cbc20c60996913a826cdc",
     "/fiesta.8de27df8aa39d37a.jpeg": "5fc75c8f4a993818546a99d6ffb7e8d8ad95d3f3",
-    "/index.html": "39ccc061f4644855aae09451fad00abf31ece750",
-    "/main.93ad06f3b413fd2e.js": "5a0a46a4b870ab1fe8c61aa3494ddec9900d5afb",
+    "/index.html": "c4f3bddb4ea66873f7321127f9f6e4baddf383de",
+    "/main.1c11833390c2136b.js": "a4b0a5b7a1ab38848c63427d7fbf72b42f9561b1",
     "/manifest.webmanifest": "f3ee09a9f3b96c8dbc496fb3ae8595a14ab22bd1",
     "/polyfills.0a14238993673413.js": "e8e41c297a3fb24560fa851e08d4e483cac81e10",
     "/runtime.8f33b8458085c89f.js": "7561a8f72dd5c989426d3c2f453504c5ee27f44a",
     "/scripts.3a384ad5c5dd731b.js": "8aa86e89b2ed1d914d2ebfa9c482816219e9e7ac",
-    "/styles.e26c6a2fa1e16aaf.css": "0c900cadb7adc4c105d6c602143003fa6357f20a"
+    "/styles.2c156736360c9e61.css": "1282057523086b8307dfa20e0fe6a11320b1e9d5"
   },
   "navigationUrls": [
     {
