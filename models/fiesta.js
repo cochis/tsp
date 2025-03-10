@@ -80,8 +80,6 @@ const FiestaSchema = Schema({
   },
   invitacion: {
     type: String,
-
-
   },
   activacreadated: {
     type: Boolean,
@@ -120,6 +118,11 @@ const FiestaSchema = Schema({
   croquisOk: {
     type: Boolean,
     default: false,
+
+  },
+  mensaje: {
+    type: String,
+    default: '',
 
   },
   usuarioCreated: {
