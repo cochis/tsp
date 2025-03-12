@@ -29,7 +29,7 @@ const getAllMailTemplates = async (req, res) => {
       .sort({ nombre: 1 }),
     MailTemplate.countDocuments(),
   ])
-  console.log('mailTemplates::: ', mailTemplates);
+
 
   res.json({
     ok: true,

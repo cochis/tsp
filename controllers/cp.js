@@ -277,8 +277,9 @@ const deleteCPS = async (req, res = response) => {
 }
 const readFile = async (req, res = response) => {
   const pais = req.params.pais
+  const number = req.params.number
   try {
-    fs.readFile('./uploads/files/cpsMx.json', 'utf8', async (error, datos) => {
+    fs.readFile(`./uploads/files/cpsMx${number}.json`, 'utf8', async (error, datos) => {
       if (error) {
         console.error("Ocurrió un error al leer el archivo:", error);
         return res.json({

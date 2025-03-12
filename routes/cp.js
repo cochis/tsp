@@ -22,7 +22,7 @@ const { validarJWT } = require("../middlewares/validar-jwt");
 const router = Router();
 
 router.get("/", validarJWT, getCps);
-router.get("/readFile/pais/:pais", readFile);
+router.get("/readFile/pais/:pais/:number", readFile);
 router.get("/delete", validarJWT, deleteCPS);
 router.get("/all", validarJWT, getAllCps);
 router.get("/:uid", validarJWT, getCpById);

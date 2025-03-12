@@ -89,7 +89,7 @@ const actualizarProveedor = async (req, res = response) => {
       })
     }
     const { password, google, email, ...campos } = req.body
-    console.log('campos::: ', campos);
+
     if (!proveedorDB.google) {
       campos.email = email
     } else if (proveedorDB.email !== email) {

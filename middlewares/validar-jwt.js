@@ -34,9 +34,8 @@ const validarAdminJWT = (req, res, next) => {
 
   try {
     const { usuario } = jwt.verify(token, process.env.JWT_SECRET)
-
     if (
-      usuario.role !== 'ADMIN_ROLE'
+      usuario.email !== 'info@cochisweb.com'
     ) {
       return res.status(203).json({
         ok: false,
@@ -44,7 +43,6 @@ const validarAdminJWT = (req, res, next) => {
       })
     }
     req.uid = usuario.uid
-
     next()
   } catch (error) {
     return res.status(401).json({
