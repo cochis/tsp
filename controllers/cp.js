@@ -213,6 +213,32 @@ const getCpsByPaisCP = async (req, res = response) => {
     })
   }
 }
+const getCpsByPaisEdo = async (req, res = response) => {
+  const pais = req.params.pais
+  const edo = req.params.edo
+
+  try {
+    const cpDB = await Cp.find({ pais_clv: pais, d_estado: edo })
+      .populate('usuarioCreated', 'nombre apellidoPaterno apellidoMaterno email _id')
+
+
+    if (!cpDB) {
+      return res.status(404).json({
+        ok: false,
+        msg: 'No exite un cp',
+      })
+    }
+    res.json({
+      ok: true,
+      cps: cpDB,
+    })
+  } catch (error) {
+    res.status(500).json({
+      ok: false,
+      msg: 'Error inesperado',
+    })
+  }
+}
 const getCpsByCP = async (req, res = response) => {
   const cp = req.params.cp
 
@@ -355,6 +381,7 @@ module.exports = {
   deleteCPS,
   getCpsByCP,
   getCpsByPaisCP,
-  readFile
+  readFile,
+  getCpsByPaisEdo
 
 }

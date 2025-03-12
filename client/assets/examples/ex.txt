@@ -11,8 +11,8 @@ db.invitacions.updateMany({ usuarioCreated: ObjectId("670acdb9e52f97e3590818c1")
 db.cps.insertMany()
 db.cps.updateMany({"usuarioCreated":ObjectId("67b38ad8b022b03df94a499e")})
 
-
-
+db.boletos.deleteMany({ fiesta: ObjectId("67d06f4844a08c9b2a1b9f5c") })
+ObjectId("67bf4dcff3973d0ce5df83d6")
 
 
 db.salons.updateMany({telefono:5529046793}, {$set:{nombre:"Salon D'Angelos"}})

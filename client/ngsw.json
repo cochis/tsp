@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1741618755602,
+  "timestamp": 1741791040492,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.e4fdd5b918c41e93.js",
+        "/main.3e213d6ef1d0c686.js",
         "/manifest.webmanifest",
         "/polyfills.0a14238993673413.js",
         "/runtime.8f33b8458085c89f.js",
@@ -222,7 +222,7 @@
     "/assets/examples/envio_mail.png": "27654aeb84c8988baa0935f8e5a92afecf16c9ca",
     "/assets/examples/envio_push.jpeg": "bf229671a03e86bb6f39ca09acff1e87055d7095",
     "/assets/examples/envio_whatsapp.png": "bf11718a4880e366d9f23442f976b6683779de2f",
-    "/assets/examples/ex.txt": "eda890392683bfe4c777ee6ac9048a209b4d34ff",
+    "/assets/examples/ex.txt": "85b8abcad1b306f791521256894683b2da9da2f1",
     "/assets/examples/example_dinamica.png": "3f652c927c285b02467be3a91bfff6e9c1d8bb93",
     "/assets/examples/galeria.png": "fa3fceb2cafca1c669ffe8d4e70073dabfc67d5e",
     "/assets/examples/insert-roles.json": "b47f7413d478573e10945241eec36bbcdf4dcf97",
@@ -389,8 +389,8 @@
     "/assets/js/jquery.sticky.js": "7fd0ecfd2534f00a8a97f8db64fc9ece30303863",
     "/favicon.ico": "406cd1a4f1dfae8dc91cbc20c60996913a826cdc",
     "/fiesta.8de27df8aa39d37a.jpeg": "5fc75c8f4a993818546a99d6ffb7e8d8ad95d3f3",
-    "/index.html": "85c3ae84473f42e508e74076d99f077637f1d0a1",
-    "/main.e4fdd5b918c41e93.js": "7e4901aaea38d03285b99f7b14e069204040bcde",
+    "/index.html": "dc10a8ffae522aabf33fb8dec9138dc07e8363d8",
+    "/main.3e213d6ef1d0c686.js": "7bbdd1e1633875a82538ad2256dcebc293ffafec",
     "/manifest.webmanifest": "f3ee09a9f3b96c8dbc496fb3ae8595a14ab22bd1",
     "/polyfills.0a14238993673413.js": "e8e41c297a3fb24560fa851e08d4e483cac81e10",
     "/runtime.8f33b8458085c89f.js": "7561a8f72dd5c989426d3c2f453504c5ee27f44a",

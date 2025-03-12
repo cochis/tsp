@@ -16,7 +16,8 @@ const {
   deleteCPS,
   getCpsByCP,
   getCpsByPaisCP,
-  readFile
+  readFile,
+  getCpsByPaisEdo
 } = require("../controllers/cp");
 const { validarJWT } = require("../middlewares/validar-jwt");
 const router = Router();
@@ -24,6 +25,7 @@ const router = Router();
 router.get("/", validarJWT, getCps);
 router.get("/readFile/pais/:pais/:number", readFile);
 router.get("/delete", validarJWT, deleteCPS);
+router.get("/byEdo/:pais/:edo", validarJWT, getCpsByPaisEdo);
 router.get("/all", validarJWT, getAllCps);
 router.get("/:uid", validarJWT, getCpById);
 router.get("/cp/:cp", validarJWT, getCpsByCP);
