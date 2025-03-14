@@ -328,7 +328,7 @@ const changeStatus = async (req, res = response) => {
     const fiestaDB = await Fiesta.find()
     var fiestaDB1 = await fiestaDB.filter((res, j) => {
 
-      return res.fecha <= today
+      return (res.fecha <= today && !res.example)
     })
 
     if (fiestaDB1 && fiestaDB1.length > 0) {
