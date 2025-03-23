@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1742695937045,
+  "timestamp": 1742700533045,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.41ad0cc37bbb1714.js",
+        "/main.f227427abec75d51.js",
         "/manifest.webmanifest",
         "/polyfills.0a14238993673413.js",
         "/runtime.8f33b8458085c89f.js",
@@ -144,6 +144,7 @@
         "/assets/images/businesswoman-using-tablet-analysis.jpg",
         "/assets/images/chambelan1.jpg",
         "/assets/images/colleagues-working-cozy-office-medium-shot.jpg",
+        "/assets/images/croquis.jpg",
         "/assets/images/example/example_dinamica.png",
         "/assets/images/example/example_pagina_proveedor.png",
         "/assets/images/example/fiesta.webp",
@@ -381,6 +382,7 @@
     "/assets/images/businesswoman-using-tablet-analysis.jpg": "610aec239228882ce4f7be6fe277de8ef426a758",
     "/assets/images/chambelan1.jpg": "9d538229781e15eaac7f7efe7cec63e34625d5e6",
     "/assets/images/colleagues-working-cozy-office-medium-shot.jpg": "990cb87f1f6f066b63b352e9923e318f809a3c16",
+    "/assets/images/croquis.jpg": "f3d5008ff8003e0e0de683ef6942a2cb6e2a7983",
     "/assets/images/example/example_dinamica.png": "3f652c927c285b02467be3a91bfff6e9c1d8bb93",
     "/assets/images/example/example_pagina_proveedor.png": "40410d38593e4ab9741c7be347980a8047cbb5da",
     "/assets/images/example/fiesta.webp": "9f1650e17bc815829140edc9f5b79960a4747f40",
@@ -499,8 +501,8 @@
     "/assets/js/jquery.sticky.js": "7fd0ecfd2534f00a8a97f8db64fc9ece30303863",
     "/favicon.ico": "406cd1a4f1dfae8dc91cbc20c60996913a826cdc",
     "/fiesta.8de27df8aa39d37a.jpeg": "5fc75c8f4a993818546a99d6ffb7e8d8ad95d3f3",
-    "/index.html": "e57d9689bfae267ab6591f47bb0ce62a7d604071",
-    "/main.41ad0cc37bbb1714.js": "2c5ff9f698195c10efae60f7f7e417051d718311",
+    "/index.html": "b13508a2dd07446779e4d15584ec4609aa45b327",
+    "/main.f227427abec75d51.js": "5d3aa8ac87eef8edca567f05f6600dcf13be95cb",
     "/manifest.webmanifest": "f3ee09a9f3b96c8dbc496fb3ae8595a14ab22bd1",
     "/polyfills.0a14238993673413.js": "e8e41c297a3fb24560fa851e08d4e483cac81e10",
     "/runtime.8f33b8458085c89f.js": "7561a8f72dd5c989426d3c2f453504c5ee27f44a",
