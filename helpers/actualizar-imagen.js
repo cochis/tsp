@@ -4,6 +4,7 @@ const Salon = require('../models/salon')
 const Fiesta = require('../models/fiesta')
 const Proveedor = require('../models/proveedor')
 const Galeria = require('../models/galeria')
+const Fondo = require('../models/fondo')
 const Invitacion = require('../models/invitacion')
 const Paquete = require('../models/paquete')
 const Item = require('../models/item')
@@ -93,6 +94,19 @@ const actualizarImagen = async (tipo, id, nombreArchivo) => {
       paquete.img = nombreArchivo
       await paquete.save()
       return true
+    case 'fondos':
+      const fondo = await Fondo.findById(id)
+      if (!fondo) {
+        return false
+      }
+      pathViejo = `./uploads/fondos/${fondo.img}`
+      if (fondo.img && fondo.img !== '') {
+
+        borrarArchivo(pathViejo)
+      }
+      fondo.img = nombreArchivo
+      await fondo.save()
+      return true
     case 'items':
       const item = await Item.findById(id)
       if (!item) {
@@ -178,6 +192,7 @@ const actualizarImagen = async (tipo, id, nombreArchivo) => {
   }
 }
 const actualizarImagenTemplate = async (tipo, id, nombreArchivo, imgTemplate) => {
+
 
   let pathViejo = ''
   switch (tipo) {
@@ -269,6 +284,32 @@ const actualizarImagenTemplate = async (tipo, id, nombreArchivo, imgTemplate) =>
             borrarArchivo(pathViejo)
           }
           invitacion.data.byFileInvitacion = nombreArchivo
+
+          await invitacion.save()
+
+          return true
+          break;
+        case 'imgIntroLeftUp':
+          if (invitacion.data.imgIntroLeftUp !== '') {
+            pathViejo = `./uploads/invitaciones/${invitacion.data.imgIntroLeftUp}`
+            borrarArchivo(pathViejo)
+          }
+          invitacion.data.imgIntroLeftUp = nombreArchivo
+
+
+
+          await invitacion.save()
+
+          return true
+          break;
+        case 'imgIntroRightUp':
+          if (invitacion.data.imgIntroRightUp !== '') {
+            pathViejo = `./uploads/invitaciones/${invitacion.data.imgIntroRightUp}`
+            borrarArchivo(pathViejo)
+          }
+          invitacion.data.imgIntroRightUp = nombreArchivo
+
+
 
           await invitacion.save()
 

@@ -17,7 +17,8 @@ const fileUpload = async (req, res = response) => {
     'galerias',
     'paquetes',
     'imgItems',
-    'items'
+    'items',
+    'fondos'
   ]
 
   if (!tiposValidos.includes(tipo)) {
@@ -225,7 +226,9 @@ const fileUploadGaleria = async (req, res = response) => {
 }
 const deleteGaleria = async (req, res = response) => {
   const tipo = req.params.tipo
+
   const foto = req.params.foto
+
   try {
     const galeriaDB = await Galeria.findById(foto)
     if (!galeriaDB) {
