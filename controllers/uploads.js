@@ -241,7 +241,7 @@ const deleteGaleria = async (req, res = response) => {
 
     let glDB = {
       fiesta: galeriaDB.fiesta.toString(),
-      boleto: galeriaDB.boleto.toString(),
+      boleto: galeriaDB.boleto ? galeriaDB.boleto.toString() : null,
       img: '',
       dateCreated: galeriaDB.dateCreated,
       activated: false,
