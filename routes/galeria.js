@@ -35,7 +35,7 @@ router.post(
 
 
     check("fiesta", "La fiesta es obligatoria").not().isEmpty(),
-    check("boleto", "El boleto es obligatorio").not().isEmpty(),
+
 
 
     validarCampos,

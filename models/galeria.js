@@ -8,6 +8,7 @@ const GaleriaSchema = Schema({
   boleto: {
     type: Schema.Types.ObjectId,
     ref: "Boleto",
+    default: null
   },
 
 
