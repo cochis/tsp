@@ -21,7 +21,7 @@ const router = Router();
 
 router.get("/", validarJWT, getSalons);
 router.get("/all", getAllSalons);
-router.get("/:uid", validarJWT, getSalonById);
+router.get("/:uid", getSalonById);
 router.get("/email/:email", validarJWT, getSalonByEmail);
 router.get("/creador/:uid", validarJWT, getSalonByCreador);
 router.delete("/deleteSalonByUser/:user", validarJWT, deleteSalonByUser);
