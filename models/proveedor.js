@@ -67,6 +67,10 @@ const ProveedorSchema = Schema({
     type: Number,
 
   },
+  enviosOk: {
+    type: Boolean,
+
+  },
   ubicaciones: [{
     type: Schema.Types.ObjectId,
     ref: "Salon",
