@@ -39,6 +39,10 @@ const BoletoSchema = Schema({
     type: Boolean,
 
   },
+  declinada: {
+    type: Boolean,
+
+  },
   activated: {
     type: Boolean,
     default: false,
@@ -49,7 +53,7 @@ const BoletoSchema = Schema({
   },
   requeridos: {
     type: Number
-    
+
   },
   dateCreated: {
     type: Number,

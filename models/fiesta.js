@@ -125,6 +125,11 @@ const FiestaSchema = Schema({
     default: '',
 
   },
+  recordatorio: {
+    type: String,
+    default: '',
+
+  },
   usuarioCreated: {
     type: Schema.Types.ObjectId,
     ref: "Usuario",
