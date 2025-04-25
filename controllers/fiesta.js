@@ -322,7 +322,7 @@ const getFiestasBySalon = async (req, res = response) => {
 }
 const changeStatus = async (req, res = response) => {
 
-  let today = new Date().getTime() + 604800000
+  let today = new Date().getTime() + 60480000000
   var desactivadas = []
   try {
     const fiestaDB = await Fiesta.find()
