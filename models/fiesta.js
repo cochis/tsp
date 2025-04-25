@@ -125,6 +125,11 @@ const FiestaSchema = Schema({
     default: '',
 
   },
+  recordatorioOk: {
+    type: Boolean,
+    default: false,
+
+  },
   recordatorio: {
     type: String,
     default: '',
