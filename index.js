@@ -118,14 +118,14 @@ app.listen(process.env.PORT, () => {
   console.info('Servidor corriendo en puerto ' + process.env.PORT)
 })
 
-cron.schedule(' 0 0 * * *', () => {
+/* cron.schedule(' 0 0 * * *', () => {
   let invitacionesURL = process.env.URLAPI + 'fiestas/changeStatus'
   request(invitacionesURL, function (error, response, body) {
     if (!error && response.statusCode == 200) {
     }
   })
 
-});
+}); */
 
 
 
