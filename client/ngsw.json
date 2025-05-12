@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1746584468267,
+  "timestamp": 1747022655632,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,12 +13,12 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.21cf20e35dcfdd89.js",
+        "/main.a0d5fc08b2c1a83b.js",
         "/manifest.webmanifest",
         "/polyfills.0a14238993673413.js",
         "/runtime.8f33b8458085c89f.js",
         "/scripts.3a384ad5c5dd731b.js",
-        "/styles.c8e0ecd59b54f27f.css"
+        "/styles.00099697abe98446.css"
       ],
       "patterns": []
     },
@@ -62,6 +62,8 @@
         "/assets/fonts/daemon.ttf",
         "/assets/fonts/esponja.ttf",
         "/assets/fonts/saiyan.ttf",
+        "/assets/i18n/en.json",
+        "/assets/i18n/es.json",
         "/assets/icons/1evento-checking.png",
         "/assets/icons/QRExample.png",
         "/assets/icons/baile.png",
@@ -86,6 +88,7 @@
         "/assets/icons/drink4.png",
         "/assets/icons/drink5.png",
         "/assets/icons/end.png",
+        "/assets/icons/es.png",
         "/assets/icons/escolar.png",
         "/assets/icons/evento-checking.png",
         "/assets/icons/evento.png",
@@ -155,6 +158,7 @@
         "/assets/icons/tarjeta.svg",
         "/assets/icons/tiktok.png",
         "/assets/icons/treasure.png",
+        "/assets/icons/us.png",
         "/assets/icons/vals1.png",
         "/assets/icons/vals2.png",
         "/assets/icons/vals3.png",
@@ -348,6 +352,8 @@
     "/assets/fonts/daemon.ttf": "9ac701cebd060ed06867e7e2e88004ffb7f76ec1",
     "/assets/fonts/esponja.ttf": "70114c91e423c7961e7f7f3fbf81f343f0650d8f",
     "/assets/fonts/saiyan.ttf": "78c884308db564720698927e9ab13ea4688facf5",
+    "/assets/i18n/en.json": "f97a9b84730b8d170be10f52ea33c20dd162f6b0",
+    "/assets/i18n/es.json": "55d6cfa236b00dd5e25c8977accb7089e82bdad5",
     "/assets/icons/1evento-checking.png": "97b65b046e9fc9188375f4de2a90cde99c2c7b6e",
     "/assets/icons/QRExample.png": "4172596eebd876744b236d3d97b9199b2d92863b",
     "/assets/icons/baile.png": "edbae2c7fdb5865c0c2e8a6cf4a9ce8761337fcf",
@@ -372,6 +378,7 @@
     "/assets/icons/drink4.png": "a06790982cbecebdd3822e819c96bcf7fb2d8625",
     "/assets/icons/drink5.png": "97771a26f5987354c84e75626e09005019fb35a5",
     "/assets/icons/end.png": "98b667b7d7d50df3e4f675d9f47366395416422d",
+    "/assets/icons/es.png": "5b7937bc92d50d47c4663597d30493a7e9abbbf3",
     "/assets/icons/escolar.png": "a7e9b4d3db341135111d6b898ac81ae999b7d841",
     "/assets/icons/evento-checking.png": "2967098fd789a5c95ef92de61dc3c2f6fd09bf45",
     "/assets/icons/evento.png": "ab57ab13dff0e96141de8f71dc4935ad4e575412",
@@ -441,6 +448,7 @@
     "/assets/icons/tarjeta.svg": "737fcb42fdf5d333efa8b105ca4eb1d9afc2b898",
     "/assets/icons/tiktok.png": "e6a289a5c93024a9cc541ee68b01ee683461c689",
     "/assets/icons/treasure.png": "d72434369b90548e9bef57ffe291be6607a237f2",
+    "/assets/icons/us.png": "2f68217e78e0c9406a81fbb09f1d7a70fa3ac969",
     "/assets/icons/vals1.png": "53c54c25fddab2669c8556804ba79a004c728624",
     "/assets/icons/vals2.png": "2b9b3547e92578362882675ec9112eeed9e29c8b",
     "/assets/icons/vals3.png": "9940aeff8277d7f2ed985c846e93bb320f135ef7",
@@ -597,13 +605,13 @@
     "/assets/js/jquery.sticky.js": "7fd0ecfd2534f00a8a97f8db64fc9ece30303863",
     "/favicon.ico": "406cd1a4f1dfae8dc91cbc20c60996913a826cdc",
     "/fiesta.8de27df8aa39d37a.jpeg": "5fc75c8f4a993818546a99d6ffb7e8d8ad95d3f3",
-    "/index.html": "8a6f2e8bf3ba5067e3ae177ada137fda5e5354f7",
-    "/main.21cf20e35dcfdd89.js": "f7ed6327ae5d6c8e521f7cf301c0f7f30bef0cec",
+    "/index.html": "3554b5ae00294f9ae48e2de91a604e426cb96c2a",
+    "/main.a0d5fc08b2c1a83b.js": "5a282e6588eb37c6dead03b634287b451540d206",
     "/manifest.webmanifest": "f3ee09a9f3b96c8dbc496fb3ae8595a14ab22bd1",
     "/polyfills.0a14238993673413.js": "e8e41c297a3fb24560fa851e08d4e483cac81e10",
     "/runtime.8f33b8458085c89f.js": "7561a8f72dd5c989426d3c2f453504c5ee27f44a",
     "/scripts.3a384ad5c5dd731b.js": "8aa86e89b2ed1d914d2ebfa9c482816219e9e7ac",
-    "/styles.c8e0ecd59b54f27f.css": "f0a380d6cfd244f890c49541cb789fafc621f8b4"
+    "/styles.00099697abe98446.css": "2bfbd5488bb17e159326da8b7f4284c1e5aa7d4e"
   },
   "navigationUrls": [
     {

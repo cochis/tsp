@@ -19,7 +19,7 @@ const sendMail = async (req, res) => {
       msg: 'No exite un evento',
     })
   }
-  if (boletoDB.email === null || boletoDB.email === null || boletoDB.email === '') {
+  if (boletoDB.email === null || boletoDB.email === '') {
 
 
     return res.status(404).json({
@@ -489,7 +489,7 @@ const reSendMail = async (req, res) => {
 
   const boletoDB = await Boleto.findById(boleto)
 
-  if (boletoDB.email === null || boletoDB.email === null || boletoDB.email === '') {
+  if (boletoDB.email === null || boletoDB.email === '') {
 
 
     return res.status(500).json({
@@ -933,59 +933,42 @@ const reSendMail = async (req, res) => {
       sender,
     })
   } catch (error) {
+    console.error('error::: ', error);
 
     return res.status(500).json({
       ok: false,
       fiestaDB,
       boletoDB,
-      error: "Sin Correo"
+      error: error
     })
   }
 
 
 }
 const sendMailByBoleto = async (req, res) => {
-
   const boleto = req.body
-
-
   const text_url = boleto.text_url
-
   const fiestaDB = await Fiesta.findById(boleto.fiesta)
-
   const evento = fiestaDB.nombre
-
-  if (boleto.email === null || boleto.email === null || boleto.email === '') {
-
-
-    return res.status(500).json({
+  if (boleto.email === null || boleto.email === '') {
+    return res.status(200).json({
       ok: false,
       fiestaDB,
       boleto,
       error: 'Sin Correo'
-
     })
   }
   const uid = req.params.boleto
   var link = ''
-  if (fiestaDB.invitacion == 'default') {
-
-    link = `${text_url}core/templates/${fiestaDB.invitacion}/${fiestaDB._id}/${uid}`
-  } else {
-
-    link = `${text_url}core/invitaciones/xv/xv2/${fiestaDB._id}/${uid}`
-  }
-
+  const boletoDB = await Boleto.findById(boleto.uid)
+  link = `${text_url}shared/?evt=${boletoDB.shared}`
   const ToMail = boleto.email
   const sender = "info@cochisweb.com"
   let nGrupo = boleto.nombreGrupo
   let cantP = fiestaDB.cantidad
   let cantT = (cantP == 1) ? 'Esta' : 'Están'
   let textoP = (cantP == 1) ? 'invitado' : 'invitados'
-
   let boletoP = (cantP == 1) ? 'boleto' : 'boletos'
-
-
   try {
     await transporter.sendMail({
       from: '"Invitacion" <info@cochisweb.com>', // sender address

@@ -2,6 +2,7 @@ const { response } = require('express')
 const bcrypt = require('bcryptjs')
 const Boleto = require('../models/boleto')
 const Fiesta = require('../models/fiesta')
+const Shared = require('../models/shared')
 const Usuario = require('../models/usuario')
 const { generarJWT } = require('../helpers/jwt')
 const { transporter } = require('../helpers/mailer')
@@ -49,29 +50,41 @@ const getAllBoletos = async (req, res) => {
 
 //crearBoleto Boleto
 const crearBoleto = async (req, res = response) => {
-  const { email, password } = req.body
   const uid = req.uid
-
   const campos = {
     ...req.body,
     usuarioCreated: req.uid
   }
-
-
-
   try {
-
-
     const boleto = new Boleto({
       ...campos
     })
-
-
     await boleto.save()
+    const shared = new Shared({
+      type: 'invitacion',
+      boleto: boleto._id,
+      fiesta: boleto.fiesta,
+      data: {
+        boleto: boleto,
+        fiesta: await Fiesta.findById(boleto.fiesta)
+      },
+      compartidas: 0,
+      vistas: 0,
+      usuarioCreated: boleto.usuarioCreated,
+      dateCreated: Date.now(),
+      lastEdited: Date.now(),
+    })
 
+    await shared.save()
+
+
+    boleto.shared = shared._id
+    const blt = await Boleto.findByIdAndUpdate(boleto._id, boleto, {
+      new: true,
+    })
     res.json({
       ok: true,
-      boleto
+      boleto: blt
     })
   } catch (error) {
     console.error('error', error)

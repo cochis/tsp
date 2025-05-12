@@ -1,0 +1,113 @@
+{
+    "menu": {
+        "inicio": "Home",
+        "market": "Marketplace",
+        "productos": "Products",
+        "proveedores": "Suppliers",
+        "nosotros": "About Us",
+        "contacto": "Contact",
+        "precio": "Pricing",
+        "ejemplos": "Examples",
+        "faqs": "FAQ'S",
+        "cuenta": "Account",
+        "ingresar": "Log In",
+        "registrar": "Sing Up",
+        "perfil": "Profile",
+        "mis_cotizaciones": "My quotations",
+        "salir": "Log Out ",
+        "mis_eventos": "My scheduled events",
+        "check-in": "Check In",
+        "admin": "Management",
+        "admin_general": "General",
+        "admin_centros_eventos": "View event venue",
+        "admin_usuarios": "View Users",
+        "admin_eventos": "View Events",
+        "admin_boletos": "View Tickets",
+        "admin_market_menu": "Marketplace",
+        "admin_proveedores_menu": "View providers",
+        "admin_productos_menu": "Ver products",
+        "admin_promos": "Promos",
+        "admin_editar_proveedor": "Edit supplier details",
+        "admin_add_productos": "Add new products or services",
+        "admin_mis_productos": "My products & services",
+        "catalogos": "Catalogs",
+        "catalogos_general": "General",
+        "catalogos_parametros": "View parameters",
+        "catalogos_roles": "View roles",
+        "catalogos_paises": "View countries",
+        "catalogos_grupos": "View grups",
+        "catalogos_eventos": "View events",
+        "catalogos_fondos": "View Backgrounds",
+        "catalogos_ejemplos": "View examples",
+        "catalogos_cps": "View cps",
+        "catalogos_tipo_centros": "View center types",
+        "catalogos_tipo_paquetes": "View package types",
+        "catalogos_tipo_medios": "View media types",
+        "catalogos_market": "Marketplace",
+        "catalogos_monedas": "View currencies",
+        "catalogos_redes": "View social media",
+        "catalogos_tipo_contactos": "View   contacts types",
+        "catalogos_tipo_colores": "View color´s types",
+        "catalogos_tipo_ubicaciones": "View locations types",
+        "catalogos_tipo_venta_items": "View Item sales methods",
+        "catalogos_estatus_cotizaciones": "View quote status",
+        "catalogos_categoria_items": "View item category"
+    },
+    "home": {
+        "saludo": "Welcome",
+        "mensaje_saludo": "Make sure your event is executed seamlessly and without complications.",
+        "menu_marketplace": {
+            "title": "Event Marketplace",
+            "info1": "An online platform that consolidates every aspect of event logistics from digital invitation creation to vendor discovery can greatly streamline and simplify the planning process.",
+            "info_lista1": "It is important to note that your platform's sole function is to generate quotations.",
+            "info_lista2": "Payment transactions are handled directly between users and service providers."
+        },
+        "tipo_centros": {
+            "title": "Type of events",
+            "info": "That's a great idea! Using digital invitations can be an excellent way to facilitate the organization and management of events at any type of venue.",
+            "salones": "Function room",
+            "escuelas": "Academic institutions",
+            "grupos": "Social organizations",
+            "particulares": "Private parties",
+            "club_deportivo": "Sporting organizations",
+            "cualquier": "Any event center"
+        },
+        "tipo_eventos": {
+            "title": "Type of events",
+            "info": "Perfect for preparing any type of event!",
+            "cumpleanos": "Birthday's",
+            "eventos_sociales": "Social events",
+            "eventos_laborales": "Work events",
+            "eventos_escolares": "School events",
+            "mas": "And much more"
+        },
+        "invitacion": {
+            "title": "Event Invitation",
+            "info": "Having the option to edit digital invitations to your liking is a key feature for customizing events your way",
+            "info2": "Design and customize your invitation"
+        },
+        "checkin": {
+            "title": "Check In",
+            "info1": "Real-time check-in is an outstanding feature for effective event management. Providing organizers with access to real-time data regarding their event can significantly enhance the overall experience.",
+            "info2": "Check-in using a QR code",
+            "info3": "Real-time display",
+            "list1": "Total number of tickets enabled",
+            "list2": "Total tickets occupied",
+            "list3": "Invitation count",
+            "list4": "Invitation viewers and respondents",
+            "list5": "Guests are currently attending the event",
+            "list6": "Check-in using QR code or guest list"
+        },
+        "galeria": {
+            "title": "Galery",
+            "info": "Implementing a feature that enables guests to upload and download event photos is an outstanding method for fostering interaction and creating shared memories."
+        },
+        "proveedor": {
+            "title": "Become a supplier",
+            "info": "Provider of services and products",
+            "p1": "In the management of opportunities through social media, the practice of attaching individual images of each product is considered inefficient.",
+            "p2": "It is advisable, instead, to provide a QR code that directly links to their personal page on TicketParty.",
+            "p3": "This approach enhances communication by showcasing the complete product catalog via a single, streamlined link."
+        }
+    }
+}

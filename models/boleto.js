@@ -68,7 +68,11 @@ const BoletoSchema = Schema({
     type: Schema.Types.ObjectId,
     ref: "Push"
   }],
-
+  shared: {
+    type: Schema.Types.ObjectId,
+    ref: "Shared",
+    default: null
+  },
   usuarioCreated: {
     type: Schema.Types.ObjectId,
     ref: "Usuario",

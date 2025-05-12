@@ -1,0 +1,113 @@
+{
+    "menu": {
+        "inicio": "Inicio",
+        "market": "Marketplace",
+        "productos": "Productos",
+        "proveedores": "Proveedores",
+        "nosotros": "Nosotros",
+        "contacto": "Contacto",
+        "precio": "Precios",
+        "ejemplos": "Ejemplos",
+        "faqs": "FAQ'S",
+        "cuenta": "Cuenta",
+        "ingresar": "Ingresar",
+        "registrar": "Registrar",
+        "perfil": "Perfil",
+        "mis_cotizaciones": "Mis cotizaciones",
+        "salir": "Salir ",
+        "mis_eventos": "Mis eventos",
+        "check-in": "Check In",
+        "admin": "Administración",
+        "admin_general": "General",
+        "admin_centros_eventos": "Ver centro de eventos",
+        "admin_usuarios": "Usuarios",
+        "admin_eventos": "Eventos",
+        "admin_boletos": "Boletos",
+        "admin_market_menu": "Marketplace",
+        "admin_proveedores_menu": "Ver proveedores",
+        "admin_productos_menu": "Ver productos",
+        "admin_promos": "Promos",
+        "admin_editar_proveedor": "Edita datos de proveedor",
+        "admin_add_productos": "Agregar Productos o servicios",
+        "admin_mis_productos": "Mis Productos o servicios",
+        "catalogos": "Catalogos",
+        "catalogos_general": "General",
+        "catalogos_parametros": "Ver parametros",
+        "catalogos_roles": "Ver roles",
+        "catalogos_paises": "Ver paises",
+        "catalogos_grupos": "Ver grupos",
+        "catalogos_eventos": "Ver eventos",
+        "catalogos_fondos": "Ver fondos",
+        "catalogos_ejemplos": "Ver ejemplos",
+        "catalogos_cps": "Ver cps",
+        "catalogos_tipo_centros": "Ver tipo centros",
+        "catalogos_tipo_paquetes": "Ver tipo paquetes",
+        "catalogos_tipo_medios": "Ver tipo medios",
+        "catalogos_market": "Marketplace",
+        "catalogos_monedas": "Ver monedas",
+        "catalogos_redes": "Ver redes",
+        "catalogos_tipo_contactos": "Ver tipo de contactos",
+        "catalogos_tipo_colores": "Ver tipo  de colores",
+        "catalogos_tipo_ubicaciones": "Ver tipo de ubicaciones",
+        "catalogos_tipo_venta_items": "Ver tipo de venta de items",
+        "catalogos_estatus_cotizaciones": "Ver estatus de cotizaciones",
+        "catalogos_categoria_items": "Ver categoria de items"
+    },
+    "home": {
+        "saludo": "Bienvenido",
+        "mensaje_saludo": "Asegúrate que su evento, se lleve a cabo sin contratiempos.",
+        "menu_marketplace": {
+            "title": "Marketplace para eventos",
+            "info1": "Tener una plataforma en línea que centralice todo lo relacionado con la logística de eventos, desde la creación de invitaciones digitales hasta la búsqueda de proveedores, puede hacer que la planificación sea mucho más fácil y eficiente.",
+            "info_lista1": "Es importante aclarar que tu plataforma solo se encarga de realizar cotizaciones",
+            "info_lista2": "Los pagos se gestionan directamente entre los usuarios y los proveedores"
+        },
+        "tipo_centros": {
+            "title": "Tipo de eventos",
+            "info": "¡Eso es una gran idea! Utilizar invitaciones digitales puede ser una excelente manera de facilitar la organización y la gestión de eventos en cualquier tipo de centro.",
+            "salones": "Salón de eventos",
+            "escuelas": "Instituciones academicas",
+            "grupos": "Grupos sociales",
+            "particulares": "Fiestas particulares",
+            "club_deportivo": "Clubs deportivos",
+            "cualquier": "Cualquier centro de eventos "
+        },
+        "tipo_eventos": {
+            "title": "Tipo de eventos",
+            "info": "¡Perfecto para preparar cualquier tipo de eventos!",
+            "cumpleanos": "Cumpleaños",
+            "eventos_sociales": "Eventos sociales",
+            "eventos_laborales": "Eventos laborales",
+            "eventos_escolares": "Eventos escolares",
+            "mas": "Y mucho más"
+        },
+        "invitacion": {
+            "title": "Invitación",
+            "info": "Tienes la opción de editar las invitaciones digitales a tu gusto es una característica fundamental para personalizar los eventos a tu manera.",
+            "info2": "Crea y edita tu invitación"
+        },
+        "checkin": {
+            "title": "Check In",
+            "info1": "Check-in en tiempo real es excelente para la gestión de eventos! Permitir que los organizadores tengan acceso a información actualizada sobre su evento puede hacer que la experiencia sea mucho más fluida.",
+            "info2": "Checking por código QR",
+            "info3": "Visualización en tiempo real",
+            "list1": "Cantidad de boletos habilitados",
+            "list2": "Cantidad de boletos ocupados",
+            "list3": "Cantidad de invitaciones creadas",
+            "list4": "La gente que visualizo o confirmo la invitación",
+            "list5": "La gente esta en el evento",
+            "list6": "Check-In por QR o Lista de invitados"
+        },
+        "galeria": {
+            "title": "Galería",
+            "info": "Incorpora la función que permita a los invitados subir y descargar fotos del evento es una excelente manera de fomentar la interacción y crear recuerdos compartidos."
+        },
+        "proveedor": {
+            "title": "Quiero ser proveedor",
+            "info": "Proveedor de servicios y productos",
+            "p1": "En la gestión de oportunidades a través de redes sociales, la práctica de adjuntar imágenes individuales de cada producto resulta INEFICIENTE.",
+            "p2": "Se recomienda, en cambio, proporcionar un código QR. que enlace directamente a su página personal en TicketParty.",
+            "p3": "Este enfoque optimiza la comunicación al presentar la totalidad de su catálogo de productos mediante un único enlace conciso."
+        }
+    }
+}

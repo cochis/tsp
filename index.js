@@ -28,6 +28,7 @@ const routes = [
   '/core/mis-fiestas',
   '/core/galeria',
   '/core/ejemplos',
+  '/core/shared',
   '/core/check-in',
   '/core/templates/default/',
   '/core/templates/byFile/',
@@ -52,6 +53,12 @@ app.get('/api/sitemap.xml', (req, res) => {
 
   res.header('Content-Type', 'application/xml');
   res.send(root.end({ pretty: true }));
+});
+// Servir robots.txt
+app.get('/robots.txt', (req, res) => {
+  const robotsPath = path.join(__dirname, 'robots.txt');
+  res.type('text/plain');
+  fs.createReadStream(robotsPath).pipe(res);
 });
 
 
@@ -96,6 +103,7 @@ app.use('/api/search', require('./routes/busquedas'))
 app.use('/api/galeria', require('./routes/galeria'))
 app.use('/api/redes', require('./routes/red'))
 app.use('/api/logs', require('./routes/log'))
+app.use('/api/shareds', require('./routes/shared'))
 app.use('/api/stripes', require('./routes/stripe'))
 app.use('/api/cps', require('./routes/cp'))
 app.use('/api/calificaciones', require('./routes/calificacion'))
