@@ -18,15 +18,15 @@ const {
 const { validarJWT } = require("../middlewares/validar-jwt");
 const router = Router();
 
-router.get("/", validarJWT, getShareds);
-router.get("/all", validarJWT, getAllShareds);
-router.get("/:uid", validarJWT, getSharedById);
-router.get("/email/:email", validarJWT, getSharedsByEmail);
+router.get("/", getShareds);
+router.get("/all", getAllShareds);
+router.get("/:uid", getSharedById);
+router.get("/email/:email", getSharedsByEmail);
 router.get("/fiesta-boleto/:fiesta/:boleto", getSharedByFiestaBoleto);
 router.post(
     "/",
     [
-        validarJWT,
+
         check("fiesta", "La fiesta es obligatoria").not().isEmpty(),
         check("boleto", "El boleto es obligatorio").not().isEmpty(),
         check("data", "La data es obligatoria").not().isEmpty(),
@@ -38,7 +38,7 @@ router.post(
 router.put(
     "/:id",
     [
-        validarJWT,
+
 
 
         check("lastEdited", "La fecha de edición es obligatoria").not().isEmpty(),
@@ -51,7 +51,7 @@ router.put(
 router.put(
     "/isActive/:id",
     [
-        validarJWT,
+
         check("lastEdited", "La fecha de edición es obligatoria").not().isEmpty(),
         validarCampos,
     ],
