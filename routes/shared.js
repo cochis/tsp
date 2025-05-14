@@ -23,16 +23,7 @@ router.get("/all", getAllShareds);
 router.get("/:uid", getSharedById);
 router.get("/email/:email", getSharedsByEmail);
 router.get("/fiesta-boleto/:fiesta/:boleto", getSharedByFiestaBoleto);
-router.post(
-    "/",
-    [
-
-        check("fiesta", "La fiesta es obligatoria").not().isEmpty(),
-        check("boleto", "El boleto es obligatorio").not().isEmpty(),
-        check("data", "La data es obligatoria").not().isEmpty(),
-        validarCampos,
-    ],
-    crearShared
+router.post("/", crearShared
 );
 
 router.put(
@@ -42,7 +33,7 @@ router.put(
 
 
         check("lastEdited", "La fecha de edición es obligatoria").not().isEmpty(),
-        validarCampos,
+
     ],
     actualizarShared
 );
@@ -53,7 +44,7 @@ router.put(
     [
 
         check("lastEdited", "La fecha de edición es obligatoria").not().isEmpty(),
-        validarCampos,
+
     ],
     isActive
 );
