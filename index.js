@@ -39,6 +39,8 @@ const routes = [
   '/core/templates/default/',
   '/auth/login',
   '/auth/register',
+  '/auth/register',
+  '/shared?id=123&ref=google',
   // Add more routes as needed
 ];
 app.get('/api/sitemap.xml', (req, res) => {
