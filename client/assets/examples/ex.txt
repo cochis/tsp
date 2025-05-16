@@ -13,6 +13,7 @@ db.cps.updateMany({"usuarioCreated":ObjectId("67b38ad8b022b03df94a499e")})
 
 db.fiesta.deleteMany({ uid: ObjectId("67d06f4844a08c9b2a1b9f5c") })
 db.boletos.deleteMany({ fiesta: ObjectId("67d06f4844a08c9b2a1b9f5c") })
+db.shareds.deleteMany({ fiesta: ObjectId("67f53a3aba04450f6ecd80fd") })
 ObjectId("67bf4dcff3973d0ce5df83d6")
 
 db.fiestas.updateMany({}, {$set:{recordatorioOk:false, recordatorio:"Hola *@@invitado@@* recuerda que mi evento es el *@@fecha_evento@@*   tienes *@@cantidadInvitados@@* Boletos  no Faltes eres importante"}})
