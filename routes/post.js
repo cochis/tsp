@@ -17,10 +17,10 @@ const {
 const { validarJWT } = require("../middlewares/validar-jwt");
 const router = Router();
 
-router.get("/", validarJWT, getPosts);
-router.get("/all", validarJWT, getAllPosts);
-router.get("/:uid", validarJWT, getPostById);
-router.get("/email/:email", validarJWT, getPostsByEmail);
+router.get("/",  getPosts);
+router.get("/all",  getAllPosts);
+router.get("/:uid",  getPostById);
+router.get("/email/:email",  getPostsByEmail);
 router.post(
   "/",
   [
