@@ -39,8 +39,6 @@ const routes = [
   '/core/templates/default/',
   '/auth/login',
   '/auth/register',
-  '/auth/register',
-  '/shared?id=123&ref=google',
   // Add more routes as needed
 ];
 app.get('/api/sitemap.xml', (req, res) => {
@@ -99,6 +97,7 @@ app.use('/api/templates', require('./routes/template'))
 app.use('/api/moduloTemplates', require('./routes/moduloTemplate'))
 app.use('/api/tokenPush', require('./routes/tokenPush'))
 app.use('/api/salones', require('./routes/salon'))
+app.use('/api/posts', require('./routes/post'))
 app.use('/api/boletos', require('./routes/boleto'))
 app.use('/api/upload', require('./routes/uploads'))
 app.use('/api/search', require('./routes/busquedas'))

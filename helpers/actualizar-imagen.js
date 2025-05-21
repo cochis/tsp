@@ -8,6 +8,7 @@ const Fondo = require('../models/fondo')
 const Invitacion = require('../models/invitacion')
 const Paquete = require('../models/paquete')
 const Item = require('../models/item')
+const Post = require('../models/post')
 const ImgItem = require('../models/imgItem')
 
 const borrarArchivo = (path) => {
@@ -93,6 +94,20 @@ const actualizarImagen = async (tipo, id, nombreArchivo) => {
       }
       paquete.img = nombreArchivo
       await paquete.save()
+      return true
+    case 'posts':
+      const post = await Post.findById(id)
+      console.log('post::: ', post);
+      if (!post) {
+        return false
+      }
+      pathViejo = `./uploads/posts/${post.img}`
+      if (post.img && post.img !== '') {
+
+        borrarArchivo(pathViejo)
+      }
+      post.img = nombreArchivo
+      await post.save()
       return true
     case 'fondos':
       const fondo = await Fondo.findById(id)
