@@ -35,8 +35,7 @@ router.put(
   "/:id",
   [
     validarJWT,
-    check("nombre", "El nombre es obligatorio").not().isEmpty(),
-    check("clave", "La clave es obligarotira").not().isEmpty(),
+    
 
     check("lastEdited", "La fecha de edición es obligatoria").not().isEmpty(),
     validarCampos,
