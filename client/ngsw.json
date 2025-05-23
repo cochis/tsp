@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1747434895081,
+  "timestamp": 1747971038687,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.a8d787a59c49219d.js",
+        "/main.3600314788639efb.js",
         "/manifest.webmanifest",
         "/polyfills.0a14238993673413.js",
         "/runtime.8f33b8458085c89f.js",
@@ -355,8 +355,8 @@
     "/assets/fonts/daemon.ttf": "9ac701cebd060ed06867e7e2e88004ffb7f76ec1",
     "/assets/fonts/esponja.ttf": "70114c91e423c7961e7f7f3fbf81f343f0650d8f",
     "/assets/fonts/saiyan.ttf": "78c884308db564720698927e9ab13ea4688facf5",
-    "/assets/i18n/en.json": "f97a9b84730b8d170be10f52ea33c20dd162f6b0",
-    "/assets/i18n/es.json": "55d6cfa236b00dd5e25c8977accb7089e82bdad5",
+    "/assets/i18n/en.json": "accaa8a6273889d99c94aa43e7a68cf0089edb24",
+    "/assets/i18n/es.json": "7e722a1e61ed018509dc5e0ce06588bf72fe7168",
     "/assets/icons/1evento-checking.png": "97b65b046e9fc9188375f4de2a90cde99c2c7b6e",
     "/assets/icons/QRExample.png": "4172596eebd876744b236d3d97b9199b2d92863b",
     "/assets/icons/baile.png": "edbae2c7fdb5865c0c2e8a6cf4a9ce8761337fcf",
@@ -611,8 +611,8 @@
     "/assets/js/jquery.sticky.js": "7fd0ecfd2534f00a8a97f8db64fc9ece30303863",
     "/favicon.ico": "406cd1a4f1dfae8dc91cbc20c60996913a826cdc",
     "/fiesta.8de27df8aa39d37a.jpeg": "5fc75c8f4a993818546a99d6ffb7e8d8ad95d3f3",
-    "/index.html": "fb230f871dd3c4ae97a4f8fc5ec919ba55beba16",
-    "/main.a8d787a59c49219d.js": "1601dcb706329e2897450f710d2d176bbd5162ce",
+    "/index.html": "e47cd921ee5a3dd1d855cd8437a891fea9c524fc",
+    "/main.3600314788639efb.js": "d64fd8e8b4070700139292d88f875815e25aeb50",
     "/manifest.webmanifest": "f3ee09a9f3b96c8dbc496fb3ae8595a14ab22bd1",
     "/polyfills.0a14238993673413.js": "e8e41c297a3fb24560fa851e08d4e483cac81e10",
     "/runtime.8f33b8458085c89f.js": "7561a8f72dd5c989426d3c2f453504c5ee27f44a",
