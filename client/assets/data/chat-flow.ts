@@ -83,7 +83,10 @@ export const CHAT_FLOW = {
         ],
         info: `
         <div class="promo-logistica">
-  <h2 class="pH">🎯 ¡Lleva tu evento al siguiente nivel con nuestra logística profesional!</h2>
+  <h2 class="pH tc">🎯 ¡Lleva tu evento al siguiente nivel con nuestra logística profesional!</h2>
+  <p class="pChat">
+     <strong class="tc">Va incluida en todas nuestras invitaciones</strong>  
+  </p>
   <p class="pChat">
     En <strong>MyTicketParty</strong> no solo creamos invitaciones digitales, también te ayudamos a planificar y coordinar
     cada detalle de tu evento con nuestro servicio de <strong>logística integral</strong>.
@@ -101,7 +104,7 @@ export const CHAT_FLOW = {
    
 </div>
         `,
-        costo: 399
+        costo: 0
     },
     galeria: {
         text: 'Galeria',
@@ -153,7 +156,7 @@ export const CHAT_FLOW = {
     🥳 Ya sea un evento formal, creativo o fuera de lo común, tenemos el modelo perfecto para ti.
   </p>
   <p >
-    👉 <a href="/core/examples"  class="cta-link aChat">Explora nuestros modelos y elige el ideal para tu evento</a>.
+      <a href="/core/examples" class="btn but2 tc aChat">Explora nuestros modelos</a>
   </p>
 </div>
         `
