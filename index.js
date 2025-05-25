@@ -48,6 +48,9 @@ app.get('/sitemap.xml', (req, res) => {
   routes.forEach(route => {
     const url = root.ele('url');
     url.ele('loc', `https://tickets.cochisweb.com${route}`);
+    url.ele('lastmod', new Date().toISOString().split('T')[0]); // Fecha actual en formato YYYY-MM-DD
+    url.ele('changefreq', 'weekly'); // Frecuencia de cambio sugerida
+    url.ele('priority', '0.8'); // Prioridad relativa
     // You can add more elements like <changefreq> and <priority> here if needed
   });
 
