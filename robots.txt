@@ -41,8 +41,8 @@ Disallow: /core/estatus-cotizaciones/*
 Disallow: /core/categoria-items/*
 Disallow: /checkout/
 Allow: /shared
-Allow: /core/vista-proveedor
-Allow: /core/vista-producto
+Allow: /core/vista-proveedor/*
+Allow: /core/vista-producto/*
 Allow: /core/market
 Allow: /core/market/proveedores
 Allow: /core/contact
@@ -50,6 +50,7 @@ Allow: /core/about
 Allow: /core/pricing
 Allow: /core/example
 Allow: /core/faqs
+Allow: /core/post/*
 Allow: /
 
 Sitemap: https://myticketparty.com/sitemap.xml
