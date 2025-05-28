@@ -50,6 +50,8 @@ Allow: /core/about
 Allow: /core/pricing
 Allow: /core/example
 Allow: /core/faqs
+Allow: /core/faqs/*
+Allow: /core/post
 Allow: /core/post/*
 Allow: /
 
