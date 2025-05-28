@@ -19,6 +19,9 @@ const PostSchema = Schema({
     type: String,
     default: null
   },
+  respuestas: {
+    type: Object
+  },
   usuarioCreated: {
     type: Schema.Types.ObjectId,
     ref: "Usuario",
