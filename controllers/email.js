@@ -2073,7 +2073,7 @@ const sendMailTemplate = async (req, res) => {
   const type = req.body.type
   const title = req.body.title
   const to = req.body.to
-  const emailTemplate = await EmailTemplate.findOne({ clave: type })
+  const emailTemplate = await EmailTemplate.find({ clave: type })
   try {
     var temp = `
     <!DOCTYPE HTML
