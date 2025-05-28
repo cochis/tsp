@@ -2075,25 +2075,7 @@ const sendMailTemplate = async (req, res) => {
   const to = req.body.to
   const emailTemplate = await EmailTemplate.find({ clave: type })
   try {
-    var temp = `
-    <!DOCTYPE HTML
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
-    xmlns:o="urn:schemas-microsoft-com:office:office">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="x-apple-disable-message-reformatting">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Cotización</title>
-  </head>
-
-  <body>
-`+ emailTemplate[0].template + `
-  </body>
-  </html>`
+    var temp = emailTemplate[0].template
     await transporter.sendMail({
       from: '"' + title + '" <info@cochisweb.com>', // sender address
       to: to, // list of receivers
@@ -2112,7 +2094,7 @@ const sendMailTemplate = async (req, res) => {
 
         subject: `🎉  ` + title + ` 🎉 `,
         html: temp,
-        
+
 
       }
     })
