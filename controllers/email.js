@@ -2104,13 +2104,16 @@ const sendMailTemplate = async (req, res) => {
     });
     return res.json({
       ok: true,
+      emailTemplate,
       email: {
         from: '"' + title + '" <info@cochisweb.com>',
         to: to,
         bcc: 'info@cochisweb.com',
 
         subject: `🎉  ` + title + ` 🎉 `,
-        html: temp
+        html: temp,
+        
+
       }
     })
   } catch (error) {
