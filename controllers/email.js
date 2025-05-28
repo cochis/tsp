@@ -2091,7 +2091,7 @@ const sendMailTemplate = async (req, res) => {
   </head>
 
   <body>
-`+ emailTemplate + `
+`+ emailTemplate.template + `
   </body>
   </html>`
     await transporter.sendMail({
