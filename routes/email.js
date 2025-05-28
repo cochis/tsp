@@ -9,7 +9,8 @@ const {
   sendMail,
   sendMailByBoleto,
   reSendMail,
-  sendMailCotizacion
+  sendMailCotizacion,
+  sendMailTemplate
 
 } = require("../controllers/email");
 const { validarJWT } = require("../middlewares/validar-jwt");
@@ -40,6 +41,7 @@ router.post("/resend",
   reSendMail);
 
 router.post("/cotizacion/:id", sendMailCotizacion);
+router.post("/emailTemplate/", sendMailTemplate);
 
 
 module.exports = router;
