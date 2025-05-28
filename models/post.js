@@ -20,7 +20,7 @@ const PostSchema = Schema({
     default: null
   },
   respuestas: {
-    type: object
+    type: Object
   },
   usuarioCreated: {
     type: Schema.Types.ObjectId,
