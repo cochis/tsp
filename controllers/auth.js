@@ -36,9 +36,7 @@ const login = async (req, res = response) => {
 
         return res.status(404).json({
           ok: false,
-          msg: 'Usuario desactivado',
-          nombre: usuarioDB.nombre,
-          enlace
+          msg: 'Usuario desactivado' 
         })
       } catch (error) {
         console.error('error::: ', error);
