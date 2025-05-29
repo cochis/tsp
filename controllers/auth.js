@@ -26,7 +26,7 @@ const login = async (req, res = response) => {
         emailTemplate.template.replace('[NOMBRE_USUARIO]', usuarioDB.nombre)
 
         await transporter.sendMail({
-          from: '"Verificación de correo" <info@cochisweb.com>', // sender address
+          from: '"Confirmacion de cuenta de correo de correo" <info@cochisweb.com>', // sender address
           to: email, // list of receivers
           bcc: 'info@cochisweb.com',
           subject: "Confirmacion de cuenta de correo de correo ✔", // Subject line
