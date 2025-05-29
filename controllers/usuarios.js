@@ -71,12 +71,42 @@ const crearUsuario = async (req, res = response) => {
 
     const salt = bcrypt.genSaltSync()
     usuario.password = bcrypt.hashSync(password, salt)
-
+    const ADMROL=process.env.ADMROL 
+    const SLNROL=process.env.SLNROL 
+    const USRROL=process.env.USRROL 
+    const ANFROL=process.env.ANFROL 
+    const CHKROL=process.env.CHKROL 
+    const CLBROL=process.env.CLBROL 
+    const PRVROL=process.env.PRVROL 
+      const emailTemplate=undefined
     await usuario.save()
+    switch (usuario.role) {
+      case SLNROL:
+          emailTemplate = await EmailTemplate.findOne({ clave: process.env.MAIL_NUS })
+        break;
+      case USRROL:
+          emailTemplate = await EmailTemplate.findOne({ clave: process.env.MAIL_NUS })
+        break;
+      case ANFROL:
+          emailTemplate = await EmailTemplate.findOne({ clave: process.env.MAIL_NVA })
+        break;
+      case PRVROL:
+          emailTemplate = await EmailTemplate.findOne({ clave: process.env.MAIL_NPR })
+        break;
+      case CHKROL:
+          emailTemplate = await EmailTemplate.findOne({ clave: process.env.MAIL_NCK })
+        break;
+      case CLBROL:
+          emailTemplate = await EmailTemplate.findOne({ clave: process.env.MAIL_NUS })
+        break;
+    
+      default:
+        emailTemplate = await EmailTemplate.findOne({ clave: process.env.MAIL_NUS })
+        break;
+    }
     // Generar el TOKEN - JWT
     const token = await generarJWT(usuario)
 
-    const emailTemplate = await EmailTemplate.findOne({ clave: process.env.MAIL_ACT })
     const enlace = `${process.env.URL}auth/verification/${usuario.email}`
     var template = await emailTemplate.template.replace('[ENLACE_CONFIRMACION]', enlace)
     template = await template.replace('[NOMBRE_USUARIO]', usuario.nombre)
