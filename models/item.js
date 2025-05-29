@@ -85,7 +85,10 @@ const ItemSchema = Schema({
     type: String,
 
   },
+   example: {
+    type: Boolean,
 
+  },
   usuarioCreated: {
     type: Schema.Types.ObjectId,
     ref: "Usuario",

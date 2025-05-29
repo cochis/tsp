@@ -76,6 +76,10 @@ const ProveedorSchema = Schema({
     ref: "Salon",
     required: true
   }],
+    example: {
+    type: Boolean,
+
+  },
   usuarioCreated: {
     type: Schema.Types.ObjectId,
     ref: "Usuario",
