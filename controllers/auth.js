@@ -21,7 +21,7 @@ const login = async (req, res = response) => {
     if (!usuarioDB.activated) {
       try {
         const emailTemplate = await EmailTemplate.findOne({ clave: process.env.MAIL_ACT })
-        let enlace = `${process.env.URL}auth/verification/${email}`
+        const enlace = `${process.env.URL}auth/verification/${email}`
         emailTemplate.template.replace('[ENLACE_CONFIRMACION]', enlace)
         emailTemplate.template.replace('[NOMBRE_USUARIO]', usuarioDB.nombre)
 
@@ -37,7 +37,8 @@ const login = async (req, res = response) => {
         return res.status(404).json({
           ok: false,
           msg: 'Usuario desactivado',
-          usuarioDB
+          nombre:usuarioDB.nombre,
+          enlace
         })
       } catch (error) {
         console.error('error::: ', error);
