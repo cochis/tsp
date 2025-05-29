@@ -22,8 +22,8 @@ const login = async (req, res = response) => {
       try {
         const emailTemplate = await EmailTemplate.findOne({ clave: process.env.MAIL_ACT })
         const enlace = `${process.env.URL}auth/verification/${email}`
-        emailTemplate.template.replace('[ENLACE_CONFIRMACION]', enlace)
-        emailTemplate.template.replace('[NOMBRE_USUARIO]', usuarioDB.nombre)
+        await emailTemplate.template.replace('[ENLACE_CONFIRMACION]', enlace)
+        await emailTemplate.template.replace('[NOMBRE_USUARIO]', usuarioDB.nombre)
 
         await transporter.sendMail({
           from: '"Confirmacion de cuenta de correo de correo" <info@cochisweb.com>', // sender address
