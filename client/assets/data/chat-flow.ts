@@ -234,7 +234,7 @@ export const CHAT_FLOW = {
             { label: 'Volver', next: 'start' }
         ],
         type: "email",
-        link: "info@cochisweb.com",
+        link: "myticketparty@cochisweb.com",
         linkText: "Enviar correo",
         icon: "bi bi-envelope",
 
