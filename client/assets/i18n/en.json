@@ -34,6 +34,7 @@
         "catalogos": "Catalogs",
         "catalogos_general": "General",
         "catalogos_parametros": "View parameters",
+        "catalogos_email_templates": "View email templates",
         "catalogos_roles": "View roles",
         "catalogos_paises": "View countries",
         "catalogos_grupos": "View grups",
