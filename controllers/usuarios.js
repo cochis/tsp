@@ -75,20 +75,21 @@ const crearUsuario = async (req, res = response) => {
 
     await usuario.save()
     console.log('usuario::: ', usuario);
+
     // Generar el TOKEN - JWT
     const token = await generarJWT(usuario)
     var emailTemplateDb = undefined
     switch (usuario.role) {
-      case USRROL:
+      case process.env.USRROL:
         emailTemplateDb = await EmailTemplate.findOne({ clave: process.env.MAIL_NUS })
         break;
-      case SLNROL:
+      case process.env.SLNROL:
         emailTemplateDb = await EmailTemplate.findOne({ clave: process.env.MAIL_NSL })
         break;
-      case ANFROL:
+      case process.env.ANFROL:
         emailTemplateDb = await EmailTemplate.findOne({ clave: process.env.MAIL_NVA })
         break;
-      case PRVROL:
+      case process.env.PRVROL:
         emailTemplateDb = await EmailTemplate.findOne({ clave: process.env.MAIL_NPR })
         break;
       default:
