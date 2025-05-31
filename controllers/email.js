@@ -968,7 +968,7 @@ const sendMailByBoleto = async (req, res) => {
   let nGrupo = boleto.nombreGrupo
   let cantP = fiestaDB.cantidad
   let cantT = (cantP == 1) ? 'Esta' : 'Están'
-  let textoP = (cantP == 1) ? 'invitado' : 'invitados'
+  let textoP = (cantP == 1 || !cantP) ? 'invitado' : 'invitados'
   let boletoP = (cantP == 1) ? 'boleto' : 'boletos'
   try {
 
@@ -977,6 +977,8 @@ const sendMailByBoleto = async (req, res) => {
     const enlace = `${text_url}shared/?evt=${boletoDB.shared}`
     var template = await emailTemplate.template.replace('[URL_INVITACION]', enlace)
     template = await template.replace('[INVITADO]', nGrupo.toUpperCase())
+    template = await template.replace('Estás', cantT)
+    template = await template.replace('Invitado', textoP)
 
 
     await transporter.sendMail({
