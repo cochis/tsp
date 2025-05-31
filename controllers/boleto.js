@@ -6,6 +6,7 @@ const Shared = require('../models/shared')
 const Usuario = require('../models/usuario')
 const { generarJWT } = require('../helpers/jwt')
 const { transporter } = require('../helpers/mailer')
+const EmailTemplate = require('../models/emailTemplate')
 //getBoletos Boleto
 const getBoletos = async (req, res) => {
   const desde = Number(req.query.desde) || 0
