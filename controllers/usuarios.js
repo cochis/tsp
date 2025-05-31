@@ -98,7 +98,7 @@ const crearUsuario = async (req, res = response) => {
     }
     const enlace = `${process.env.URL}auth/verification/${email}`
     var template = await emailTemplateDb.template.replace('[ENLACE_CONFIRMACION]', enlace)
-    template = await template.replace('[NOMBRE_USUARIO]', usuarioDB.nombre)
+    template = await template.replace('[NOMBRE_USUARIO]', usuario.nombre)
 
     await transporter.sendMail({
       from: '"Verificació de correo" <info@cochisweb.com>', // sender address
