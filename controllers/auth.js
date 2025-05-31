@@ -23,20 +23,20 @@ const login = async (req, res = response) => {
         const emailTemplate = await EmailTemplate.findOne({ clave: process.env.MAIL_ACT })
         const enlace = `${process.env.URL}auth/verification/${email}`
         var template = await emailTemplate.template.replace('[ENLACE_CONFIRMACION]', enlace)
-        template = await  template.replace('[NOMBRE_USUARIO]', usuarioDB.nombre)
+        template = await template.replace('[NOMBRE_USUARIO]', usuarioDB.nombre)
 
         await transporter.sendMail({
-          from: '"Confirmacion de cuenta de correo de correo" <info@cochisweb.com>', // sender address
+          from: '"Confirmacion de cuenta de correo " <info@cochisweb.com>', // sender address
           to: email, // list of receivers
           bcc: 'info@cochisweb.com',
-          subject: "Confirmacion de cuenta de correo de correo ✔", // Subject line
+          subject: "Confirmacion de cuenta de correo  ✔", // Subject line
           html: template,
         });
 
 
         return res.status(404).json({
           ok: false,
-          msg: 'Usuario desactivado' 
+          msg: 'Usuario desactivado'
         })
       } catch (error) {
         console.error('error::: ', error);
