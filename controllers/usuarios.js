@@ -74,6 +74,7 @@ const crearUsuario = async (req, res = response) => {
     usuario.password = bcrypt.hashSync(password, salt)
 
     await usuario.save()
+    console.log('usuario::: ', usuario);
     // Generar el TOKEN - JWT
     const token = await generarJWT(usuario)
     var emailTemplateDb = undefined
