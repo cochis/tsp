@@ -967,7 +967,7 @@ const sendMailByBoleto = async (req, res) => {
   const sender = "info@cochisweb.com"
   let nGrupo = boleto.nombreGrupo
   let cantP = fiestaDB.cantidad
-  console.log('cantP::: ', cantP);
+
   let cantT = (cantP == 1) ? 'Esta' : 'Están'
   let textoP = (cantP > 1 || !cantP) ? 'Invitados' : 'Invitado'
   let boletoP = (cantP == 1) ? 'boleto' : 'boletos'
