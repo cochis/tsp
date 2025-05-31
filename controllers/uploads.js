@@ -40,7 +40,7 @@ const fileUpload = async (req, res = response) => {
   const extensionArchivo = nombreCortado[nombreCortado.length - 1]
   const nombreArchivo = `${uuidv4()}.${extensionArchivo}`
   const path = `./uploads/${tipo}/${nombreArchivo}`
-  console.log('path::: ', path);
+
 
 
   file.mv(path, async (err) => {

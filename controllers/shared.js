@@ -41,7 +41,7 @@ const getAllShareds = async (req, res) => {
 //crearShared Shared
 const crearShared = async (req, res = response) => {
     const { email, password } = req.body
-    console.log('req.body::: ', req.body);
+
     const uid = req.uid
 
     campos = {

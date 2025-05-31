@@ -74,7 +74,7 @@ const crearUsuario = async (req, res = response) => {
     usuario.password = bcrypt.hashSync(password, salt)
 
     await usuario.save()
-    console.log('usuario::: ', usuario);
+
 
     // Generar el TOKEN - JWT
     const token = await generarJWT(usuario)
@@ -101,7 +101,7 @@ const crearUsuario = async (req, res = response) => {
     template = await template.replace('[NOMBRE_USUARIO]', usuario.nombre)
 
     await transporter.sendMail({
-      from: '"Verificació de correo" <info@cochisweb.com>', // sender address
+      from: '"Verificación de correo" <info@cochisweb.com>', // sender address
       to: email, // list of receivers
       bcc: 'info@cochisweb.com',
       subject: "Confirmación de cuenta de correo ✔", // Subject line

@@ -97,7 +97,7 @@ const actualizarImagen = async (tipo, id, nombreArchivo) => {
       return true
     case 'posts':
       const post = await Post.findById(id)
-      console.log('post::: ', post);
+
       if (!post) {
         return false
       }

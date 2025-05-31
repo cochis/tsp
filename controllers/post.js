@@ -40,7 +40,7 @@ const getAllPosts = async (req, res) => {
 
 //crearPost Post
 const crearPost = async (req, res = response) => {
-  console.log('req::: ', req);
+
   const { email, password } = req.body
   const uid = req.uid
 
