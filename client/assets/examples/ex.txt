@@ -31,7 +31,7 @@ db.usuarios.deleteOne({ email: "martin@mail.com" })
 db.usuarios.deleteOne({ email: "neza@neza.com" })
 db.fiestas.deleteOne({ nombre: 'BODA DE MARTIN' })
 db.fiestas.deleteOne({  nombre: 'DSA' })
-db.usuarios.insertMany([{ nombre: "OSCAR ALEJANDRO", apellidoPaterno: "RAMIREZ", apellidoMaterno: "ROSAS", email: "info@cochisweb.com", password: "$2a$10$ZBTj0HY9HeIh8dxDwVXekenRYl2g0MgR2ivDIgySDc6qmkcNmr9dG", role: "64ff4ea7da409a7d91056a53", google: false, activated: true, dateCreated: 1694453227825, lastEdited: 1694802018423 }])
+db.usuarios.insertMany([{ nombre: "OSCAR ALEJANDRO", apellidoPaterno: "RAMIREZ", apellidoMaterno: "ROSAS", email: "myticketparty@cochisweb.com", password: "$2a$10$ZBTj0HY9HeIh8dxDwVXekenRYl2g0MgR2ivDIgySDc6qmkcNmr9dG", role: "64ff4ea7da409a7d91056a53", google: false, activated: true, dateCreated: 1694453227825, lastEdited: 1694802018423 }])
 db.boletos.drop()
 db.eventos.drop()
 db.fiestas.drop()
@@ -112,7 +112,7 @@ db.boletos.deleteMany({ uid: ObjectId("66c180d880109b8790114e06") });
     nombre: 'OSCAR ALEJANDRO',
     apellidoPaterno: 'RAMIREZ',
     apellidoMaterno: 'ROSAS',
-    email: 'info@cochisweb.com',
+    email: 'myticketparty@cochisweb.com',
     password: '$2a$10$uw5bPuSzrwwkX6BtSpsto.g4xPWZVZlJL12dkkFJatOVcRS1HfFuS',
     role: ObjectId("6551752fae51b4c12e8d9f6e"),
     google: false,
