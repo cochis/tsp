@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1749403427219,
+  "timestamp": 1749442900919,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,12 +13,12 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.7ef036f764a4dda8.js",
+        "/main.9d065c71f170e384.js",
         "/manifest.webmanifest",
         "/polyfills.5a74663bd0da474b.js",
         "/runtime.b5c883e4ce533020.js",
         "/scripts.3a384ad5c5dd731b.js",
-        "/styles.16ba45411a4efba9.css"
+        "/styles.6ac2baaeb8daa62a.css"
       ],
       "patterns": []
     },
@@ -63,10 +63,12 @@
         "/assets/fonts/bootstrap-icons.woff2",
         "/assets/fonts/daemon.ttf",
         "/assets/fonts/esponja.ttf",
+        "/assets/fonts/eternal.ttf",
         "/assets/fonts/naruto.ttf",
         "/assets/fonts/rebel.ttf",
         "/assets/fonts/roth.ttf",
         "/assets/fonts/saiyan.ttf",
+        "/assets/fonts/solo.otf",
         "/assets/i18n/en.json",
         "/assets/i18n/es.json",
         "/assets/icons/1evento-checking.png",
@@ -180,10 +182,12 @@
     "/assets/fonts/bootstrap-icons.woff2": "3a284b0618771f29da8eb6be900e99439253dce0",
     "/assets/fonts/daemon.ttf": "9ac701cebd060ed06867e7e2e88004ffb7f76ec1",
     "/assets/fonts/esponja.ttf": "70114c91e423c7961e7f7f3fbf81f343f0650d8f",
+    "/assets/fonts/eternal.ttf": "61cfaf57deb128466f36b07cb28070f490bfe358",
     "/assets/fonts/naruto.ttf": "f501a547ff1d8d2e93b8f5e3d72138f49af54857",
     "/assets/fonts/rebel.ttf": "e684231bfbc262ad7edd9337fd90226f57de977e",
     "/assets/fonts/roth.ttf": "7358c3d12cb05dd0732efff43b0498613a815165",
     "/assets/fonts/saiyan.ttf": "78c884308db564720698927e9ab13ea4688facf5",
+    "/assets/fonts/solo.otf": "6a1ade3fcdfbe2677b88308deb04668af61c1420",
     "/assets/i18n/en.json": "acdb52ac4571223c1635562588d94fa898e6ea98",
     "/assets/i18n/es.json": "c5aa1cde754f971c35a7f109e4fad5b16c389280",
     "/assets/icons/1evento-checking.png": "97b65b046e9fc9188375f4de2a90cde99c2c7b6e",
@@ -259,13 +263,13 @@
     "/assets/js/jquery.sticky.js": "7fd0ecfd2534f00a8a97f8db64fc9ece30303863",
     "/favicon.ico": "406cd1a4f1dfae8dc91cbc20c60996913a826cdc",
     "/fiesta.8de27df8aa39d37a.jpeg": "5fc75c8f4a993818546a99d6ffb7e8d8ad95d3f3",
-    "/index.html": "10e86bfd595513d48371acb4e0afe52d53a3ee1a",
-    "/main.7ef036f764a4dda8.js": "94cf4774daf79c40a5ac3313aef1ec055d20b142",
+    "/index.html": "274c411b454a79c9c4c99a5b432b01a182aa430f",
+    "/main.9d065c71f170e384.js": "28cd6f3be883ec25493abd454743ed5f09a23bc4",
     "/manifest.webmanifest": "f3ee09a9f3b96c8dbc496fb3ae8595a14ab22bd1",
     "/polyfills.5a74663bd0da474b.js": "f62e377febc5603878fcfc7ab4453692592eacfc",
     "/runtime.b5c883e4ce533020.js": "7170f2d4dd3e54ddab126c7be082604eed137d29",
     "/scripts.3a384ad5c5dd731b.js": "8aa86e89b2ed1d914d2ebfa9c482816219e9e7ac",
-    "/styles.16ba45411a4efba9.css": "766ef6eb40e461702b7c8b92cbc249d5dc8610e0"
+    "/styles.6ac2baaeb8daa62a.css": "60cd63c7545f67dc1590047c1e65f9c378ec3b03"
   },
   "navigationUrls": [
     {
