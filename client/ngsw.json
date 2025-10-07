@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1759520260282,
+  "timestamp": 1759860792507,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,12 +13,12 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.ad3e90d3644644d3.js",
+        "/main.3ab6a2e5f3d3164a.js",
         "/manifest.webmanifest",
         "/polyfills.5a74663bd0da474b.js",
         "/runtime.b5c883e4ce533020.js",
         "/scripts.3a384ad5c5dd731b.js",
-        "/styles.6ac2baaeb8daa62a.css"
+        "/styles.034e6df018d23fb4.css"
       ],
       "patterns": []
     },
@@ -65,6 +65,7 @@
         "/assets/fonts/esponja.ttf",
         "/assets/fonts/eternal.ttf",
         "/assets/fonts/naruto.ttf",
+        "/assets/fonts/one_piece.ttf",
         "/assets/fonts/rebel.ttf",
         "/assets/fonts/roth.ttf",
         "/assets/fonts/saiyan.ttf",
@@ -184,6 +185,7 @@
     "/assets/fonts/esponja.ttf": "70114c91e423c7961e7f7f3fbf81f343f0650d8f",
     "/assets/fonts/eternal.ttf": "61cfaf57deb128466f36b07cb28070f490bfe358",
     "/assets/fonts/naruto.ttf": "f501a547ff1d8d2e93b8f5e3d72138f49af54857",
+    "/assets/fonts/one_piece.ttf": "a20b933c8cdf285dc3519dac4f8e93d7bf0e366a",
     "/assets/fonts/rebel.ttf": "e684231bfbc262ad7edd9337fd90226f57de977e",
     "/assets/fonts/roth.ttf": "7358c3d12cb05dd0732efff43b0498613a815165",
     "/assets/fonts/saiyan.ttf": "78c884308db564720698927e9ab13ea4688facf5",
@@ -263,13 +265,13 @@
     "/assets/js/jquery.sticky.js": "7fd0ecfd2534f00a8a97f8db64fc9ece30303863",
     "/favicon.ico": "406cd1a4f1dfae8dc91cbc20c60996913a826cdc",
     "/fiesta.8de27df8aa39d37a.jpeg": "5fc75c8f4a993818546a99d6ffb7e8d8ad95d3f3",
-    "/index.html": "13b40b59112922002ff3f1a3915131317333a5fb",
-    "/main.ad3e90d3644644d3.js": "f4e267196551d997ee67033c34357dcdbfcc097d",
+    "/index.html": "0b0bd95dd30e3af6be6b725bcdf7da597815f6d1",
+    "/main.3ab6a2e5f3d3164a.js": "126ff58e877c9b99c818b4135a77cc1d2b86976b",
     "/manifest.webmanifest": "7c976ea1a1d9848c32c7020bae0c92544c8793dd",
     "/polyfills.5a74663bd0da474b.js": "f62e377febc5603878fcfc7ab4453692592eacfc",
     "/runtime.b5c883e4ce533020.js": "7170f2d4dd3e54ddab126c7be082604eed137d29",
     "/scripts.3a384ad5c5dd731b.js": "8aa86e89b2ed1d914d2ebfa9c482816219e9e7ac",
-    "/styles.6ac2baaeb8daa62a.css": "60cd63c7545f67dc1590047c1e65f9c378ec3b03"
+    "/styles.034e6df018d23fb4.css": "bef20e802042c37f88c281130564aa84767cadc7"
   },
   "navigationUrls": [
     {
