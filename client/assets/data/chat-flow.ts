@@ -256,7 +256,7 @@ export const CHAT_FLOW = {
             { label: 'Volver', next: 'start' }
         ],
         type: "phone",
-        link: "5566828251",
+        link: "5570698830",
         linkText: "Llamar",
         icon: "bi bi-telephone",
 
