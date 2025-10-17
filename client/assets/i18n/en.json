@@ -1,6 +1,7 @@
 {
     "menu": {
         "inicio": "Home",
+        "funcionalidades": "Features",
         "market": "Marketplace",
         "productos": "Products",
         "proveedores": "Suppliers",

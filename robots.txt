@@ -1,9 +1,19 @@
+# Regla principal: Aplica a todos los rastreadores
 User-agent: *
+
+# =========================================================
+# RUTAS DE ACCESO RESTRINGIDO, ADMINISTRACIÓN Y USUARIO PRIVADO
+# Bloquea todas las áreas que contengan datos personales o sean internas del sistema (backend)
+# =========================================================
+
+# Áreas de autenticación y perfil de usuario
 Disallow: /admin/
 Disallow: /auth/login
 Disallow: /auth/register
 Disallow: /auth/perfil
 Disallow: /auth/reset-password
+
+# Funcionalidades de usuario privado (Mis fiestas, Carrito, Check-in, Edición)
 Disallow: /core/mis-fiestas
 Disallow: /core/market/carrito
 Disallow: /core/fiestas/single-fiesta/*
@@ -12,14 +22,18 @@ Disallow: /core/salones/editar-salon/*/*
 Disallow: /core/invitaciones/editar-invitacion/*/*
 Disallow: /core/agregar-invitado/*/*
 Disallow: /core/check-incore/check-in
+
+# Vistas de administración/tablas de control interno
 Disallow: /core/salones/vista-salones/*
 Disallow: /core/usuarios/vista-usuarios/*
 Disallow: /core/boletos/vista-boletos/*
+Disallow: /core/mis-cotizaciones
+Disallow: /core/cotizaciones/*
+
+# Áreas de configuración interna y parámetros del sistema
 Disallow: /core/proveedores/*
 Disallow: /core/parametros/*
 Disallow: /core/items/*
-Disallow: /core/mis-cotizaciones
-Disallow: /core/cotizaciones/*
 Disallow: /core/promos/*
 Disallow: /core/roles/*
 Disallow: /core/paises/*
@@ -39,8 +53,18 @@ Disallow: /core/redes/*
 Disallow: /core/tipo-ubicaciones/*
 Disallow: /core/estatus-cotizaciones/*
 Disallow: /core/categoria-items/*
+
+# Proceso de pago
 Disallow: /checkout/
-Allow: /shared
+
+# =========================================================
+# RUTAS PÚBLICAS PERMITIDAS 
+# =========================================================
+
+# **IMPORTANTE:** Esta línea permite el rastreo de /shared, /shared/subdirectorio y /shared?parametro=valor
+Allow: /shared 
+
+# Otras vistas de contenido público
 Allow: /core/vista-proveedor/*
 Allow: /core/vista-producto/*
 Allow: /core/market
@@ -53,6 +77,9 @@ Allow: /core/faqs
 Allow: /core/faqs/*
 Allow: /core/post
 Allow: /core/post/*
-Allow: /
+
+# =========================================================
+# UBICACIÓN DEL SITEMAP
+# =========================================================
 
 Sitemap: https://myticketparty.com/sitemap.xml

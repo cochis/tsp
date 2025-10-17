@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1760671815905,
+  "timestamp": 1760723312930,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,12 +13,12 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.4437aac075f26850.js",
+        "/main.e80121fd9403221d.js",
         "/manifest.webmanifest",
         "/polyfills.5a74663bd0da474b.js",
         "/runtime.b5c883e4ce533020.js",
         "/scripts.3a384ad5c5dd731b.js",
-        "/styles.034e6df018d23fb4.css"
+        "/styles.5efc4256d5916c44.css"
       ],
       "patterns": []
     },
@@ -120,12 +120,16 @@
         "/assets/images/example/wattercolor.jpg",
         "/assets/images/faq_graphic.jpg",
         "/assets/images/fiesta.jpeg",
+        "/assets/images/icon.png",
         "/assets/images/lg.png",
         "/assets/images/lg.svg",
+        "/assets/images/licon.png",
         "/assets/images/link-ubicacion.png",
         "/assets/images/loading.gif",
         "/assets/images/logo.png",
         "/assets/images/logo.svg",
+        "/assets/images/logo3.png",
+        "/assets/images/logon.png",
         "/assets/images/media.png",
         "/assets/images/media.webp",
         "/assets/images/musica.avif",
@@ -190,8 +194,8 @@
     "/assets/fonts/roth.ttf": "7358c3d12cb05dd0732efff43b0498613a815165",
     "/assets/fonts/saiyan.ttf": "78c884308db564720698927e9ab13ea4688facf5",
     "/assets/fonts/solo.otf": "6a1ade3fcdfbe2677b88308deb04668af61c1420",
-    "/assets/i18n/en.json": "acdb52ac4571223c1635562588d94fa898e6ea98",
-    "/assets/i18n/es.json": "c5aa1cde754f971c35a7f109e4fad5b16c389280",
+    "/assets/i18n/en.json": "46e1dbfe65b1a09545f194ab33902b6e8beb5400",
+    "/assets/i18n/es.json": "804352f1be0fa7adaa6d12c0c0b5819a5c1435b1",
     "/assets/icons/1evento-checking.png": "97b65b046e9fc9188375f4de2a90cde99c2c7b6e",
     "/assets/icons/QRExample.png": "4172596eebd876744b236d3d97b9199b2d92863b",
     "/assets/icons/crear-evento.png": "47f05e62932e8ff13f2844dcb851d34693f27784",
@@ -240,12 +244,16 @@
     "/assets/images/example/wattercolor.jpg": "d41049b8475f472ea3d3e8cc5b05189315f05974",
     "/assets/images/faq_graphic.jpg": "07e50f3aa9b810d96f734d7629def2a279a0a3b2",
     "/assets/images/fiesta.jpeg": "5fc75c8f4a993818546a99d6ffb7e8d8ad95d3f3",
+    "/assets/images/icon.png": "a7a4fb16bf66192b5b29baecc1bd9da2dd1bff5b",
     "/assets/images/lg.png": "10846c4f7dc1d82535f884681586f35f7fe31d62",
     "/assets/images/lg.svg": "2855bceb7b50fcb11379d77bc1829694b3a6181e",
+    "/assets/images/licon.png": "3aaac5d0d427e0b2fec516dfcaf5455307b6075b",
     "/assets/images/link-ubicacion.png": "e8f501e2ca14257af7945f9763516e0a789569b8",
     "/assets/images/loading.gif": "c6bbb0c42808f8200c8c472750b4d68b32dd4079",
     "/assets/images/logo.png": "4d9d522e490cddbd739f00b744503a9d00fbb71b",
     "/assets/images/logo.svg": "51a149947302eb954ca2d9eab6eda7281b2487dc",
+    "/assets/images/logo3.png": "b5bb48974b0d6e5e8bcacbd921a4d49973f3fb6a",
+    "/assets/images/logon.png": "f22575738b6b6cc7d02ef87327953b5faa3880b4",
     "/assets/images/media.png": "f4d559c443787a4302f7d723c8ba853dafac60e5",
     "/assets/images/media.webp": "b53b798cc8bb72f1333011438311e99469aed557",
     "/assets/images/musica.avif": "1139f42090285a80bfc6a2a57fe3e6994a33d778",
@@ -265,13 +273,13 @@
     "/assets/js/jquery.sticky.js": "7fd0ecfd2534f00a8a97f8db64fc9ece30303863",
     "/favicon.ico": "406cd1a4f1dfae8dc91cbc20c60996913a826cdc",
     "/fiesta.8de27df8aa39d37a.jpeg": "5fc75c8f4a993818546a99d6ffb7e8d8ad95d3f3",
-    "/index.html": "fdcdf3409e14da751df1059839539d7fecb13532",
-    "/main.4437aac075f26850.js": "9ea1c880e5cc4dd52d20e3c3094a7198c11b6e67",
+    "/index.html": "e1d9cbda227db460a2511d50915a049fb415b4dd",
+    "/main.e80121fd9403221d.js": "1c77578c7b7963527ae80592ea9c7b5610c224b8",
     "/manifest.webmanifest": "7c976ea1a1d9848c32c7020bae0c92544c8793dd",
     "/polyfills.5a74663bd0da474b.js": "f62e377febc5603878fcfc7ab4453692592eacfc",
     "/runtime.b5c883e4ce533020.js": "7170f2d4dd3e54ddab126c7be082604eed137d29",
     "/scripts.3a384ad5c5dd731b.js": "8aa86e89b2ed1d914d2ebfa9c482816219e9e7ac",
-    "/styles.034e6df018d23fb4.css": "bef20e802042c37f88c281130564aa84767cadc7"
+    "/styles.5efc4256d5916c44.css": "bc455b3ef7ebdac4fe3a02109ddf311b7247f3fa"
   },
   "navigationUrls": [
     {
