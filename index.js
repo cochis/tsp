@@ -12,11 +12,16 @@ const http = require("http");
 const { Server } = require("socket.io");
 
 // --- AJUSTE 1: Variables de Entorno para Dominios ---
-// Define tus dominios aquí o en tu archivo .env para usarlos en CORS y Sitemap
 const aDominioFrontend =
   process.env.FRONTEND_URL || "https://www.myticketparty.com";
 const aDominioBackend =
-  process.env.BACKEND_URL || "https://www.myticketparty.com"; // O el subdominio de tu API
+  process.env.BACKEND_URL || "https://www.myticketparty.com";
+
+// --- CAMBIO AQUÍ (1 de 3): Creamos la lista de dominios permitidos ---
+const allowedOrigins = [
+  aDominioFrontend,
+  "http://localhost:4200", // <-- Agregamos tu localhost de desarrollo
+];
 
 // Crear el servidor de express
 const app = express();
@@ -24,18 +29,17 @@ const app = express();
 // Creación de servidores HTTP y Socket.io
 const server = http.createServer(app);
 const io = new Server(server, {
-  // --- AJUSTE 2: CORS para Socket.io (Más Seguro) ---
-  // No uses '*' en producción.
+  // --- CAMBIO AQUÍ (2 de 3): Usamos la lista de dominios para Socket.io ---
   cors: {
-    origin: aDominioFrontend,
+    origin: allowedOrigins,
     methods: ["GET", "POST"],
   },
 });
 
 // Configurar CORS (para rutas API REST)
-// --- AJUSTE 2: CORS para Express (Más Seguro) ---
+// --- CAMBIO AQUÍ (3 de 3): Usamos la lista de dominios para Express ---
 const corsOptions = {
-  origin: aDominioFrontend,
+  origin: allowedOrigins,
 };
 app.use(cors(corsOptions));
 
