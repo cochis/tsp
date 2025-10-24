@@ -4,89 +4,109 @@ const cors = require("cors");
 const xmlbuilder = require("xmlbuilder");
 const { dbConnection } = require("./database/config");
 const path = require("path");
-// const https = require('https') // Nota: https requiere configuración adicional de certificados
+// const https = require('https')
 const fs = require("fs");
 var cron = require("node-cron");
 var request = require("request");
+const http = require("http");
+const { Server } = require("socket.io");
 
-// --- 1. IMPORTACIONES PARA SOCKET.IO ---
-const http = require("http"); // <-- CAMBIO: Importamos http nativo
-const { Server } = require("socket.io"); // <-- CAMBIO: Importamos Server de socket.io
+// --- AJUSTE 1: Variables de Entorno para Dominios ---
+// Define tus dominios aquí o en tu archivo .env para usarlos en CORS y Sitemap
+const aDominioFrontend =
+  process.env.FRONTEND_URL || "https://www.myticketparty.com";
+const aDominioBackend =
+  process.env.BACKEND_URL || "https://www.myticketparty.com"; // O el subdominio de tu API
 
 // Crear el servidor de express
 const app = express();
 
-// --- 2. CREACIÓN DE SERVIDORES ---
-const server = http.createServer(app); // <-- CAMBIO: Creamos el server http
+// Creación de servidores HTTP y Socket.io
+const server = http.createServer(app);
 const io = new Server(server, {
-  // <-- CAMBIO: Inicializamos socket.io
+  // --- AJUSTE 2: CORS para Socket.io (Más Seguro) ---
+  // No uses '*' en producción.
   cors: {
-    origin: "*", // En producción, cambia esto por tu dominio (ej: "https://www.myticketparty.com")
+    origin: aDominioFrontend,
     methods: ["GET", "POST"],
   },
 });
 
 // Configurar CORS (para rutas API REST)
-app.use(cors());
-//Carpeta publoc
-app.use("/", express.static("client", { redirect: false }));
-app.use(express.static("public"));
+// --- AJUSTE 2: CORS para Express (Más Seguro) ---
+const corsOptions = {
+  origin: aDominioFrontend,
+};
+app.use(cors(corsOptions));
+
+// --- AJUSTE 3: Rutas Estáticas Robustas (con path.join) ---
+// Sirve la app de Angular (build) desde la carpeta 'client'
+app.use("/", express.static(path.join(__dirname, "client"), { redirect: false }));
+// Sirve otros archivos (ej. uploads) desde la carpeta 'public'
+app.use(express.static(path.join(__dirname, "public")));
+
 //lectura y paseo del body
 app.use(express.json());
 
 // Base de datos
 dbConnection();
 
-// --- 3. MANEJADOR DE SOCKETS ---
+// Manejador de Sockets
 const { socketController } = require("./sockets/controller");
-io.on("connection", socketController); // <-- CAMBIO: Le decimos a socket.io qué hacer
+io.on("connection", socketController);
 
-// --- Código de Sitemap y Robots (sin cambios) ---
+// --- Sitemap y Robots ---
 const routes = [
-  "/core",
-  "/core/about",
-  "/core/contact",
-  "/core/market",
-  "/core/faqs",
-  "/core/pricing",
-  "/core/mis-fiestas",
-  "/core/galeria",
-  "/core/ejemplos",
-  "/core/shared",
-  "/core/check-in",
-  "/core/templates/default/",
-  "/core/templates/byFile/",
-  "/core/examples",
-  "/core/market",
-  "/core/vista-proveedor/",
-  "/core/faqs",
-  "/core/templates/default/",
+  "",
+  "/about",
+  "/contact",
+  "/market",
+  "/faqs",
+  "/pricing",
+  "/mis-fiestas",
+  "/galeria",
+  "/ejemplos",
+  "/shared",
+  "/check-in",
+  "/templates/default/",
+  "/templates/byFile/",
+  "/examples",
+  "/market",
+  "/vista-proveedor/",
+  "/faqs",
+  "/templates/default/",
   "/auth/login",
   "/auth/register",
   // Add more routes as needed
 ];
+
 app.get("/sitemap.xml", (req, res) => {
   const root = xmlbuilder.create("urlset", { version: "1.0", encoding: "UTF-8" });
   root.att("xmlns", "http://www.sitemaps.org/schemas/sitemap/0.9");
 
   routes.forEach((route) => {
     const url = root.ele("url");
-    url.ele("loc", `https://tickets.cochisweb.com${route}`);
-    url.ele("lastmod", new Date().toISOString().split("T")[0]); // Fecha actual en formato YYYY-MM-DD
-    url.ele("changefreq", "weekly"); // Frecuencia de cambio sugerida
-    url.ele("priority", "0.8"); // Prioridad relativa
+    // --- AJUSTE 4: Dominio del Sitemap ---
+    // Usamos la variable en lugar de un dominio hardcodeado
+    url.ele("loc", `${aDominioFrontend}${route}`);
+    url.ele("lastmod", new Date().toISOString().split("T")[0]);
+    url.ele("changefreq", "weekly");
+    url.ele("priority", "0.8");
   });
 
   res.header("Content-Type", "application/xml");
   res.send(root.end({ pretty: true }));
 });
+
 app.get("/robots.txt", (req, res) => {
+  // --- AJUSTE 3: Ruta Robusta (con path.join) ---
   const robotsPath = path.join(__dirname, "robots.txt");
   res.type("text/plain");
   fs.createReadStream(robotsPath).pipe(res);
 });
 
-// --- Rutas API (sin cambios) ---
+// --- Rutas API ---
+// (Tus rutas API van aquí - sin cambios)
 app.use("/api/usuarios", require("./routes/usuarios"));
 app.use("/api/roles", require("./routes/role"));
 app.use("/api/tipo-centros", require("./routes/tipoCentro"));
@@ -137,21 +157,27 @@ app.use("/api/estatus-cotizaciones", require("./routes/estatusCotizacion"));
 app.use("/api/paises", require("./routes/pais"));
 app.use("/api/files", require("./routes/file"));
 app.use("/api/datas", require("./routes/data"));
-
-// --- 4. ELIMINAR RUTA ANTIGUA DE CHAT ---
-// app.use('/api/chat', require('./routes/chat')) // <-- CAMBIO: Comentada o eliminada.
-
 app.use("/api/mail-templates", require("./routes/mailTemplate"));
+// app.use('/api/chat', require('./routes/chat')) // Eliminada por Socket.io
 
-// Ruta Catch-all (al final)
-app.get("*", function (req, res, next) {
-  res.sendFile(path.resolve("client/index.html"));
+// --- AJUSTE 5: Ruta Catch-all (La más importante para Angular) ---
+// Debe ir DESPUÉS de todas las rutas API.
+// Esto se asegura de que cualquier ruta que no sea API
+// sea manejada por Angular.
+app.get("*", (req, res) => {
+  // Comprobamos si la petición es para la API (incluso si es un GET a una ruta API no existente)
+  if (req.path.startsWith("/api/")) {
+    return res.status(404).json({
+      ok: false,
+      msg: "Ruta API no encontrada. Revisa la documentación.",
+    });
+  }
+  // Si no es API, enviamos el index.html de Angular para que él maneje la ruta
+  res.sendFile(path.join(__dirname, "client", "index.html"));
 });
 
-// --- 5. LEVANTAR EL SERVIDOR ---
-// Usamos 'server.listen' en lugar de 'app.listen'
+// Levantar el Servidor
 server.listen(process.env.PORT, () => {
-  // <-- CAMBIO
   console.info(
     "__________________________________________________________________________________________________",
   );
@@ -159,7 +185,7 @@ server.listen(process.env.PORT, () => {
     "__________________________________________________________________________________________________",
   );
   console.info("Servidor corriendo en puerto " + process.env.PORT);
-  console.info("🔌 Socket.io escuchando conexiones..."); // <-- CAMBIO
+  console.info("🔌 Socket.io escuchando conexiones...");
 });
 
 /* ... (tu cron job se queda igual) ... */

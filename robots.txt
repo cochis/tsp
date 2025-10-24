@@ -14,45 +14,45 @@ Disallow: /auth/perfil
 Disallow: /auth/reset-password
 
 # Funcionalidades de usuario privado (Mis fiestas, Carrito, Check-in, Edición)
-Disallow: /core/mis-fiestas
-Disallow: /core/market/carrito
-Disallow: /core/fiestas/single-fiesta/*
-Disallow: /core/info-fiesta/*
-Disallow: /core/salones/editar-salon/*/*
-Disallow: /core/invitaciones/editar-invitacion/*/*
-Disallow: /core/agregar-invitado/*/*
-Disallow: /core/check-incore/check-in
+Disallow: /mis-fiestas
+Disallow: /market/carrito
+Disallow: /fiestas/single-fiesta/*
+Disallow: /info-fiesta/*
+Disallow: /salones/editar-salon/*/*
+Disallow: /invitaciones/editar-invitacion/*/*
+Disallow: /agregar-invitado/*/*
+Disallow: /check-incore/check-in
 
 # Vistas de administración/tablas de control interno
-Disallow: /core/salones/vista-salones/*
-Disallow: /core/usuarios/vista-usuarios/*
-Disallow: /core/boletos/vista-boletos/*
-Disallow: /core/mis-cotizaciones
-Disallow: /core/cotizaciones/*
+Disallow: /salones/vista-salones/*
+Disallow: /usuarios/vista-usuarios/*
+Disallow: /boletos/vista-boletos/*
+Disallow: /mis-cotizaciones
+Disallow: /cotizaciones/*
 
 # Áreas de configuración interna y parámetros del sistema
-Disallow: /core/proveedores/*
-Disallow: /core/parametros/*
-Disallow: /core/items/*
-Disallow: /core/promos/*
-Disallow: /core/roles/*
-Disallow: /core/paises/*
-Disallow: /core/grupos/*
-Disallow: /core/eventos/*
-Disallow: /core/fondos/*
-Disallow: /core/tipo-centros/*
-Disallow: /core/ejemplos/*
-Disallow: /core/paquete/*
-Disallow: /core/cps/*
-Disallow: /core/tip-medios/*
-Disallow: /core/monedas/*
-Disallow: /core/tipo-contacto/*
-Disallow: /core/tipo-colores/*
-Disallow: /core/tipo-items/*
-Disallow: /core/redes/*
-Disallow: /core/tipo-ubicaciones/*
-Disallow: /core/estatus-cotizaciones/*
-Disallow: /core/categoria-items/*
+Disallow: /proveedores/*
+Disallow: /parametros/*
+Disallow: /items/*
+Disallow: /promos/*
+Disallow: /roles/*
+Disallow: /paises/*
+Disallow: /grupos/*
+Disallow: /eventos/*
+Disallow: /fondos/*
+Disallow: /tipo-centros/*
+Disallow: /ejemplos/*
+Disallow: /paquete/*
+Disallow: /cps/*
+Disallow: /tip-medios/*
+Disallow: /monedas/*
+Disallow: /tipo-contacto/*
+Disallow: /tipo-colores/*
+Disallow: /tipo-items/*
+Disallow: /redes/*
+Disallow: /tipo-ubicaciones/*
+Disallow: /estatus-cotizaciones/*
+Disallow: /categoria-items/*
 
 # Proceso de pago
 Disallow: /checkout/
@@ -65,18 +65,18 @@ Disallow: /checkout/
 Allow: /shared 
 
 # Otras vistas de contenido público
-Allow: /core/vista-proveedor/*
-Allow: /core/vista-producto/*
-Allow: /core/market
-Allow: /core/market/proveedores
-Allow: /core/contact
-Allow: /core/about
-Allow: /core/pricing
-Allow: /core/example
-Allow: /core/faqs
-Allow: /core/faqs/*
-Allow: /core/post
-Allow: /core/post/*
+Allow: /vista-proveedor/*
+Allow: /vista-producto/*
+Allow: /market
+Allow: /market/proveedores
+Allow: /contact
+Allow: /about
+Allow: /pricing
+Allow: /example
+Allow: /faqs
+Allow: /faqs/*
+Allow: /post
+Allow: /post/*
 
 # =========================================================
 # UBICACIÓN DEL SITEMAP
